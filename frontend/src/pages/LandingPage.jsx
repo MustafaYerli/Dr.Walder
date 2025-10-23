@@ -53,7 +53,7 @@ const LandingPage = () => {
   const faqs = [
     {
       question: 'Wie kann ich einen Termin vereinbaren?',
-      answer: 'Sie können telefonisch unter 01 / 214 14 31 einen Termin vereinbaren oder das Kontaktformular auf dieser Website nutzen.'
+      answer: 'Sie können online über unser Buchungssystem einen Termin vereinbaren oder telefonisch unter 01 / 214 14 31 anrufen.'
     },
     {
       question: 'Werden die Kosten von der Krankenkasse übernommen?',
