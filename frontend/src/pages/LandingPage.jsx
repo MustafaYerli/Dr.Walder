@@ -10,11 +10,17 @@ import {
 } from '../components/ui/accordion';
 
 const LandingPage = () => {
+  const BOOKING_URL = 'https://testdrwalder.setmore.com/book?step=time-slot&products=fb48646b-422b-4f94-ad3b-7b2252a9d866&type=service&staff=ea0beaba-8aa7-4058-b05b-8654cdb1fc9d&staffSelected=true';
+  
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+  
+  const openBooking = () => {
+    window.open(BOOKING_URL, '_blank');
   };
 
   const benefits = [
