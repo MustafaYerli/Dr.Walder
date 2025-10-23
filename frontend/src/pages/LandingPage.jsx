@@ -86,6 +86,24 @@ const LandingPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Mobile Sticky Buttons - Only visible on mobile */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden flex gap-0 shadow-2xl">
+        <a
+          href="tel:012141431"
+          className="flex-1 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold py-4 flex items-center justify-center gap-2 hover:from-orange-600 hover:to-amber-600 transition-all"
+        >
+          <Phone className="w-5 h-5" />
+          <span>Anrufen</span>
+        </a>
+        <button
+          onClick={openBooking}
+          className="flex-1 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold py-4 flex items-center justify-center gap-2 hover:from-green-700 hover:to-emerald-700 transition-all"
+        >
+          <Stethoscope className="w-5 h-5" />
+          <span>Online-Termin</span>
+        </button>
+      </div>
+
       {/* Header */}
       <header className="fixed top-0 w-full bg-white shadow-sm z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
