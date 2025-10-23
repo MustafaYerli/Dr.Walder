@@ -90,14 +90,14 @@ const LandingPage = () => {
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden flex gap-0 shadow-2xl">
         <a
           href="tel:012141431"
-          className="flex-1 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold py-4 flex items-center justify-center gap-2 hover:from-orange-600 hover:to-amber-600 transition-all"
+          className="flex-1 bg-[#1E3A5F] text-white font-bold py-4 flex items-center justify-center gap-2 hover:bg-[#1E3A5F]/90 transition-all"
         >
           <Phone className="w-5 h-5" />
           <span>Anrufen</span>
         </a>
         <button
           onClick={openBooking}
-          className="flex-1 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold py-4 flex items-center justify-center gap-2 hover:from-green-700 hover:to-emerald-700 transition-all"
+          className="flex-1 bg-[#1E3A5F] text-white font-bold py-4 flex items-center justify-center gap-2 hover:bg-[#1E3A5F]/90 transition-all"
         >
           <Stethoscope className="w-5 h-5" />
           <span>Online-Termin</span>
