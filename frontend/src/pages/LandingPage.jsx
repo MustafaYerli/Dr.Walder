@@ -328,68 +328,42 @@ const LandingPage = () => {
 
       {/* Appointment Section */}
       <section id="termin" className="py-20 bg-[#1E3A5F] text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-12">
             <h3 className="text-4xl font-bold mb-4">Termin vereinbaren</h3>
-            <p className="text-xl text-white/90">
-              Kontaktieren Sie uns für einen Termin
+            <p className="text-xl text-white/90 mb-8">
+              Buchen Sie Ihren Termin bequem online
             </p>
           </div>
 
           <Card className="border-0 shadow-2xl">
-            <CardContent className="p-8">
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Vorname und Nachname *
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent"
-                    placeholder="Max Mustermann"
-                  />
+            <CardContent className="p-12">
+              <div className="space-y-6">
+                <Stethoscope className="w-20 h-20 mx-auto text-[#1E3A5F]" />
+                <h4 className="text-2xl font-bold text-gray-900">
+                  Online-Terminbuchung
+                </h4>
+                <p className="text-lg text-gray-600 mb-8">
+                  Wählen Sie einen passenden Termin in unserem Online-Kalender
+                </p>
+                <Button 
+                  onClick={openBooking}
+                  size="lg"
+                  className="bg-[#1E3A5F] hover:bg-[#1E3A5F]/90 text-lg px-12 py-6"
+                >
+                  Jetzt Termin buchen
+                  <ChevronRight className="ml-2 w-5 h-5" />
+                </Button>
+                <div className="pt-6 border-t border-gray-200 mt-8">
+                  <p className="text-gray-600 mb-3">
+                    Oder rufen Sie uns direkt an:
+                  </p>
+                  <a href="tel:012141431" className="text-[#1E3A5F] hover:underline text-xl font-bold flex items-center justify-center gap-2">
+                    <Phone className="w-5 h-5" />
+                    01 / 214 14 31
+                  </a>
                 </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    E-Mail *
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent"
-                    placeholder="max@example.com"
-                  />
-                </div>
               </div>
-              <div className="mb-8">
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Telefonnummer *
-                </label>
-                <input
-                  type="tel"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent"
-                  placeholder="+43 123 456789"
-                />
-              </div>
-              <div className="mb-8">
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Ihre Nachricht
-                </label>
-                <textarea
-                  rows="4"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent"
-                  placeholder="Beschreiben Sie kurz Ihr Anliegen..."
-                ></textarea>
-              </div>
-              <Button 
-                size="lg"
-                className="w-full bg-[#1E3A5F] hover:bg-[#1E3A5F]/90 text-lg"
-              >
-                <Mail className="mr-2 w-5 h-5" />
-                NACHRICHT SENDEN
-              </Button>
-              <p className="text-xs text-gray-500 text-center mt-4">
-                * Pflichtfelder
-              </p>
             </CardContent>
           </Card>
         </div>
