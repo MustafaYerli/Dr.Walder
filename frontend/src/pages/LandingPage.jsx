@@ -85,7 +85,7 @@ const LandingPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pb-16 md:pb-0">
       {/* Mobile Sticky Buttons - Only visible on mobile */}
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden flex gap-0 shadow-2xl">
         <a
