@@ -144,7 +144,7 @@ const LandingPage = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
-                  onClick={() => scrollToSection('termin')} 
+                  onClick={openBooking} 
                   size="lg"
                   className="bg-[#1E3A5F] hover:bg-[#1E3A5F]/90 text-lg"
                 >
