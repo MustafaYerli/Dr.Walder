@@ -1,43 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Phone, MapPin, Clock, ChevronRight, Stethoscope, Heart, Activity, Shield, Bone, Users } from 'lucide-react';
+import React, { useState } from 'react';
+import { Phone, MapPin, Clock, CheckCircle, FileText, Award, Users, Heart, Activity, Bone, Shield, Stethoscope, ChevronRight, ChevronDown, Mail } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '../components/ui/accordion';
 
 const LandingPage = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const observerRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    document.querySelectorAll('.fade-in-section').forEach((el) => {
-      observerRef.current.observe(el);
-    });
-
-    return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-    };
-  }, []);
-
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -45,37 +17,57 @@ const LandingPage = () => {
     }
   };
 
-  const services = [
+  const benefits = [
     {
-      icon: Bone,
-      title: 'Gelenkschmerzen',
-      description: 'Behandlung von Knie-, Hüft-, Schulter- und Sprunggelenksbeschwerden'
+      icon: Award,
+      title: 'Neueste Methoden',
+      description: 'Moderne Behandlungsansätze'
     },
     {
-      icon: Activity,
-      title: 'Wirbelsäule',
-      description: 'Diagnostik und Therapie bei Rückenschmerzen und Bandscheibenproblemen'
+      icon: FileText,
+      title: 'Wahlarzt',
+      description: 'Flexible Terminvergabe'
     },
     {
       icon: Heart,
-      title: 'Sportverletzungen',
-      description: 'Expertise in der Behandlung von akuten und chronischen Sportverletzungen'
-    },
-    {
-      icon: Shield,
-      title: 'Arthrose-Therapie',
-      description: 'Konservative und moderne Behandlungsmethoden bei Gelenkverschleiß'
-    },
-    {
-      icon: Stethoscope,
-      title: 'Nachbehandlung',
-      description: 'Professionelle postoperative Betreuung und Rehabilitation'
-    },
-    {
-      icon: Users,
-      title: 'Individuelle Beratung',
-      description: 'Umfassende Diagnostik und persönliche Behandlungskonzepte'
+      title: 'Individuelle Betreuung',
+      description: 'Persönliche Beratung'
     }
+  ];
+
+  const services = [
+    { icon: Bone, title: 'Gelenkschmerzen', description: 'Behandlung von Knie-, Hüft-, Schulter- und Sprunggelenksbeschwerden' },
+    { icon: Activity, title: 'Wirbelsäule', description: 'Diagnostik und Therapie bei Rückenschmerzen und Bandscheibenproblemen' },
+    { icon: Heart, title: 'Sportverletzungen', description: 'Expertise in der Behandlung von akuten und chronischen Sportverletzungen' },
+    { icon: Shield, title: 'Arthrose-Therapie', description: 'Konservative und moderne Behandlungsmethoden bei Gelenkverschleiß' },
+    { icon: Stethoscope, title: 'Nachbehandlung', description: 'Professionelle postoperative Betreuung und Rehabilitation' },
+    { icon: Users, title: 'Prävention', description: 'Vorbeugende Maßnahmen und Gesundheitsberatung' }
+  ];
+
+  const faqs = [
+    {
+      question: 'Wie kann ich einen Termin vereinbaren?',
+      answer: 'Sie können telefonisch unter 01 / 214 14 31 einen Termin vereinbaren oder das Kontaktformular auf dieser Website nutzen.'
+    },
+    {
+      question: 'Werden die Kosten von der Krankenkasse übernommen?',
+      answer: 'Als Wahlarzt rechne ich privat ab. Sie erhalten eine detaillierte Honorarnote, die Sie bei Ihrer Krankenkasse zur Rückerstattung einreichen können. Die Rückerstattung erfolgt nach dem jeweiligen Tarif Ihrer Versicherung.'
+    },
+    {
+      question: 'Welche Unterlagen soll ich zum Termin mitbringen?',
+      answer: 'Bitte bringen Sie relevante Vorbefunde, Röntgenbilder, MRT-Aufnahmen und eine Liste Ihrer aktuellen Medikamente mit.'
+    },
+    {
+      question: 'Wie lange dauert eine Erstuntersuchung?',
+      answer: 'Für eine ausführliche Erstuntersuchung sollten Sie etwa 30-45 Minuten einplanen.'
+    }
+  ];
+
+  const advantages = [
+    'Kurze Wartezeiten',
+    'Ausführliche Beratung',
+    'Modernste Ausstattung',
+    'Zentrale Lage in Wien'
   ];
 
   const openingHours = [
@@ -87,85 +79,85 @@ const LandingPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-teal-50/20">
-      {/* Glassmorphism Header */}
-      <header 
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          scrolled 
-            ? 'bg-white/80 backdrop-blur-md shadow-lg' 
-            : 'bg-white/60 backdrop-blur-sm shadow-sm'
-        }`}
-      >
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <header className="fixed top-0 w-full bg-white shadow-sm z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div>
-              <h1 className="text-2xl font-serif font-bold text-primary">Dr. Ewald Walder</h1>
+              <h1 className="text-2xl font-bold text-gray-900">Dr. Ewald Walder</h1>
               <p className="text-sm text-gray-600">Orthopäde & Unfallchirurg</p>
             </div>
             <div className="flex items-center gap-6">
-              <a href="tel:012141431" className="hidden md:flex items-center gap-2 text-gray-700 hover:text-primary transition-colors">
+              <a href="tel:012141431" className="hidden md:flex items-center gap-2 text-gray-700 hover:text-teal-700 transition-colors">
                 <Phone className="w-4 h-4" />
                 <span className="font-medium">01 / 214 14 31</span>
               </a>
               <Button 
                 onClick={() => scrollToSection('termin')} 
-                className="bg-primary hover:bg-primary/90 hover:scale-105 transition-transform shadow-lg hover:shadow-xl"
+                className="bg-[#1E3A5F] hover:bg-[#1E3A5F]/90"
               >
-                Termin buchen
+                Termin
               </Button>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Enhanced Hero Section */}
-      <section className="relative pt-40 pb-32 overflow-hidden">
-        {/* Floating decoration elements */}
-        <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-primary/5 to-accent/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tr from-accent/5 to-blue-50 rounded-full blur-3xl"></div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8 fade-in-section">
-              <div className="inline-block px-5 py-2 bg-gradient-to-r from-accent/10 to-accent/5 backdrop-blur-sm border border-accent/20 text-accent rounded-full text-sm font-semibold shadow-sm">
-                Wahlarzt in Wien
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-5xl font-bold text-gray-900 leading-tight mb-6">
+                  Spezialist für Orthopädie und Unfallchirurgie in Wien
+                </h2>
+                <p className="text-xl text-gray-600 leading-relaxed mb-4">
+                  OA Dr. Ewald Walder - Wahlarzt
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Professionelle medizinische Versorgung mit Fokus auf individuelle Behandlungskonzepte und moderne Therapiemethoden. Ihre Gesundheit steht im Mittelpunkt meiner Tätigkeit.
+                </p>
               </div>
-              <h2 className="text-6xl md:text-7xl font-serif font-bold text-gray-900 leading-tight">
-                OA Dr. Ewald Walder
-              </h2>
-              <p className="text-2xl text-gray-700 font-medium">
-                Facharzt für Orthopädie und Unfallchirurgie
-              </p>
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Professionelle medizinische Versorgung mit Fokus auf individuelle Behandlungskonzepte und moderne Therapiemethoden.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-5 pt-6">
+
+              <div className="grid grid-cols-3 gap-4">
+                {benefits.map((benefit, index) => {
+                  const Icon = benefit.icon;
+                  return (
+                    <div key={index} className="text-center">
+                      <div className="w-16 h-16 mx-auto mb-3 bg-amber-100 rounded-full flex items-center justify-center">
+                        <Icon className="w-8 h-8 text-amber-600" />
+                      </div>
+                      <h4 className="text-sm font-bold text-gray-900 mb-1">{benefit.title}</h4>
+                      <p className="text-xs text-gray-600">{benefit.description}</p>
+                    </div>
+                  );
+                })}
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   onClick={() => scrollToSection('termin')} 
-                  size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-white group shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 text-lg px-8 py-6"
+                  size="lg"
+                  className="bg-[#1E3A5F] hover:bg-[#1E3A5F]/90 text-lg"
                 >
-                  Termin online buchen
-                  <ChevronRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                  Termin vereinbaren
+                  <ChevronRight className="ml-2 w-5 h-5" />
                 </Button>
-                <Button 
-                  onClick={() => scrollToSection('kontakt')} 
-                  size="lg" 
-                  variant="outline"
-                  className="border-2 border-primary text-primary hover:bg-primary/5 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg px-8 py-6"
-                >
-                  Kontakt & Anfahrt
-                </Button>
+                <p className="text-sm text-gray-600 flex items-center">
+                  <span className="inline-block px-3 py-1 bg-gray-200 rounded-full">Keine Kassen</span>
+                </p>
               </div>
             </div>
-            <div className="relative fade-in-section" style={{animationDelay: '0.2s'}}>
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl blur-2xl"></div>
-              <div className="relative aspect-[4/5] bg-white/40 backdrop-blur-md rounded-3xl border border-white/60 shadow-2xl flex items-center justify-center hover:scale-105 transition-transform duration-500">
+
+            <div className="relative">
+              <div className="aspect-[4/5] bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center shadow-xl">
                 <div className="text-center p-8">
-                  <div className="w-40 h-40 mx-auto bg-gradient-to-br from-primary/10 to-accent/10 rounded-full flex items-center justify-center mb-6 shadow-lg">
-                    <Stethoscope className="w-20 h-20 text-primary" />
+                  <div className="w-32 h-32 mx-auto bg-white rounded-full flex items-center justify-center mb-4 shadow-md">
+                    <Stethoscope className="w-16 h-16 text-[#1E3A5F]" />
                   </div>
-                  <p className="text-gray-500 font-medium text-lg">Foto Platzhalter</p>
+                  <p className="text-gray-500 font-medium">Foto Platzhalter</p>
                 </div>
               </div>
             </div>
@@ -173,22 +165,32 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* About Section with Glassmorphism */}
-      <section id="ueber" className="py-24 relative">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="backdrop-blur-sm bg-white/60 rounded-3xl border border-white/80 shadow-2xl p-12 fade-in-section">
-            <div className="text-center mb-12">
-              <h3 className="text-5xl font-serif font-bold text-gray-900 mb-4">Über Dr. Walder</h3>
-              <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+      {/* About Section */}
+      <section id="ueber" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center shadow-lg">
+                <div className="text-center p-8">
+                  <div className="w-24 h-24 mx-auto bg-white rounded-full flex items-center justify-center mb-4 shadow-md">
+                    <Users className="w-12 h-12 text-[#1E3A5F]" />
+                  </div>
+                  <p className="text-gray-500 font-medium">Praxis Foto</p>
+                </div>
+              </div>
             </div>
-            <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed space-y-6">
-              <p className="text-center text-xl">
+            <div className="order-1 md:order-2 space-y-6">
+              <h3 className="text-4xl font-bold text-gray-900">
+                Arzt mit langjähriger Erfahrung
+              </h3>
+              <div className="w-16 h-1 bg-teal-600"></div>
+              <p className="text-lg text-gray-600 leading-relaxed">
                 Mit langjähriger Erfahrung in der Orthopädie und Unfallchirurgie biete ich meinen Patienten eine umfassende und moderne medizinische Versorgung.
               </p>
-              <p className="text-center text-lg">
+              <p className="text-lg text-gray-600 leading-relaxed">
                 Meine Behandlungsphilosophie basiert auf einer gründlichen Diagnostik, individuellen Therapiekonzepten und dem Einsatz bewährter sowie innovativer Behandlungsmethoden. Als Wahlarzt nehme ich mir die Zeit, die für eine qualitativ hochwertige medizinische Betreuung notwendig ist.
               </p>
-              <p className="text-center text-lg">
+              <p className="text-lg text-gray-600 leading-relaxed">
                 In meiner Ordination in Wien steht Ihr Wohlbefinden im Mittelpunkt – von der ersten Konsultation bis zur erfolgreichen Genesung.
               </p>
             </div>
@@ -196,34 +198,33 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Premium Services Section */}
-      <section id="leistungen" className="py-24 relative">
+      {/* Services Section */}
+      <section id="leistungen" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20 fade-in-section">
-            <h3 className="text-5xl font-serif font-bold text-gray-900 mb-4">Leistungsspektrum</h3>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-accent mx-auto mb-8 rounded-full"></div>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Umfassende orthopädische und unfallchirurgische Behandlungen für Ihre Gesundheit
+          <div className="text-center mb-16">
+            <h3 className="text-4xl font-bold text-gray-900 mb-4">Leistungen</h3>
+            <div className="w-16 h-1 bg-teal-600 mx-auto mb-6"></div>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Mein Leistungsspektrum umfasst die gesamte konservative Orthopädie und Unfallchirurgie
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
                 <div
                   key={index}
-                  className="fade-in-section"
-                  style={{animationDelay: `${index * 0.1}s`}}
+                  className="bg-white p-6 rounded-lg hover:shadow-lg transition-all duration-300 border border-gray-200 group cursor-pointer"
                 >
-                  <Card className="border-0 bg-white/60 backdrop-blur-md shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-105 h-full group">
-                    <CardContent className="p-8">
-                      <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                        <Icon className="w-8 h-8 text-primary" />
-                      </div>
-                      <h4 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h4>
-                      <p className="text-gray-600 leading-relaxed">{service.description}</p>
-                    </CardContent>
-                  </Card>
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center">
+                      <Icon className="w-6 h-6 text-amber-600" />
+                    </div>
+                    <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-teal-600 transition-colors" />
+                  </div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h4>
+                  <p className="text-gray-600 text-sm">{service.description}</p>
                 </div>
               );
             })}
@@ -231,76 +232,197 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Premium Appointment Section */}
-      <section id="termin" className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"></div>
-        
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 fade-in-section">
-          <h3 className="text-5xl font-serif font-bold mb-8 text-white">Termin vereinbaren</h3>
-          <p className="text-2xl mb-12 text-white/95">
-            Buchen Sie Ihren Termin ganz einfach online oder kontaktieren Sie uns telefonisch.
-          </p>
-          <div className="bg-white/15 backdrop-blur-xl rounded-3xl border border-white/30 p-12 mb-8 shadow-2xl hover:bg-white/20 transition-all duration-300">
-            <Stethoscope className="w-24 h-24 mx-auto mb-8 text-white/90" />
-            <p className="text-xl text-white/95 mb-10">
-              Online-Terminbuchungssystem wird hier integriert
-            </p>
-            <div className="flex flex-col sm:flex-row gap-5 justify-center">
-              <Button 
-                size="lg" 
-                className="bg-white text-primary hover:bg-gray-100 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 text-lg px-8 py-6"
-              >
-                Terminbuchung (in Kürze)
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white/20 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 text-lg px-8 py-6"
-                onClick={() => window.location.href = 'tel:012141431'}
-              >
-                <Phone className="mr-2 w-6 h-6" />
-                Telefonisch buchen
-              </Button>
-            </div>
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h3 className="text-4xl font-bold text-gray-900 mb-4">FAQ - Häufig gestellte Fragen</h3>
+            <div className="w-16 h-1 bg-teal-600 mx-auto"></div>
+          </div>
+
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`} className="border border-gray-200 rounded-lg px-6">
+                <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-teal-700">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-600 leading-relaxed">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+
+      {/* Transparent Fees Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-bold text-gray-900 mb-4">Transparente Honorare</h3>
+            <div className="w-16 h-1 bg-teal-600 mx-auto mb-8"></div>
+          </div>
+
+          <Card className="border-0 shadow-lg">
+            <CardContent className="p-8">
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-2">Wahlarzt-Honorar</h4>
+                    <p className="text-gray-600">
+                      Als Wahlarzt rechne ich nach der ÖÄK-Honorarordnung ab. Sie erhalten eine detaillierte Rechnung, die Sie bei Ihrer Krankenkasse zur Rückerstattung einreichen können.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-2">Rückerstattung</h4>
+                    <p className="text-gray-600">
+                      Die Rückerstattung durch Ihre Krankenkasse beträgt je nach Versicherung ca. 80% des Kassentarifs. Privatzusatzversicherungen übernehmen häufig einen Großteil der Kosten.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-2">Transparenz</h4>
+                    <p className="text-gray-600">
+                      Auf Wunsch informiere ich Sie gerne vor der Behandlung über die voraussichtlichen Kosten.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h3 className="text-4xl font-bold text-gray-900 mb-4">Wir helfen Ihnen schnell weiter</h3>
+            <div className="w-16 h-1 bg-teal-600 mx-auto"></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {advantages.map((advantage, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center">
+                  <CheckCircle className="w-8 h-8 text-amber-600" />
+                </div>
+                <p className="text-lg font-semibold text-gray-900">{advantage}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Premium Contact Section */}
-      <section id="kontakt" className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20 fade-in-section">
-            <h3 className="text-5xl font-serif font-bold text-gray-900 mb-4">Kontakt & Anfahrt</h3>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+      {/* Appointment Section */}
+      <section id="termin" className="py-20 bg-[#1E3A5F] text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-bold mb-4">Termin vereinbaren</h3>
+            <p className="text-xl text-white/90">
+              Kontaktieren Sie uns für einen Termin
+            </p>
           </div>
+
+          <Card className="border-0 shadow-2xl">
+            <CardContent className="p-8">
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Vorname und Nachname *
+                  </label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent"
+                    placeholder="Max Mustermann"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    E-Mail *
+                  </label>
+                  <input
+                    type="email"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent"
+                    placeholder="max@example.com"
+                  />
+                </div>
+              </div>
+              <div className="mb-8">
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Telefonnummer *
+                </label>
+                <input
+                  type="tel"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent"
+                  placeholder="+43 123 456789"
+                />
+              </div>
+              <div className="mb-8">
+                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  Ihre Nachricht
+                </label>
+                <textarea
+                  rows="4"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-600 focus:border-transparent"
+                  placeholder="Beschreiben Sie kurz Ihr Anliegen..."
+                ></textarea>
+              </div>
+              <Button 
+                size="lg"
+                className="w-full bg-[#1E3A5F] hover:bg-[#1E3A5F]/90 text-lg"
+              >
+                <Mail className="mr-2 w-5 h-5" />
+                NACHRICHT SENDEN
+              </Button>
+              <p className="text-xs text-gray-500 text-center mt-4">
+                * Pflichtfelder
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="kontakt" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h3 className="text-4xl font-bold text-gray-900 mb-4">Kontakt & Anfahrt</h3>
+            <div className="w-16 h-1 bg-teal-600 mx-auto"></div>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-8">
-              <Card className="border-0 bg-white/60 backdrop-blur-md shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 fade-in-section">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-5">
-                    <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
-                      <MapPin className="w-7 h-7 text-primary" />
+            <div className="space-y-6">
+              <Card className="border-0 shadow-md">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-amber-600" />
                     </div>
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900 mb-3">Adresse</h4>
-                      <p className="text-gray-600 text-lg">Praterstraße 66/1/69b</p>
-                      <p className="text-gray-600 text-lg">1020 Wien</p>
+                      <h4 className="text-lg font-bold text-gray-900 mb-2">Adresse</h4>
+                      <p className="text-gray-600">Praterstraße 66/1/69b</p>
+                      <p className="text-gray-600">1020 Wien</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="border-0 bg-white/60 backdrop-blur-md shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 fade-in-section" style={{animationDelay: '0.1s'}}>
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-5">
-                    <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
-                      <Phone className="w-7 h-7 text-primary" />
+              <Card className="border-0 shadow-md">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-6 h-6 text-amber-600" />
                     </div>
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900 mb-3">Telefon</h4>
-                      <a href="tel:012141431" className="text-primary hover:text-primary/80 hover:underline text-xl font-semibold transition-colors">
+                      <h4 className="text-lg font-bold text-gray-900 mb-2">Telefon</h4>
+                      <a href="tel:012141431" className="text-[#1E3A5F] hover:underline text-lg font-semibold">
                         01 / 214 14 31
                       </a>
                     </div>
@@ -308,19 +430,19 @@ const LandingPage = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-0 bg-white/60 backdrop-blur-md shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 fade-in-section" style={{animationDelay: '0.2s'}}>
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-5">
-                    <div className="w-14 h-14 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
-                      <Clock className="w-7 h-7 text-primary" />
+              <Card className="border-0 shadow-md">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-6 h-6 text-amber-600" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-xl font-bold text-gray-900 mb-5">Ordinationszeiten</h4>
-                      <div className="space-y-3">
+                      <h4 className="text-lg font-bold text-gray-900 mb-4">Ordinationszeiten</h4>
+                      <div className="space-y-2">
                         {openingHours.map((item, index) => (
-                          <div key={index} className="flex justify-between items-center py-2 border-b border-gray-200/50 last:border-0">
-                            <span className="text-gray-700 font-semibold text-lg">{item.day}</span>
-                            <span className={item.hours === 'Geschlossen' ? 'text-gray-400 text-lg' : 'text-gray-900 font-semibold text-lg'}>
+                          <div key={index} className="flex justify-between items-center py-2 border-b border-gray-100 last:border-0">
+                            <span className="text-gray-700 font-medium">{item.day}</span>
+                            <span className={item.hours === 'Geschlossen' ? 'text-gray-400' : 'text-gray-900 font-semibold'}>
                               {item.hours}
                             </span>
                           </div>
@@ -332,18 +454,16 @@ const LandingPage = () => {
               </Card>
             </div>
 
-            <div className="fade-in-section" style={{animationDelay: '0.3s'}}>
-              <Card className="border-0 bg-white/60 backdrop-blur-md shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
-                <CardContent className="p-0 h-full min-h-[600px]">
-                  <div className="w-full h-full bg-gradient-to-br from-primary/5 via-accent/5 to-blue-50/50 rounded-lg flex items-center justify-center relative overflow-hidden">
-                    <div className="absolute top-10 right-10 w-32 h-32 bg-accent/10 rounded-full blur-2xl"></div>
-                    <div className="absolute bottom-10 left-10 w-40 h-40 bg-primary/10 rounded-full blur-2xl"></div>
-                    <div className="text-center p-8 relative z-10">
-                      <MapPin className="w-24 h-24 mx-auto mb-6 text-primary/70" />
-                      <p className="text-gray-600 font-semibold mb-6 text-lg">Google Maps wird hier eingebettet</p>
+            <div>
+              <Card className="border-0 shadow-md h-full">
+                <CardContent className="p-0 h-full min-h-[500px]">
+                  <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center">
+                    <div className="text-center p-8">
+                      <MapPin className="w-20 h-20 mx-auto mb-4 text-[#1E3A5F]/50" />
+                      <p className="text-gray-500 font-medium mb-4">Google Maps wird hier eingebettet</p>
                       <Button 
                         variant="outline"
-                        className="border-2 border-primary text-primary hover:bg-primary/5 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                        className="border-[#1E3A5F] text-[#1E3A5F] hover:bg-[#1E3A5F]/5"
                         onClick={() => window.open('https://www.google.com/maps/search/?api=1&query=Praterstraße+66/1/69b,+1020+Wien', '_blank')}
                       >
                         In Google Maps öffnen
@@ -357,48 +477,42 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Premium Footer */}
-      <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid md:grid-cols-3 gap-12 mb-12">
+      {/* Footer */}
+      <footer className="bg-[#1E3A5F] text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h4 className="text-2xl font-serif font-bold mb-4">OA Dr. Ewald Walder</h4>
-              <p className="text-gray-400 mb-2 text-lg">Facharzt für Orthopädie und Unfallchirurgie</p>
-              <p className="text-gray-400 text-lg">Wahlarzt in Wien</p>
+              <h4 className="text-xl font-bold mb-4">OA Dr. Ewald Walder</h4>
+              <p className="text-white/80 mb-2">Facharzt für Orthopädie und Unfallchirurgie</p>
+              <p className="text-white/80">Wahlarzt in Wien</p>
             </div>
             <div>
-              <h5 className="font-bold mb-5 text-lg">Kontakt</h5>
-              <div className="space-y-3 text-gray-400">
-                <p className="text-lg">Praterstraße 66/1/69b</p>
-                <p className="text-lg">1020 Wien</p>
-                <a href="tel:012141431" className="text-accent hover:text-accent/80 transition-colors block text-lg font-semibold">
+              <h5 className="font-bold mb-4">Kontakt</h5>
+              <div className="space-y-2 text-white/80">
+                <p>Praterstraße 66/1/69b</p>
+                <p>1020 Wien</p>
+                <a href="tel:012141431" className="text-teal-400 hover:text-teal-300 transition-colors block">
                   Tel: 01 / 214 14 31
                 </a>
               </div>
             </div>
             <div>
-              <h5 className="font-bold mb-5 text-lg">Rechtliches</h5>
-              <div className="space-y-3">
-                <a href="#impressum" className="block text-gray-400 hover:text-white transition-colors text-lg">
+              <h5 className="font-bold mb-4">Rechtliches</h5>
+              <div className="space-y-2">
+                <a href="#impressum" className="block text-white/80 hover:text-white transition-colors">
                   Impressum
                 </a>
-                <a href="#datenschutz" className="block text-gray-400 hover:text-white transition-colors text-lg">
+                <a href="#datenschutz" className="block text-white/80 hover:text-white transition-colors">
                   Datenschutz
                 </a>
+                <a href="#genderhinweis" className="block text-white/80 hover:text-white transition-colors">
+                  Genderhinweis
+                </a>
               </div>
-              <Button 
-                onClick={() => scrollToSection('termin')} 
-                className="bg-accent hover:bg-accent/90 mt-6 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
-              >
-                Termin buchen
-              </Button>
             </div>
           </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p className="text-lg">© {new Date().getFullYear()} Dr. Ewald Walder. Alle Rechte vorbehalten.</p>
+          <div className="border-t border-white/20 pt-8 text-center text-white/70">
+            <p>© {new Date().getFullYear()} Dr. Ewald Walder. Alle Rechte vorbehalten.</p>
           </div>
         </div>
       </footer>
