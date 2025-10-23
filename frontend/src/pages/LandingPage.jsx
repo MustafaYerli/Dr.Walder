@@ -100,7 +100,7 @@ const LandingPage = () => {
                 <span className="font-medium">01 / 214 14 31</span>
               </a>
               <Button 
-                onClick={() => scrollToSection('termin')} 
+                onClick={openBooking} 
                 className="bg-[#1E3A5F] hover:bg-[#1E3A5F]/90"
               >
                 Termin
