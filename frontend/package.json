@@ -1,0 +1,12 @@
+{
+  "name": "dr-walder-static",
+  "version": "1.0.0",
+  "description": "Static website for Dr. Walder",
+  "main": "serve.js",
+  "scripts": {
+    "start": "node serve.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
