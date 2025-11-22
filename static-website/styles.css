@@ -20,6 +20,18 @@ body {
     padding-bottom: 80px;
 }
 
+/* Accessibility Mode */
+body.accessibility-mode {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+body.accessibility-mode * {
+    animation: none !important;
+    transition: none !important;
+}
+
 @media (min-width: 768px) {
     body {
         padding-bottom: 0;
