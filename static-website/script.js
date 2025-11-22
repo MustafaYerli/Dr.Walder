@@ -67,6 +67,22 @@ window.addEventListener('scroll', function() {
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 }, false);
 
+// Accessibility Mode Toggle
+function toggleAccessibilityMode() {
+    const body = document.body;
+    const button = document.getElementById('accessibility-toggle');
+    
+    if (body.classList.contains('accessibility-mode')) {
+        body.classList.remove('accessibility-mode');
+        button.textContent = 'Barrierefreie Seite';
+        button.setAttribute('aria-label', 'Barrierefreie Seite einschalten');
+    } else {
+        body.classList.add('accessibility-mode');
+        button.textContent = 'Normale Ansicht';
+        button.setAttribute('aria-label', 'Barrierefreie Seite ausschalten, zur normalen Ansicht wechseln');
+    }
+}
+
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
     setCurrentYear();
@@ -74,5 +90,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Re-initialize Lucide icons after DOM is ready
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
+    }
+    
+    // Setup accessibility toggle button
+    const accessibilityButton = document.getElementById('accessibility-toggle');
+    if (accessibilityButton) {
+        accessibilityButton.addEventListener('click', toggleAccessibilityMode);
     }
 });
