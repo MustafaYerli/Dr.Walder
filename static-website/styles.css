@@ -516,7 +516,7 @@ body {
 .service-icon {
     width: 3rem;
     height: 3rem;
-    background: #FEF3C7;
+    background: #e8f5d8;
     border-radius: 0.5rem;
     display: flex;
     align-items: center;
@@ -526,7 +526,7 @@ body {
 .service-icon i {
     width: 1.5rem;
     height: 1.5rem;
-    color: #D97706;
+    color: #1E3A5F;
 }
 
 .service-arrow {
