@@ -190,12 +190,12 @@ body {
 }
 
 .btn-primary {
-    background: #1E3A5F;
+    background: #80cc28;
     color: white;
 }
 
 .btn-primary:hover {
-    background: rgba(30, 58, 95, 0.9);
+    background: #6fb020;
 }
 
 .btn-outline {
