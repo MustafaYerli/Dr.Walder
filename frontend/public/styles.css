@@ -41,7 +41,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #14B8A6;
+    background: #80cc28;
 }
 
 /* Layout */
@@ -163,7 +163,7 @@ body {
 }
 
 .header-phone:hover {
-    color: #0F766E;
+    color: #80cc28;
 }
 
 .icon-sm {
@@ -435,13 +435,13 @@ body {
 .title-underline {
     width: 4rem;
     height: 0.25rem;
-    background: #14B8A6;
+    background: #80cc28;
 }
 
 .title-underline-center {
     width: 4rem;
     height: 0.25rem;
-    background: #14B8A6;
+    background: #80cc28;
     margin: 0 auto 1.5rem;
 }
 
@@ -525,7 +525,7 @@ body {
 }
 
 .service-card:hover .service-arrow {
-    color: #14B8A6;
+    color: #80cc28;
 }
 
 .service-title {
@@ -570,7 +570,7 @@ body {
 }
 
 .accordion-trigger:hover {
-    color: #0F766E;
+    color: #80cc28;
 }
 
 .accordion-icon {
@@ -623,7 +623,7 @@ body {
 .fee-icon {
     width: 1.5rem;
     height: 1.5rem;
-    color: #14B8A6;
+    color: #80cc28;
     flex-shrink: 0;
     margin-top: 0.25rem;
 }
