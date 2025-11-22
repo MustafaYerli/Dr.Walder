@@ -42,6 +42,31 @@ function setCurrentYear() {
     }
 }
 
+// Navbar Scroll Animation
+let lastScrollTop = 0;
+const navbar = document.getElementById('navbar');
+const heroSection = document.querySelector('.hero');
+
+window.addEventListener('scroll', function() {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    const heroHeight = heroSection ? heroSection.offsetHeight : 0;
+    
+    // If at the top of the page (in hero section), always show navbar
+    if (currentScroll <= 100) {
+        navbar.classList.remove('hidden');
+    } 
+    // If scrolling down and past the hero section, hide navbar
+    else if (currentScroll > lastScrollTop && currentScroll > 100) {
+        navbar.classList.add('hidden');
+    } 
+    // If scrolling up, show navbar
+    else if (currentScroll < lastScrollTop) {
+        navbar.classList.remove('hidden');
+    }
+    
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+}, false);
+
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
     setCurrentYear();
