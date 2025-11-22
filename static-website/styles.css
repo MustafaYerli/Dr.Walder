@@ -89,7 +89,7 @@ body {
 
 .mobile-btn {
     flex: 1;
-    background: #1E3A5F;
+    background: #80cc28;
     color: white;
     font-weight: 700;
     padding: 1rem;
@@ -104,7 +104,7 @@ body {
 }
 
 .mobile-btn:hover {
-    background: rgba(30, 58, 95, 0.9);
+    background: #6fb020;
 }
 
 .mobile-btn .icon {
