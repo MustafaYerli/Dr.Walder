@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Ewald Walder - Orthopäde & Unfallchirurg in Wien</title>
+    <meta name="description" content="OA Dr. Ewald Walder - Facharzt für Orthopädie und Unfallchirurgie in Wien. Wahlarzt mit langjähriger Erfahrung.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Mobile Sticky Buttons - Only visible on mobile -->
+    <div class="mobile-sticky-footer">
+        <a href="tel:012141431" class="mobile-btn mobile-btn-call">
+            <i data-lucide="phone" class="icon"></i>
+            <span>Anrufen</span>
+        </a>
+        <button onclick="openBooking()" class="mobile-btn mobile-btn-booking">
+            <i data-lucide="stethoscope" class="icon"></i>
+            <span>Online-Termin</span>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="navbar">
+        <div class="container">
+            <div class="header-content-centered">
+                <img src="logo.png" alt="Dr. Ewald Walder - Orthopäde & Unfallchirurg" style="height: 70px; width: auto;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h2 class="hero-title">
+                            Facharzt für Orthopädie und Unfallchirurgie in Wien
+                        </h2>
+                        <p class="hero-subtitle">
+                            OA Dr. Ewald Walder - Wahlarzt
+                        </p>
+                        <p class="hero-description">
+                            Professionelle medizinische Versorgung mit Fokus auf individuelle Behandlungskonzepte und moderne Therapiemethoden. Ihre Gesundheit steht im Mittelpunkt meiner Tätigkeit.
+                        </p>
+                    </div>
+
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i data-lucide="award"></i>
+                            </div>
+                            <h4 class="benefit-title">Neueste Methoden</h4>
+                            <p class="benefit-description">Moderne Behandlungsansätze</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i data-lucide="file-text"></i>
+                            </div>
+                            <h4 class="benefit-title">Wahlarzt</h4>
+                            <p class="benefit-description">Flexible Terminvergabe</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i data-lucide="heart"></i>
+                            </div>
+                            <h4 class="benefit-title">Individuelle Betreuung</h4>
+                            <p class="benefit-description">Persönliche Beratung</p>
+                        </div>
+                    </div>
+
+                    <div class="hero-cta">
+                        <button onclick="openBooking()" class="btn btn-primary btn-lg">
+                            Termin vereinbaren
+                            <i data-lucide="chevron-right" class="icon-sm"></i>
+                        </button>
+                        <span class="badge">Keine Kassen</span>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="placeholder-box">
+                        <div class="placeholder-icon">
+                            <i data-lucide="stethoscope"></i>
+                        </div>
+                        <p class="placeholder-text">Foto Platzhalter</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title-center">Wir helfen Ihnen schnell weiter</h3>
+                <div class="title-underline-center"></div>
+            </div>
+
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i data-lucide="check-circle"></i>
+                    </div>
+                    <p class="advantage-text">Kurze Wartezeiten</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i data-lucide="check-circle"></i>
+                    </div>
+                    <p class="advantage-text">Ausführliche Beratung</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i data-lucide="check-circle"></i>
+                    </div>
+                    <p class="advantage-text">Modernste Ausstattung</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-icon">
+                        <i data-lucide="check-circle"></i>
+                    </div>
+                    <p class="advantage-text">Zentrale Lage in Wien</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="ueber" class="section">
+        <div class="container">
+            <div class="section-grid">
+                <div class="about-image-wrapper">
+                    <div class="placeholder-box">
+                        <div class="placeholder-icon">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <p class="placeholder-text">Praxis Foto</p>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h3 class="section-title">
+                        Arzt mit langjähriger Erfahrung
+                    </h3>
+                    <div class="title-underline"></div>
+                    <p class="text-lg">
+                        Mit langjähriger Erfahrung in der Orthopädie und Unfallchirurgie biete ich meinen Patienten eine umfassende und moderne medizinische Versorgung.
+                    </p>
+                    <p class="text-lg">
+                        Meine Behandlungsphilosophie basiert auf einer gründlichen Diagnostik, individuellen Therapiekonzepten und dem Einsatz bewährter sowie innovativer Behandlungsmethoden. Als Wahlarzt nehme ich mir die Zeit, die für eine qualitativ hochwertige medizinische Betreuung notwendig ist.
+                    </p>
+                    <p class="text-lg">
+                        In meiner Ordination in Wien steht Ihr Wohlbefinden im Mittelpunkt – von der ersten Konsultation bis zur erfolgreichen Genesung.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="leistungen" class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title-center">Leistungen</h3>
+                <div class="title-underline-center"></div>
+                <p class="section-description">
+                    Mein Leistungsspektrum umfasst die gesamte konservative Orthopädie und Unfallchirurgie
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="bone"></i>
+                        </div>
+                        <i data-lucide="chevron-right" class="service-arrow"></i>
+                    </div>
+                    <h4 class="service-title">Gelenkschmerzen</h4>
+                    <p class="service-description">Behandlung von Knie-, Hüft-, Schulter- und Sprunggelenksbeschwerden</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="activity"></i>
+                        </div>
+                        <i data-lucide="chevron-right" class="service-arrow"></i>
+                    </div>
+                    <h4 class="service-title">Wirbelsäule</h4>
+                    <p class="service-description">Diagnostik und Therapie bei Rückenschmerzen und Bandscheibenproblemen</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="heart"></i>
+                        </div>
+                        <i data-lucide="chevron-right" class="service-arrow"></i>
+                    </div>
+                    <h4 class="service-title">Sportverletzungen</h4>
+                    <p class="service-description">Expertise in der Behandlung von akuten und chronischen Sportverletzungen</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="shield"></i>
+                        </div>
+                        <i data-lucide="chevron-right" class="service-arrow"></i>
+                    </div>
+                    <h4 class="service-title">Arthrose-Therapie</h4>
+                    <p class="service-description">Konservative und moderne Behandlungsmethoden bei Gelenkverschleiß</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="stethoscope"></i>
+                        </div>
+                        <i data-lucide="chevron-right" class="service-arrow"></i>
+                    </div>
+                    <h4 class="service-title">Nachbehandlung</h4>
+                    <p class="service-description">Professionelle postoperative Betreuung und Rehabilitation</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <i data-lucide="chevron-right" class="service-arrow"></i>
+                    </div>
+                    <h4 class="service-title">Prävention</h4>
+                    <p class="service-description">Vorbeugende Maßnahmen und Gesundheitsberatung</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container-narrow">
+            <div class="section-header">
+                <h3 class="section-title-center">FAQ - Häufig gestellte Fragen</h3>
+                <div class="title-underline-center"></div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(0)">
+                        <span>Brauche ich eine Überweisung?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-0"></i>
+                    </button>
+                    <div class="accordion-content" id="content-0">
+                        <p>Für einen Termin bei OA Dr. Ewald Walder, Facharzt für Orthopädie und Unfallchirurgie in Wien, ist keine Überweisung erforderlich. Patienten können unmittelbar einen Termin zur orthopädischen Untersuchung oder Behandlung buchen.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(1)">
+                        <span>Wie buche ich einen Termin?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-1"></i>
+                    </button>
+                    <div class="accordion-content" id="content-1">
+                        <p>Die Terminvereinbarung bei OA Dr. Ewald Walder ist sowohl online als auch telefonisch unter 01 214 14 31 möglich. Die Onlinebuchung bietet eine schnelle und flexible Möglichkeit, orthopädische Termine zu reservieren.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(2)">
+                        <span>Welche Beschwerden behandelt Dr. Walder?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-2"></i>
+                    </button>
+                    <div class="accordion-content" id="content-2">
+                        <p>OA Dr. Ewald Walder deckt ein breites Spektrum orthopädischer Erkrankungen ab. Dazu zählen Knie, Hüfte und Schulter, Rückenschmerzen, Bandscheibenprobleme, Sportverletzungen und Arthrose. Auch Nachbehandlungen nach Operationen gehören zu seinen Schwerpunkten.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(3)">
+                        <span>Wie läuft ein Wahlarzttermin ab?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-3"></i>
+                    </button>
+                    <div class="accordion-content" id="content-3">
+                        <p>Ein Termin bei OA Dr. Ewald Walder umfasst eine ausführliche orthopädische Untersuchung ohne Zeitdruck. Patienten erhalten verständliche Erklärungen zur Diagnose und eine maßgeschneiderte Therapieempfehlung.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(4)">
+                        <span>Wie funktioniert die Kostenrückerstattung?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-4"></i>
+                    </button>
+                    <div class="accordion-content" id="content-4">
+                        <p>Die Rückerstattung der Behandlungskosten bei OA Dr. Ewald Walder läuft vollständig automatisch über die Krankenkasse. Patienten müssen keine Unterlagen einreichen und profitieren von einer effizienten, direkten Abrechnung ohne eigene Mitarbeit.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(5)">
+                        <span>Gibt es barrierefreien Zugang zur Ordination?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-5"></i>
+                    </button>
+                    <div class="accordion-content" id="content-5">
+                        <p>Die Ordination von OA Dr. Ewald Walder verfügt über einen vollständig barrierefreien Zugang. Dadurch ist die Praxis besonders komfortabel für Patienten mit eingeschränkter Mobilität erreichbar.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(6)">
+                        <span>Wo kann ich parken?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-6"></i>
+                    </button>
+                    <div class="accordion-content" id="content-6">
+                        <p>Entlang der Praterstraße stehen viele Parkplätze zur Verfügung. Zusätzlich befinden sich APCOA Tiefgaragen in der Praterstraße 62 und Afrikanergasse 3.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(7)">
+                        <span>Wo finden Vor- und Nachbetreuungen statt?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-7"></i>
+                    </button>
+                    <div class="accordion-content" id="content-7">
+                        <p>OA Dr. Ewald Walder ermöglicht Patienten eine umfassende Betreuung im Herz Jesu Krankenhaus in 1030 Wien. Sowohl vorbereitende Untersuchungen als auch Nachkontrollen nach orthopädischen Eingriffen können dort stattfinden.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fees Section -->
+    <section class="section section-gray">
+        <div class="container-narrow">
+            <div class="section-header">
+                <h3 class="section-title-center">Transparente Honorare</h3>
+                <div class="title-underline-center"></div>
+            </div>
+
+            <div class="card">
+                <div class="fee-item">
+                    <i data-lucide="check-circle" class="fee-icon"></i>
+                    <div>
+                        <h4 class="fee-title">Wahlarzt-Honorar</h4>
+                        <p class="fee-description">
+                            Die Verrechnung erfolgt nach der Honorarordnung der Österreichischen Ärztekammer. Die Abrechnung wird automatisch über die Versicherung durchgeführt, sodass Patienten keine Rechnung selbst einreichen müssen.
+                        </p>
+                    </div>
+                </div>
+                <div class="fee-item">
+                    <i data-lucide="check-circle" class="fee-icon"></i>
+                    <div>
+                        <h4 class="fee-title">Rückerstattung</h4>
+                        <p class="fee-description">
+                            Die Rückerstattung erfolgt direkt durch die Krankenkasse. Der erstattete Betrag entspricht je nach Versicherung in der Regel einem Großteil des Kassentarifs. Bestehende Zusatzversicherungen übernehmen häufig weitere Kosten.
+                        </p>
+                    </div>
+                </div>
+                <div class="fee-item">
+                    <i data-lucide="check-circle" class="fee-icon"></i>
+                    <div>
+                        <h4 class="fee-title">Transparenz</h4>
+                        <p class="fee-description">
+                            Vor jeder Behandlung erhalten Patienten auf Wunsch eine klare Information über die zu erwartenden Kosten, damit alle Leistungen nachvollziehbar und transparent bleiben.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="termin" class="section section-dark">
+        <div class="container-narrow">
+            <div class="appointment-header">
+                <h3 class="section-title-center white">Termin vereinbaren</h3>
+                <p class="appointment-subtitle">
+                    Buchen Sie Ihren Termin bequem online
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="appointment-content">
+                    <i data-lucide="stethoscope" class="appointment-icon"></i>
+                    <h4 class="appointment-title">
+                        Online-Terminbuchung
+                    </h4>
+                    <p class="appointment-description">
+                        Wählen Sie einen passenden Termin in unserem Online-Kalender
+                    </p>
+                    <button onclick="openBooking()" class="btn btn-primary btn-lg">
+                        Jetzt Termin buchen
+                        <i data-lucide="chevron-right" class="icon-sm"></i>
+                    </button>
+                    <div class="appointment-divider">
+                        <p class="appointment-or">
+                            Oder rufen Sie uns direkt an:
+                        </p>
+                        <a href="tel:012141431" class="appointment-phone">
+                            <i data-lucide="phone" class="icon-sm"></i>
+                            01 / 214 14 31
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontakt" class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="section-title-center">Kontakt & Anfahrt</h3>
+                <div class="title-underline-center"></div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-header">
+                            <div class="contact-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <h4 class="contact-title">Adresse</h4>
+                                <p class="contact-text">Praterstraße 66/1/69b</p>
+                                <p class="contact-text">1020 Wien</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-header">
+                            <div class="contact-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="contact-title">Telefon</h4>
+                                <a href="tel:012141431" class="contact-phone">
+                                    01 / 214 14 31
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-header">
+                            <div class="contact-icon">
+                                <i data-lucide="clock"></i>
+                            </div>
+                            <div class="opening-hours-wrapper">
+                                <h4 class="contact-title">Ordinationszeiten</h4>
+                                <div class="opening-hours">
+                                    <div class="hours-row">
+                                        <span class="hours-day">Montag</span>
+                                        <span class="hours-time">09:00 - 16:00</span>
+                                    </div>
+                                    <div class="hours-row">
+                                        <span class="hours-day">Dienstag</span>
+                                        <span class="hours-time closed">Geschlossen</span>
+                                    </div>
+                                    <div class="hours-row">
+                                        <span class="hours-day">Mittwoch</span>
+                                        <span class="hours-time">14:00 - 18:00</span>
+                                    </div>
+                                    <div class="hours-row">
+                                        <span class="hours-day">Donnerstag</span>
+                                        <span class="hours-time">09:00 - 16:00</span>
+                                    </div>
+                                    <div class="hours-row">
+                                        <span class="hours-day">Freitag</span>
+                                        <span class="hours-time closed">Geschlossen</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div class="contact-card">
+                        <div class="contact-header" style="display: block;">
+                            <h4 class="contact-title" style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                                <i data-lucide="navigation" style="width: 1.5rem; height: 1.5rem; color: #1E3A5F;"></i>
+                                Anfahrt
+                            </h4>
+                            <p class="contact-text" style="margin-bottom: 0.75rem; line-height: 1.6;">
+                                Unsere Ordination ist bequem mit der <strong>U1 – Station Nestroyplatz</strong> erreichbar und bietet einen barrierefreien Zugang direkt aus der U-Bahn.
+                            </p>
+                            <p class="contact-text" style="line-height: 1.6;">
+                                Für die Anreise mit dem Auto stehen zahlreiche Parkplätze entlang der Praterstraße sowie APCOA-Tiefgaragen in der Praterstraße 62 und Afrikanergasse 3 zur Verfügung.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="map-wrapper">
+                        <img src="Anfahrt_Dr.Walder.png" alt="Anfahrt zur Ordination Dr. Walder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.5rem; cursor: pointer;" onclick="openMaps()">
+                    </div>
+                    <div style="text-align: center;">
+                        <button onclick="openMaps()" class="btn btn-outline">
+                            Google Maps
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 class="footer-title">OA Dr. Ewald Walder</h4>
+                    <p class="footer-text">Facharzt für Orthopädie und Unfallchirurgie</p>
+                    <p class="footer-text">Wahlarzt in Wien</p>
+                </div>
+                <div>
+                    <h5 class="footer-subtitle">Kontakt</h5>
+                    <div class="footer-contact">
+                        <p class="footer-text">Praterstraße 66/1/69b</p>
+                        <p class="footer-text">1020 Wien</p>
+                        <a href="tel:012141431" class="footer-link">
+                            Tel: 01 / 214 14 31
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="footer-subtitle">Rechtliches</h5>
+                    <div class="footer-links">
+                        <a href="#impressum" class="footer-link">Impressum</a>
+                        <a href="#datenschutz" class="footer-link">Datenschutz</a>
+                        <a href="#genderhinweis" class="footer-link">Genderhinweis</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© <span id="year"></span> Dr. Ewald Walder. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
