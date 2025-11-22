@@ -387,7 +387,7 @@ body {
 }
 
 .section-dark {
-    background: #1E3A5F;
+    background: #2d4a2d;
     color: white;
 }
 
@@ -745,7 +745,7 @@ body {
 }
 
 .appointment-phone {
-    color: #1E3A5F;
+    color: #9fdf5f;
     text-decoration: none;
     font-size: 1.25rem;
     font-weight: 700;
@@ -884,7 +884,7 @@ body {
 
 /* Footer */
 .footer {
-    background: #1E3A5F;
+    background: #2d4a2d;
     color: white;
     padding: 3rem 0;
 }
