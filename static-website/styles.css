@@ -676,7 +676,7 @@ body {
     width: 4rem;
     height: 4rem;
     margin: 0 auto 1rem;
-    background: #FEF3C7;
+    background: #e8f5d8;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -686,7 +686,7 @@ body {
 .advantage-icon i {
     width: 2rem;
     height: 2rem;
-    color: #D97706;
+    color: #80cc28;
 }
 
 .advantage-text {
