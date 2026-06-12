@@ -1,0 +1,168 @@
+{
+  "theme": "Light",
+  "archetype": "1 (Organic & Earthy)",
+  "emotional_tone": "Warm, Trustworthy, Patient-Centered, Professional",
+  "core_principles": [
+    "Context is King: Conversion-focused local medical practice. The path to booking (Termin vereinbaren) must be frictionless.",
+    "Solid Surfaces: Avoid glassmorphism to prevent a cold, clinical feel. Use flat, warm solid backgrounds with subtle borders.",
+    "Generous Spacing: Use breathing room (padding) heavily to convey calm and luxury (e.g., Wahlarzt premium feel).",
+    "Human Touch: Rely on real uploaded photos. Ensure image slots are defined with appropriate object-fit and max-height constraints."
+  ],
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "Work Sans",
+    "fallback_fonts": "sans-serif",
+    "scale_css_variables": {
+      "--text-xs": "0.75rem",
+      "--text-sm": "0.875rem",
+      "--text-base": "1rem",
+      "--text-lg": "1.125rem",
+      "--text-xl": "1.25rem",
+      "--text-2xl": "clamp(1.5rem, 2vw + 1rem, 1.875rem)",
+      "--text-3xl": "clamp(1.875rem, 3vw + 1rem, 2.25rem)",
+      "--text-4xl": "clamp(2.25rem, 4vw + 1rem, 3rem)",
+      "--text-5xl": "clamp(3rem, 5vw + 1rem, 3.75rem)"
+    },
+    "guidelines": "Headlines MUST use tracking-tight equivalent (letter-spacing: -0.02em) and line-height: 1.1. Body uses line-height: 1.6. No center alignment for multi-line text; left-align paragraphs for readability."
+  },
+  "color_palette": {
+    "primary": {
+      "name": "Brand Green",
+      "hex": "#80cc28",
+      "css_var": "--color-primary"
+    },
+    "primary_hover": {
+      "name": "Dark Green",
+      "hex": "#6bb320",
+      "css_var": "--color-primary-hover"
+    },
+    "secondary": {
+      "name": "Navy Dark",
+      "hex": "#1E3A5F",
+      "css_var": "--color-secondary"
+    },
+    "background_base": {
+      "name": "Bone White",
+      "hex": "#FAFAF9",
+      "css_var": "--color-bg-base"
+    },
+    "surface": {
+      "name": "Pure White",
+      "hex": "#FFFFFF",
+      "css_var": "--color-surface"
+    },
+    "surface_alt": {
+      "name": "Soft Sage/Gray",
+      "hex": "#F0F4EC",
+      "css_var": "--color-surface-alt"
+    },
+    "text_main": {
+      "name": "Deep Navy",
+      "hex": "#0F1D30",
+      "css_var": "--color-text-main"
+    },
+    "text_muted": {
+      "name": "Muted Slate",
+      "hex": "#4B5563",
+      "css_var": "--color-text-muted"
+    },
+    "border": {
+      "name": "Subtle Line",
+      "hex": "#E5E7EB",
+      "css_var": "--color-border"
+    }
+  },
+  "spacing_and_layout": {
+    "spacing_css_variables": {
+      "--space-1": "0.25rem",
+      "--space-2": "0.5rem",
+      "--space-4": "1rem",
+      "--space-6": "1.5rem",
+      "--space-8": "2rem",
+      "--space-12": "3rem",
+      "--space-16": "4rem",
+      "--space-20": "5rem",
+      "--space-24": "6rem",
+      "--space-32": "8rem"
+    },
+    "layout_rules": "Use a mobile-first approach. Container max-width: 1200px; margin: 0 auto; padding-inline: var(--space-4). Sections must have padding-block of var(--space-20) to var(--space-32) on desktop, var(--space-12) on mobile. Use pure CSS Grid for complex layouts."
+  },
+  "components": {
+    "header": {
+      "structure": "Sticky navigation, z-index 50. Solid white background with a subtle border-bottom (1px solid var(--color-border)). Logo on left, Nav links center, Accessibility toggle + 'Termin' CTA on right.",
+      "interactions": "Nav links hover state: color changes to var(--color-primary). Active state styling."
+    },
+    "hero": {
+      "structure": "Relative container. Background: uploaded photo (e.g., AKV.jpg). Overlay: div covering 100% width/height with `background: linear-gradient(to right, rgba(128, 204, 40, 0.98) 0%, rgba(128, 204, 40, 0.85) 45%, rgba(128, 204, 40, 0.1) 100%);`.",
+      "content": "Left-aligned content. H1 (var(--text-5xl)), Subtitle (var(--text-2xl)), 3 checkmark list items, primary CTA 'Termin vereinbaren' + 'Keine Kassen' badge (Navy background, white text, rounded-full). All text white for contrast.",
+      "media_slot": "Requires real photo uploaded by user. Ensure container has min-height: 85vh, background-size: cover, background-position: center right."
+    },
+    "advantages_strip": {
+      "structure": "Full-width strip immediately below hero. Background: var(--color-secondary) (Navy). Text: White.",
+      "content": "CSS Grid layout for 4 items inline (desktop) or stacked (mobile). Headline 'Wir helfen Ihnen schnell weiter' plus 4 check items. Icons must be light green (#80cc28).",
+      "spacing": "padding-block: var(--space-8)."
+    },
+    "about_section": {
+      "structure": "CSS Grid bento/asymmetric layout (1 column mobile, 2 columns desktop). Column 1: Doctor/Practice text content. Column 2: Uploaded practice photo.",
+      "style": "Image wrapper must have `object-fit: cover`, `border-radius: 12px` (subtle roundness). `max-height: 80vh`. Text side needs generous padding and gap (var(--space-8))."
+    },
+    "services_grid": {
+      "structure": "CSS Grid `grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))`; gap: var(--space-8). 6 Cards total.",
+      "card_style": "Flat surface (var(--color-surface)), 1px solid var(--color-border), border-radius: 8px. Padding: var(--space-8). Hover state: `transform: translateY(-4px)`, `box-shadow: 0 12px 24px rgba(30,58,95,0.06)`.",
+      "content": "Lucide Icon (Green, 32px), Title (Navy, var(--text-xl)), short description text (Muted Slate, var(--text-base))."
+    },
+    "fees_section": {
+      "structure": "3 info blocks layout using CSS Grid. Background: var(--color-surface-alt) (Soft Sage) spanning full width.",
+      "content": "Clear, transparent pricing info for Wahlarzt. Include large readable numbers or distinct visual icons. Title (var(--text-3xl))."
+    },
+    "appointment_section": {
+      "structure": "Call-to-action banner. Background: var(--color-primary). Text: White. Center aligned content.",
+      "content": "Headline (var(--text-4xl)), Subheadline, Online booking CTA button (White bg, Green text), Phone number link below CTA.",
+      "spacing": "padding-block: var(--space-20); margin-block: var(--space-20)."
+    },
+    "contact_faq": {
+      "structure": "CSS Grid, Two column layout on desktop (`grid-template-columns: 1fr 1fr`). Left: Contact info, Open hours, Address. Right: FAQ accordion.",
+      "accordion_style": "Vanilla JS toggle. Border-bottom on each `.faq-item`. Chevron icon rotates 180deg on open. Content uses `display: grid; grid-template-rows: 0fr;` transitioning to `1fr`.",
+      "map_style": "Embedded map image or iframe. 100% width, `border-radius: 8px`, `aspect-ratio: 16/9`, `object-fit: cover`."
+    },
+    "footer": {
+      "structure": "3-column CSS Grid. Background: var(--color-secondary) (Navy). Text: #9CA3AF (Light gray).",
+      "content": "Col 1: Practice info, Col 2: Contact, Col 3: Legal links. Add a bottom border and copyright text below.",
+      "spacing": "padding-block: var(--space-20)."
+    },
+    "mobile_sticky_buttons": {
+      "structure": "Position: fixed bottom-0 left-0 width: 100% z-index: 50. Display: flex. Visible only via media query max-width: 768px.",
+      "buttons": "Left button: Call (var(--color-secondary)), Right button: Booking (var(--color-primary)). Both: `flex: 1`, centered text, `padding: var(--space-4)`."
+    }
+  },
+  "css_classes_patterns": {
+    "btn_primary": "background-color: var(--color-primary); color: #fff; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; text-decoration: none; transition: background-color 0.2s ease; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;",
+    "btn_primary_hover": "background-color: var(--color-primary-hover);",
+    "btn_secondary": "background-color: transparent; color: var(--color-secondary); border: 1px solid var(--color-secondary); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; text-decoration: none; transition: all 0.2s ease;",
+    "btn_secondary_hover": "background-color: var(--color-secondary); color: #fff;",
+    "section_wrapper": "padding-block: var(--space-24);",
+    "container": "max-width: 1200px; margin-inline: auto; padding-inline: var(--space-4);"
+  },
+  "motion_and_interactions": {
+    "buttons": "Hover states must have background color shift and a subtle transform (e.g., scale 1.02).",
+    "cards": "Services cards elevate slightly on hover (`transform: translateY(-4px)`) with an updated subtle box-shadow.",
+    "accordions": "CSS transition on `grid-template-rows` from 0fr to 1fr for smooth opening.",
+    "links": "Underline animation on hover for inline text links."
+  },
+  "media_guidelines": {
+    "images": "User will supply real photos. Use class wrappers around `<img>` elements with `object-fit: cover` and appropriate aspect ratios. Suggest adding placeholder blocks styled with a light gray background and dashed border to indicate where user should drop their images.",
+    "icons": "Use Lucide icons via CDN script (`<script src='https://unpkg.com/lucide@latest'></script>`). Ensure icon sizing aligns with text size (usually `width: 24px; height: 24px`)."
+  },
+  "accessibility": {
+    "contrast": "Ensure all text combinations meet WCAG AA standards. White text on Primary Green gradient MUST have enough opacity (e.g., 0.95 at start) or a subtle text-shadow if needed.",
+    "existing_mode": "Preserve the logic and button for the user's existing accessibility high-contrast toggle. Do not rewrite their accessibility JS logic, just style the trigger cleanly in the header.",
+    "focus_states": "All interactive elements must have a visible focus outline: `outline: 2px solid var(--color-primary); outline-offset: 2px;`",
+    "testing": "Add `data-testid` attribute to all key interactive elements (e.g., `data-testid='book-appointment-btn'`)."
+  },
+  "instructions_to_main_agent": {
+    "architecture": "Implement as pure HTML, CSS, and Vanilla JS. Create `index.html`, `styles.css`, and `main.js`.",
+    "css_strategy": "Set up CSS Variables (`:root`) exactly as defined in this JSON. Use standard CSS techniques (Grid/Flexbox). DO NOT use Tailwind CSS or any external framework other than Google Fonts (`Outfit` and `Work Sans`) and Lucide icon CDN.",
+    "js_strategy": "Write clean Vanilla JS for sticky header scroll effect, mobile menu toggle, FAQ accordion logic, and Lucide icons initialization `lucide.createIcons();`.",
+    "image_handling": "Since user uploads their own images, provide clear standard `<img src='assets/hero-bg.jpg' alt='...' />` tags but apply strict CSS classes to them so they don't break layouts regardless of dimensions uploaded."
+  }
+}
