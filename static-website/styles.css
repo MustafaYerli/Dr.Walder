@@ -468,6 +468,81 @@ body.accessibility-mode .btn-accessibility {
     .hero-cta { flex-direction: row; align-items: center; }
 }
 
+/* Google reviews badge (hero) */
+.hero-google-badge {
+    display: inline-flex;
+    align-self: flex-start;
+    align-items: center;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+    padding: 0.55rem 1rem 0.55rem 0.6rem;
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(6px);
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.hero-google-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+.google-badge-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: #ffffff;
+    border-radius: var(--radius-full);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    flex-shrink: 0;
+}
+.google-badge-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+.google-badge-top {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+.google-badge-rating {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: var(--text-base);
+    color: var(--color-secondary);
+}
+.google-stars {
+    position: relative;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1;
+    font-family: Arial, sans-serif;
+    letter-spacing: 1px;
+}
+.google-stars::before {
+    content: "★★★★★";
+    color: #dadce0;
+}
+.google-stars-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--rating, 0%);
+    overflow: hidden;
+    white-space: nowrap;
+    color: #fbbc04;
+}
+.google-badge-count {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+
 /* Floating Wahlarzt info card */
 .hero-floating-card {
     position: absolute;
@@ -1438,6 +1513,11 @@ body.accessibility-mode .hero-floating-card {
 }
 body.accessibility-mode .hero-card-title, body.accessibility-mode .hero-card-text { color: #000000 !important; }
 body.accessibility-mode .hero-card-tag { background: #000000 !important; color: #ffffff !important; }
+body.accessibility-mode .hero-google-badge {
+    background: #ffffff !important;
+    border: 2px solid #000000 !important;
+}
+body.accessibility-mode .google-badge-rating, body.accessibility-mode .google-badge-count { color: #000000 !important; }
 
 /* About section a11y */
 body.accessibility-mode .section-eyebrow { color: #000000 !important; }
