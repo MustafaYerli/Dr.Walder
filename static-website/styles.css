@@ -614,6 +614,114 @@ body.accessibility-mode .btn-accessibility {
     margin: 0 auto;
 }
 
+/* Generic mixed-weight helpers */
+.t-light { font-weight: 300; }
+.t-bold { font-weight: 700; }
+
+/* Section eyebrow (light sections) */
+.section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-4);
+    color: var(--color-primary-hover);
+    font-family: 'Outfit', sans-serif;
+    font-size: var(--text-sm);
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-2);
+}
+.section-eyebrow::before {
+    content: '';
+    width: 36px;
+    height: 2px;
+    background: var(--color-primary);
+    display: inline-block;
+}
+.section-header .section-eyebrow { justify-content: center; }
+.section-title .t-light { font-weight: 300; }
+
+/* Eyebrow on dark/green backgrounds */
+.eyebrow-light { color: #fff; }
+.eyebrow-light::before { background: #fff; }
+
+/* About premium */
+.about-image-wrapper { position: relative; }
+.about-image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -22px;
+    left: -22px;
+    width: 60%;
+    height: 60%;
+    background: var(--color-primary-soft);
+    border-radius: var(--radius-lg);
+    z-index: 0;
+}
+.about-image-frame {
+    position: relative;
+    z-index: 1;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+.about-image-frame .placeholder-box { border-radius: 0; aspect-ratio: 4/3; }
+.about-badge {
+    position: absolute;
+    right: -14px;
+    bottom: 28px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    background: #fff;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-4) var(--space-6);
+}
+.about-badge-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    flex-shrink: 0;
+    background: var(--color-primary);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-badge-icon i { width: 1.4rem; height: 1.4rem; color: #fff; }
+.about-badge-text { display: flex; flex-direction: column; }
+.about-badge-title { font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--color-secondary); font-size: var(--text-base); }
+.about-badge-label { font-size: var(--text-xs); color: var(--color-text-muted); }
+
+.about-points {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin: var(--space-2) 0;
+}
+.about-points li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+.about-points li i { width: 1.3rem; height: 1.3rem; color: var(--color-primary); flex-shrink: 0; }
+
+.about-cta { align-self: flex-start; }
+
+/* Primary pill */
+.btn-pill-primary { background: var(--color-primary); color: #fff; }
+.btn-pill-primary .btn-pill-icon { background: #fff; color: var(--color-secondary); }
+.btn-pill-primary:hover { background: var(--color-primary-hover); transform: translateY(-2px); box-shadow: 0 14px 30px rgba(128, 204, 40, 0.34); }
+
+@media (max-width: 767px) {
+    .about-image-wrapper::before { display: none; }
+    .about-badge { right: 12px; bottom: 12px; }
+}
+
 /* Image slot / placeholder */
 .image-slot {
     border-radius: var(--radius-md);
@@ -1255,6 +1363,21 @@ body.accessibility-mode .hero-floating-card {
 }
 body.accessibility-mode .hero-card-title, body.accessibility-mode .hero-card-text { color: #000000 !important; }
 body.accessibility-mode .hero-card-tag { background: #000000 !important; color: #ffffff !important; }
+
+/* About section a11y */
+body.accessibility-mode .section-eyebrow { color: #000000 !important; }
+body.accessibility-mode .section-eyebrow::before { background: #000000 !important; }
+body.accessibility-mode .eyebrow-light { color: #ffffff !important; }
+body.accessibility-mode .eyebrow-light::before { background: #ffffff !important; }
+body.accessibility-mode .about-image-wrapper::before { background: #e0e0e0 !important; }
+body.accessibility-mode .about-badge { background: #ffffff !important; border: 2px solid #000000 !important; }
+body.accessibility-mode .about-badge-icon { background: #000000 !important; }
+body.accessibility-mode .about-badge-icon i { color: #ffffff !important; }
+body.accessibility-mode .about-badge-title, body.accessibility-mode .about-badge-label { color: #000000 !important; }
+body.accessibility-mode .about-points li { color: #000000 !important; }
+body.accessibility-mode .about-points li i { color: #000000 !important; }
+body.accessibility-mode .btn-pill-primary { background: #000000 !important; color: #ffffff !important; }
+body.accessibility-mode .btn-pill-primary .btn-pill-icon { background: #ffffff !important; color: #000000 !important; }
 body.accessibility-mode .nav-link { color: #000000 !important; }
 body.accessibility-mode .nav-link:hover { color: #003d82 !important; }
 body.accessibility-mode .badge {

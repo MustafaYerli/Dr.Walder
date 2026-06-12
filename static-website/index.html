@@ -155,28 +155,43 @@
     <section id="ueber" class="section">
         <div class="container">
             <div class="section-grid">
-                <div class="about-image-wrapper">
-                    <div class="placeholder-box" role="img" aria-label="Platzhalter für Praxisfoto">
-                        <div class="placeholder-icon" aria-hidden="true">
-                            <i data-lucide="users"></i>
+                <div class="about-image-wrapper reveal">
+                    <div class="about-image-frame">
+                        <div class="placeholder-box" role="img" aria-label="Platzhalter für Praxisfoto">
+                            <div class="placeholder-icon" aria-hidden="true">
+                                <i data-lucide="users"></i>
+                            </div>
+                            <p class="placeholder-text">Praxis Foto</p>
                         </div>
-                        <p class="placeholder-text">Praxis Foto</p>
+                    </div>
+                    <div class="about-badge" data-testid="about-badge">
+                        <div class="about-badge-icon" aria-hidden="true"><i data-lucide="award"></i></div>
+                        <div class="about-badge-text">
+                            <span class="about-badge-title">OA Dr. Ewald Walder</span>
+                            <span class="about-badge-label">Facharzt &amp; Wahlarzt in Wien</span>
+                        </div>
                     </div>
                 </div>
-                <div class="about-content">
+                <div class="about-content reveal">
+                    <span class="section-eyebrow">Über mich</span>
                     <h2 class="section-title">
-                        Arzt mit langjähriger Erfahrung
+                        <span class="t-light">Arzt mit</span> <span class="t-bold">langjähriger Erfahrung</span>
                     </h2>
-                    <div class="title-underline" aria-hidden="true"></div>
                     <p class="text-lg">
                         Mit langjähriger Erfahrung in der Orthopädie und Unfallchirurgie biete ich meinen Patienten eine umfassende und moderne medizinische Versorgung.
                     </p>
                     <p class="text-lg">
                         Meine Behandlungsphilosophie basiert auf einer gründlichen Diagnostik, individuellen Therapiekonzepten und dem Einsatz bewährter sowie innovativer Behandlungsmethoden. Als Wahlarzt nehme ich mir die Zeit, die für eine qualitativ hochwertige medizinische Betreuung notwendig ist.
                     </p>
-                    <p class="text-lg">
-                        In meiner Ordination in Wien steht Ihr Wohlbefinden im Mittelpunkt – von der ersten Konsultation bis zur erfolgreichen Genesung.
-                    </p>
+                    <ul class="about-points">
+                        <li><i data-lucide="check-circle" aria-hidden="true"></i> Gründliche, persönliche Diagnostik</li>
+                        <li><i data-lucide="check-circle" aria-hidden="true"></i> Individuelle Therapiekonzepte</li>
+                        <li><i data-lucide="check-circle" aria-hidden="true"></i> Behandlung ohne Zeitdruck</li>
+                    </ul>
+                    <button onclick="openBooking()" class="btn-pill btn-pill-primary about-cta" aria-label="Termin vereinbaren" data-testid="about-booking-btn">
+                        <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="calendar-check"></i></span>
+                        Termin vereinbaren
+                    </button>
                 </div>
             </div>
         </div>
@@ -186,8 +201,8 @@
     <section id="leistungen" class="section section-gray">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title-center">Leistungen</h2>
-                <div class="title-underline-center" aria-hidden="true"></div>
+                <span class="section-eyebrow">Leistungen</span>
+                <h2 class="section-title-center"><span class="t-light">Umfassende</span> <span class="t-bold">orthopädische Versorgung</span></h2>
                 <p class="section-description">
                     Mein Leistungsspektrum umfasst die gesamte konservative Orthopädie und Unfallchirurgie
                 </p>
@@ -267,8 +282,8 @@
     <section id="honorare" class="section section-gray">
         <div class="container-narrow">
             <div class="section-header">
-                <h2 class="section-title-center">Transparente Honorare</h2>
-                <div class="title-underline-center" aria-hidden="true"></div>
+                <span class="section-eyebrow">Honorare</span>
+                <h2 class="section-title-center"><span class="t-light">Transparente</span> <span class="t-bold">Honorare</span></h2>
             </div>
 
             <div class="card">
@@ -307,7 +322,8 @@
     <section id="termin" class="section section-dark">
         <div class="container-narrow">
             <div class="appointment-header">
-                <h2 class="section-title-center white">Termin vereinbaren</h2>
+                <span class="section-eyebrow eyebrow-light">Terminbuchung</span>
+                <h2 class="section-title-center white"><span class="t-light">Termin</span> <span class="t-bold">vereinbaren</span></h2>
                 <p class="appointment-subtitle">
                     Buchen Sie Ihren Termin bequem online
                 </p>
@@ -322,9 +338,9 @@
                     <p class="appointment-description">
                         Wählen Sie einen passenden Termin in unserem Online-Kalender
                     </p>
-                    <button onclick="openBooking()" class="btn btn-primary btn-lg" aria-label="Jetzt online Termin buchen">
+                    <button onclick="openBooking()" class="btn-pill btn-pill-dark" aria-label="Jetzt online Termin buchen" data-testid="appointment-booking-btn">
+                        <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="calendar-check"></i></span>
                         Jetzt Termin buchen
-                        <i data-lucide="chevron-right" class="icon-sm" aria-hidden="true"></i>
                     </button>
                     <div class="appointment-divider">
                         <p class="appointment-or">
@@ -344,8 +360,8 @@
     <section id="kontakt" class="section section-gray">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title-center">Kontakt & Anfahrt</h2>
-                <div class="title-underline-center" aria-hidden="true"></div>
+                <span class="section-eyebrow">Kontakt</span>
+                <h2 class="section-title-center"><span class="t-light">Kontakt</span> <span class="t-bold">&amp; Anfahrt</span></h2>
             </div>
 
             <div class="contact-grid">
@@ -443,8 +459,8 @@
     <section class="section">
         <div class="container-narrow">
             <div class="section-header">
-                <h2 class="section-title-center">FAQ - Häufig gestellte Fragen</h2>
-                <div class="title-underline-center" aria-hidden="true"></div>
+                <span class="section-eyebrow">FAQ</span>
+                <h2 class="section-title-center"><span class="t-light">Häufig gestellte</span> <span class="t-bold">Fragen</span></h2>
             </div>
 
             <div class="accordion">

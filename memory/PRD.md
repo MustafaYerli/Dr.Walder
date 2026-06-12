@@ -33,9 +33,20 @@ Orthopädie und Unfallchirurgie in Wien. Migriert von React zu reinem HTML/CSS/J
 - (Frühere Session) Sections neu geordnet (FAQ als letzte), Footer/Termin-Section Farben.
 
 ## Offen / Hinweise
-- User lädt eigene Fotos hoch (Hero/About). About nutzt aktuell noch eine gestrichelte Bild-
-  Platzhalterbox (.placeholder-box) – beim Upload einfach durch <img> ersetzen.
-- Barrierefreier Modus: Feinschliff "reden wir später" (User).
+- 2026-06-12: PREMIUM-REDESIGN (Schritt für Schritt, Referenz: ihre-zahnarztpraxis.at, Stil
+  "premium, modern, dynamisch"). Alle Sections überarbeitet:
+  - Globales Muster: Eyebrow mit Akzentlinie + Mixed-Weight-Titel (Outfit 300/700),
+    Pill-Buttons mit Icon-Badge (.btn-pill: dark/ghost/primary).
+  - Hero: tiefer Grün-Verlauf, Eyebrow-Linie, Mixed-Headline, 2 Pill-CTAs, Glas-Trust-Leiste,
+    schwebende "Wahlarzt"-Info-Karte (rechts, ab <1100px ausgeblendet).
+  - Über mich: Bildrahmen mit grünem Akzentblock (::before), schwebendes Arzt-Badge,
+    Check-Punkte, grüner Pill-CTA.
+  - Leistungen/Honorare/Kontakt/FAQ: Eyebrow + Mixed-Titel; Termin: grünes Banner mit
+    weißer Eyebrow (.eyebrow-light) + dark Pill-CTA.
+  - Barrierefrei-Modus für alle neuen Komponenten mit Overrides ergänzt; verifiziert.
+- User lädt eigene Fotos hoch (Hero gesetzt; About hat gestrichelte .placeholder-box → durch <img> ersetzen).
+- Barrierefrei-Modus: Feinschliff "reden wir später" (User).
+- Buchung: openBooking() öffnet Setmore-Link in neuem Tab (unverändert); Maps via openMaps().
 
 ## Backlog
 - P1: Automatische Synchronisation static-website → frontend/public (Watcher / chokidar / bash watch),
