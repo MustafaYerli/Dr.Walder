@@ -9,7 +9,7 @@ Orthopädie und Unfallchirurgie in Wien. Migriert von React zu reinem HTML/CSS/J
 - `/app/frontend/public/` = vom Express-Server (serve.js, Port 3000) ausgelieferte Kopie
 - WICHTIG: Nach jeder Änderung in static-website: `cp -r /app/static-website/* /app/frontend/public/`
 - Kein Backend (FATAL ist hier normal – kein /app/backend Verzeichnis).
-- Preview-URL: https://1e32b06c-3ca0-4efd-ae71-d2928a4b534c.preview.emergentagent.com
+- Preview-URL: https://dental-dynamic-1.preview.emergentagent.com
   (Externe Vorschau zeigt evtl. "Preview Unavailable" im Ruhezustand; lokal: http://localhost:3000)
 
 ## Umgesetzt
