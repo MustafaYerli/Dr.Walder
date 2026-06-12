@@ -550,20 +550,43 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
+            <div class="footer-cta">
+                <div class="footer-cta-text">
+                    <span class="section-eyebrow eyebrow-light">Jetzt Termin sichern</span>
+                    <h2 class="footer-cta-title"><span class="t-light">Wir sind</span> <span class="t-bold">für Sie da</span></h2>
+                </div>
+                <div class="footer-cta-actions">
+                    <button onclick="openBooking()" class="btn-pill btn-pill-primary" aria-label="Termin vereinbaren" data-testid="footer-booking-btn">
+                        <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="calendar-check"></i></span>
+                        Termin vereinbaren
+                    </button>
+                    <a href="tel:012141431" class="footer-phone-cta" aria-label="Telefonnummer 01 214 14 31 anrufen" data-testid="footer-phone">
+                        <i data-lucide="phone" class="icon-sm" aria-hidden="true"></i> 01 / 214 14 31
+                    </a>
+                </div>
+            </div>
+
             <div class="footer-grid">
-                <div>
+                <div class="footer-brand">
                     <h2 class="footer-title">OA Dr. Ewald Walder</h2>
-                    <p class="footer-text">Facharzt für Orthopädie und Unfallchirurgie</p>
-                    <p class="footer-text">Wahlarzt in Wien</p>
+                    <p class="footer-text">Facharzt für Orthopädie und Unfallchirurgie · Wahlarzt in Wien.</p>
+                    <p class="footer-text">Individuelle Betreuung, moderne Methoden und Behandlung ohne Zeitdruck.</p>
+                </div>
+                <div>
+                    <h3 class="footer-subtitle">Schnellzugriff</h3>
+                    <div class="footer-links">
+                        <a href="#ueber" class="footer-link">Über mich</a>
+                        <a href="#leistungen" class="footer-link">Leistungen</a>
+                        <a href="#honorare" class="footer-link">Honorare</a>
+                        <a href="#kontakt" class="footer-link">Kontakt</a>
+                    </div>
                 </div>
                 <div>
                     <h3 class="footer-subtitle">Kontakt</h3>
                     <div class="footer-contact">
-                        <p class="footer-text">Praterstraße 66/1/69b</p>
-                        <p class="footer-text">1020 Wien</p>
-                        <a href="tel:012141431" class="footer-link" aria-label="Telefonnummer 01 214 14 31 anrufen">
-                            Tel: 01 / 214 14 31
-                        </a>
+                        <p class="footer-contact-item"><i data-lucide="map-pin" aria-hidden="true"></i> Praterstraße 66/1/69b, 1020 Wien</p>
+                        <a href="tel:012141431" class="footer-contact-item footer-link" aria-label="Telefonnummer 01 214 14 31 anrufen"><i data-lucide="phone" aria-hidden="true"></i> 01 / 214 14 31</a>
+                        <p class="footer-contact-item"><i data-lucide="clock" aria-hidden="true"></i> Mo &amp; Do 09–16, Mi 14–18 Uhr</p>
                     </div>
                 </div>
                 <div>
@@ -576,7 +599,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="footer-copyright">© <span id="year"></span> Dr. Ewald Walder. Alle Rechte vorbehalten.</p>
+                <p class="footer-copyright">© <span id="year"></span> OA Dr. Ewald Walder. Alle Rechte vorbehalten.</p>
+                <a href="#top" class="footer-top-link" aria-label="Nach oben scrollen">Nach oben <i data-lucide="arrow-up" class="icon-sm" aria-hidden="true"></i></a>
             </div>
         </div>
     </footer>

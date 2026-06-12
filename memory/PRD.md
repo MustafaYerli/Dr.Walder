@@ -47,6 +47,9 @@ Orthopädie und Unfallchirurgie in Wien. Migriert von React zu reinem HTML/CSS/J
 - User lädt eigene Fotos hoch (Hero gesetzt; About hat gestrichelte .placeholder-box → durch <img> ersetzen).
 - Barrierefrei-Modus: Feinschliff "reden wir später" (User).
 - Buchung: openBooking() öffnet Setmore-Link in neuem Tab (unverändert); Maps via openMaps().
+- 2026-06-12: Footer premium aufgewertet – grüner Top-Akzent, CTA-Band (Eyebrow + Mixed-Titel
+  + grüner Pill-CTA + Telefon), 4-Spalten-Raster (Marke/Schnellzugriff/Kontakt mit Icons/Rechtliches),
+  Bottom-Bar mit Copyright + "Nach oben"-Link. A11y-Overrides ergänzt.
 
 ## Backlog
 - P1: Automatische Synchronisation static-website → frontend/public (Watcher / chokidar / bash watch),
