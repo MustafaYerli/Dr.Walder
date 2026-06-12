@@ -49,8 +49,14 @@ const heroSection = document.querySelector('.hero');
 
 window.addEventListener('scroll', function() {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    const heroHeight = heroSection ? heroSection.offsetHeight : 0;
-    
+
+    // Solid header background once scrolled
+    if (currentScroll > 10) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+
     // If at the top of the page (in hero section), always show navbar
     if (currentScroll <= 100) {
         navbar.classList.remove('hidden');
@@ -80,12 +86,50 @@ function toggleAccessibilityMode() {
         body.classList.add('accessibility-mode');
         button.textContent = 'Normale Ansicht';
         button.setAttribute('aria-label', 'Barrierefreie Seite ausschalten, zur normalen Ansicht wechseln');
+        // Ensure no content stays hidden by scroll-reveal in accessibility mode
+        body.classList.remove('reveal-ready');
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
     }
+}
+
+// Scroll reveal animations
+function setupScrollReveal() {
+    // Skip animations in accessibility mode (content must stay visible)
+    if (document.body.classList.contains('accessibility-mode')) return;
+
+    const targets = document.querySelectorAll(
+        '.section-header, .service-card, .contact-card, .fee-item, .accordion-item, ' +
+        '.about-content, .about-image-wrapper, .advantage-item, .card, .hero-content'
+    );
+    targets.forEach(el => el.classList.add('reveal'));
+
+    document.body.classList.add('reveal-ready');
+
+    if (!('IntersectionObserver' in window)) {
+        targets.forEach(el => el.classList.add('is-visible'));
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+    targets.forEach(el => observer.observe(el));
+
+    // Reveal hero immediately on load
+    const hero = document.querySelector('.hero-content');
+    if (hero) requestAnimationFrame(() => hero.classList.add('is-visible'));
 }
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
     setCurrentYear();
+    setupScrollReveal();
     
     // Re-initialize Lucide icons after DOM is ready
     if (typeof lucide !== 'undefined') {

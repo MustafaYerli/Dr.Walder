@@ -13,13 +13,29 @@ Orthopädie und Unfallchirurgie in Wien. Migriert von React zu reinem HTML/CSS/J
   (Externe Vorschau zeigt evtl. "Preview Unavailable" im Ruhezustand; lokal: http://localhost:3000)
 
 ## Umgesetzt
-- 2026-06-12: Hero-Section neu gestaltet – `AKV.jpg` als Hintergrundbild, Links-nach-rechts-
-  Verlauf mit `#80cc28` (grün links kräftig → rechts transparent, Bild rechts sichtbar),
-  Texte/Buttons weiß über dem Bild, alter Foto-Platzhalter entfernt. Accessibility-Modus
-  überschreibt Hero zu Weiß/Schwarz mit hohem Kontrast (kein Bild/Verlauf). Getestet via
-  Screenshot (Normal + A11y). data-testids hinzugefügt.
+- 2026-06-12: KOMPLETTE DESIGN-ÜBERARBEITUNG (auf Wunsch des Users "a komplette design überarbeiten").
+  Design-Konzept vom Design-Agent (`/app/design_guidelines.json`, Archetyp "Organic & Earthy").
+  Umgesetzt in `index.html`/`styles.css`/`script.js`:
+  - Neues Design-System (CSS-Variablen): Marke #80cc28, Navy #1E3A5F, Bone-White Hintergrund,
+    Fonts Outfit (Headings) + Work Sans (Body), Spacing-/Radius-/Shadow-Skala.
+  - Sticky Glass-Navbar mit Ankerlinks (Über/Leistungen/Honorare/Kontakt) + Barrierefreie-Seite-
+    Toggle + "Termin vereinbaren"-CTA; "scrolled"-Schatten.
+  - Hero: AKV.jpg + Links-rechts-Verlauf #80cc28, Eyebrow-Badge, Glass-Benefit-Karten, weiße CTA.
+  - Navy Advantages-Strip (4 Vorteile, grüne Icons).
+  - Services-Grid mit Hover-Lift + Icon-Farbwechsel; Honorare (Sage-Hintergrund, id=honorare);
+    Termin-Banner (grün); Kontakt-Karten + Map; FAQ-Accordion; Navy-Footer.
+  - Scroll-Reveal-Animationen via IntersectionObserver (opt-in `body.reveal-ready`, daher ohne JS /
+    im Barrierefrei-Modus voll sichtbar).
+  - Barrierefreier Modus erhalten & angepasst (Overrides für neue Komponenten). User: "reden wir später".
+  - Getestet via Screenshots (Desktop Hero/Services/Kontakt, Mobile, A11y) + Accordion-Funktion.
+- 2026-06-12: Hero-Section (vorheriger Schritt) – AKV.jpg + #80cc28-Verlauf, Platzhalter entfernt.
 - (Frühere Session) Barrierefreier Modus ("Barrierefreie Seite"-Toggle, Open Sans, Hochkontrast).
 - (Frühere Session) Sections neu geordnet (FAQ als letzte), Footer/Termin-Section Farben.
+
+## Offen / Hinweise
+- User lädt eigene Fotos hoch (Hero/About). About nutzt aktuell noch eine gestrichelte Bild-
+  Platzhalterbox (.placeholder-box) – beim Upload einfach durch <img> ersetzen.
+- Barrierefreier Modus: Feinschliff "reden wir später" (User).
 
 ## Backlog
 - P1: Automatische Synchronisation static-website → frontend/public (Watcher / chokidar / bash watch),

@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600;700&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -33,19 +33,36 @@
     <!-- Header -->
     <header class="header" id="navbar">
         <div class="container">
-            <div class="header-content-centered">
-                <img src="logo.png" alt="Dr. Ewald Walder - Facharzt für Orthopädie und Unfallchirurgie Wien" style="height: 70px; width: auto;">
-                <button id="accessibility-toggle" class="btn-accessibility" aria-label="Barrierefreie Seite ein- oder ausschalten">
-                    Barrierefreie Seite
-                </button>
+            <div class="header-inner">
+                <a href="#top" class="header-logo" aria-label="Zur Startseite" data-testid="header-logo-link">
+                    <img src="logo.png" alt="Dr. Ewald Walder - Facharzt für Orthopädie und Unfallchirurgie Wien">
+                </a>
+                <nav class="nav" aria-label="Hauptnavigation">
+                    <a href="#ueber" class="nav-link" data-testid="nav-ueber">Über mich</a>
+                    <a href="#leistungen" class="nav-link" data-testid="nav-leistungen">Leistungen</a>
+                    <a href="#honorare" class="nav-link" data-testid="nav-honorare">Honorare</a>
+                    <a href="#kontakt" class="nav-link" data-testid="nav-kontakt">Kontakt</a>
+                </nav>
+                <div class="header-actions">
+                    <button id="accessibility-toggle" class="btn-accessibility" aria-label="Barrierefreie Seite ein- oder ausschalten" data-testid="accessibility-toggle">
+                        Barrierefreie Seite
+                    </button>
+                    <button onclick="openBooking()" class="btn btn-primary header-cta" aria-label="Online-Termin vereinbaren" data-testid="header-booking-btn">
+                        Termin vereinbaren
+                    </button>
+                </div>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" data-testid="hero-section">
+    <section class="hero" id="top" data-testid="hero-section">
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-content reveal">
+                <span class="hero-eyebrow" data-testid="hero-eyebrow">
+                    <i data-lucide="map-pin" class="icon-sm" aria-hidden="true"></i>
+                    Ordination in 1020 Wien
+                </span>
                 <div class="hero-text">
                     <h1 class="hero-title">
                         Facharzt für Orthopädie und Unfallchirurgie in Wien
@@ -53,10 +70,10 @@
                     <p class="hero-subtitle">
                         OA Dr. Ewald Walder - Wahlarzt
                     </p>
-                    <p class="hero-description">
-                        Professionelle medizinische Versorgung mit Fokus auf individuelle Behandlungskonzepte und moderne Therapiemethoden. Ihre Gesundheit steht im Mittelpunkt meiner Tätigkeit.
-                    </p>
                 </div>
+                <p class="hero-description">
+                    Professionelle medizinische Versorgung mit Fokus auf individuelle Behandlungskonzepte und moderne Therapiemethoden. Ihre Gesundheit steht im Mittelpunkt meiner Tätigkeit.
+                </p>
 
                 <div class="benefits-grid">
                     <div class="benefit-item">
@@ -83,7 +100,7 @@
                 </div>
 
                 <div class="hero-cta">
-                    <button onclick="openBooking()" class="btn btn-primary btn-lg" aria-label="Online-Termin vereinbaren" data-testid="hero-booking-btn">
+                    <button onclick="openBooking()" class="btn btn-white btn-lg" aria-label="Online-Termin vereinbaren" data-testid="hero-booking-btn">
                         Termin vereinbaren
                         <i data-lucide="chevron-right" class="icon-sm" aria-hidden="true"></i>
                     </button>
@@ -94,33 +111,28 @@
     </section>
 
     <!-- Advantages Section -->
-    <section class="section">
+    <section class="advantages-strip">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title-center">Wir helfen Ihnen schnell weiter</h2>
-                <div class="title-underline-center" aria-hidden="true"></div>
-            </div>
-
             <div class="advantages-grid">
-                <div class="advantage-item">
+                <div class="advantage-item reveal">
                     <div class="advantage-icon" aria-hidden="true">
                         <i data-lucide="check-circle"></i>
                     </div>
                     <p class="advantage-text">Kurze Wartezeiten</p>
                 </div>
-                <div class="advantage-item">
+                <div class="advantage-item reveal">
                     <div class="advantage-icon" aria-hidden="true">
                         <i data-lucide="check-circle"></i>
                     </div>
                     <p class="advantage-text">Ausführliche Beratung</p>
                 </div>
-                <div class="advantage-item">
+                <div class="advantage-item reveal">
                     <div class="advantage-icon" aria-hidden="true">
                         <i data-lucide="check-circle"></i>
                     </div>
                     <p class="advantage-text">Modernste Ausstattung</p>
                 </div>
-                <div class="advantage-item">
+                <div class="advantage-item reveal">
                     <div class="advantage-icon" aria-hidden="true">
                         <i data-lucide="check-circle"></i>
                     </div>
@@ -243,7 +255,7 @@
     </section>
 
     <!-- Fees Section -->
-    <section class="section section-gray">
+    <section id="honorare" class="section section-gray">
         <div class="container-narrow">
             <div class="section-header">
                 <h2 class="section-title-center">Transparente Honorare</h2>
