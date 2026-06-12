@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600;700&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Work+Sans:wght@400;500;600;700&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -59,54 +59,63 @@
     <section class="hero" id="top" data-testid="hero-section">
         <div class="container">
             <div class="hero-content reveal">
-                <span class="hero-eyebrow" data-testid="hero-eyebrow">
-                    <i data-lucide="map-pin" class="icon-sm" aria-hidden="true"></i>
-                    Ordination in 1020 Wien
-                </span>
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        Facharzt für Orthopädie und Unfallchirurgie in Wien
-                    </h1>
-                    <p class="hero-subtitle">
-                        OA Dr. Ewald Walder - Wahlarzt
-                    </p>
-                </div>
+                <span class="hero-eyebrow" data-testid="hero-eyebrow">OA Dr. Ewald Walder · Wahlarzt</span>
+                <h1 class="hero-title">
+                    <span class="t-light">Facharzt für</span>
+                    <span class="t-bold">Orthopädie &amp; Unfallchirurgie</span>
+                    <span class="t-light">in Wien</span>
+                </h1>
                 <p class="hero-description">
                     Professionelle medizinische Versorgung mit Fokus auf individuelle Behandlungskonzepte und moderne Therapiemethoden. Ihre Gesundheit steht im Mittelpunkt meiner Tätigkeit.
                 </p>
+
+                <div class="hero-cta">
+                    <button onclick="openBooking()" class="btn-pill btn-pill-dark" aria-label="Online-Termin vereinbaren" data-testid="hero-booking-btn">
+                        <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="stethoscope"></i></span>
+                        Termin vereinbaren
+                    </button>
+                    <a href="#leistungen" class="btn-pill btn-pill-ghost" aria-label="Zu den Leistungen scrollen" data-testid="hero-services-link">
+                        <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="arrow-right"></i></span>
+                        Leistungen ansehen
+                    </a>
+                </div>
 
                 <div class="benefits-grid">
                     <div class="benefit-item">
                         <div class="benefit-icon" aria-hidden="true">
                             <i data-lucide="award"></i>
                         </div>
-                        <h2 class="benefit-title">Neueste Methoden</h2>
-                        <p class="benefit-description">Moderne Behandlungsansätze</p>
+                        <div class="benefit-text">
+                            <h2 class="benefit-title">Neueste Methoden</h2>
+                            <p class="benefit-description">Moderne Behandlungsansätze</p>
+                        </div>
                     </div>
                     <div class="benefit-item">
                         <div class="benefit-icon" aria-hidden="true">
                             <i data-lucide="file-text"></i>
                         </div>
-                        <h2 class="benefit-title">Wahlarzt</h2>
-                        <p class="benefit-description">Flexible Terminvergabe</p>
+                        <div class="benefit-text">
+                            <h2 class="benefit-title">Wahlarzt</h2>
+                            <p class="benefit-description">Flexible Terminvergabe</p>
+                        </div>
                     </div>
                     <div class="benefit-item">
                         <div class="benefit-icon" aria-hidden="true">
                             <i data-lucide="heart"></i>
                         </div>
-                        <h2 class="benefit-title">Individuelle Betreuung</h2>
-                        <p class="benefit-description">Persönliche Beratung</p>
+                        <div class="benefit-text">
+                            <h2 class="benefit-title">Individuelle Betreuung</h2>
+                            <p class="benefit-description">Persönliche Beratung</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="hero-cta">
-                    <button onclick="openBooking()" class="btn btn-white btn-lg" aria-label="Online-Termin vereinbaren" data-testid="hero-booking-btn">
-                        Termin vereinbaren
-                        <i data-lucide="chevron-right" class="icon-sm" aria-hidden="true"></i>
-                    </button>
-                    <span class="badge" aria-label="Information: Keine Kassenverträge">Keine Kassen</span>
-                </div>
             </div>
+
+            <aside class="hero-floating-card" data-testid="hero-info-card">
+                <span class="hero-card-tag">Wahlarzt</span>
+                <p class="hero-card-title">Keine Kassenverträge</p>
+                <p class="hero-card-text">Die Verrechnung erfolgt nach Honorarordnung – die Rückerstattung läuft automatisch über Ihre Krankenkasse.</p>
+            </aside>
         </div>
     </section>
 
