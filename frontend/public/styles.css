@@ -289,35 +289,49 @@ body.accessibility-mode .btn-accessibility {
 
 /* Hero Section */
 .hero {
-    padding-top: 8rem;
-    padding-bottom: 5rem;
-    background: #F9FAFB;
+    position: relative;
+    padding-top: 11rem;
+    padding-bottom: 7rem;
+    background-image: url('AKV.jpg');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
-.hero-grid {
-    display: grid;
-    gap: 3rem;
-    align-items: center;
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(128, 204, 40, 0.97) 0%,
+        rgba(128, 204, 40, 0.92) 30%,
+        rgba(128, 204, 40, 0.55) 60%,
+        rgba(128, 204, 40, 0.05) 100%
+    );
+    z-index: 1;
 }
 
-@media (min-width: 768px) {
-    .hero-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.hero .container {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    max-width: 640px;
 }
 
 .hero-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #111827;
+    color: #ffffff;
     line-height: 1.2;
     margin-bottom: 1.5rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 @media (min-width: 768px) {
@@ -328,14 +342,17 @@ body.accessibility-mode .btn-accessibility {
 
 .hero-subtitle {
     font-size: 1.25rem;
-    color: #4B5563;
+    font-weight: 600;
+    color: #ffffff;
     margin-bottom: 1rem;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
 }
 
 .hero-description {
     font-size: 1.125rem;
-    color: #4B5563;
+    color: rgba(255, 255, 255, 0.95);
     line-height: 1.75;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
 }
 
 .benefits-grid {
@@ -352,11 +369,12 @@ body.accessibility-mode .btn-accessibility {
     width: 4rem;
     height: 4rem;
     margin: 0 auto 0.75rem;
-    background: #e8f5d8;
+    background: #ffffff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .benefit-icon i {
@@ -368,13 +386,15 @@ body.accessibility-mode .btn-accessibility {
 .benefit-title {
     font-size: 0.875rem;
     font-weight: 700;
-    color: #111827;
+    color: #ffffff;
     margin-bottom: 0.25rem;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
 }
 
 .benefit-description {
     font-size: 0.75rem;
-    color: #4B5563;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero-cta {
@@ -393,10 +413,28 @@ body.accessibility-mode .btn-accessibility {
 .badge {
     display: inline-block;
     padding: 0.25rem 0.75rem;
-    background: #E5E7EB;
+    background: rgba(255, 255, 255, 0.85);
     border-radius: 9999px;
     font-size: 0.875rem;
-    color: #4B5563;
+    font-weight: 600;
+    color: #1E3A5F;
+}
+
+@media (max-width: 767px) {
+    .hero {
+        padding-top: 9rem;
+        background-position: center;
+    }
+    .hero::before {
+        background: linear-gradient(
+            to bottom,
+            rgba(128, 204, 40, 0.94) 0%,
+            rgba(128, 204, 40, 0.9) 100%
+        );
+    }
+    .hero-content {
+        max-width: 100%;
+    }
 }
 
 .hero-image {
@@ -1083,6 +1121,26 @@ body.accessibility-mode .section {
 body.accessibility-mode .hero {
     padding-top: 9.6rem !important;
     padding-bottom: 6rem !important;
+    background-image: none !important;
+    background: #ffffff !important;
+}
+
+body.accessibility-mode .hero::before {
+    display: none !important;
+}
+
+body.accessibility-mode .hero-title,
+body.accessibility-mode .hero-subtitle,
+body.accessibility-mode .hero-description,
+body.accessibility-mode .benefit-title,
+body.accessibility-mode .benefit-description {
+    color: #000000 !important;
+    text-shadow: none !important;
+}
+
+body.accessibility-mode .benefit-icon {
+    background: #e0e0e0 !important;
+    border: 2px solid #000000 !important;
 }
 
 body.accessibility-mode .card {
