@@ -20,6 +20,11 @@ Sprache des Users: DEUTSCH.
 - 2026-06: **Google-Reviews-Badge im Hero** – runder Google-Logo-Kreis + „4,1 ★" + „51 Google Rezensionen"
   (.hero-google-badge, Sternefüllung via CSS-Var --rating: 82%). A11y-Override ergänzt. Statisch/manuell gepflegt.
 - 2026-06: **serve.js auf direkte Auslieferung aus static-website umgestellt** (Sync-Problem behoben).
+- 2026-06: **Behandlungsablauf-Section** (id=ablauf, 4 nummerierte Schritt-Karten + CTA, weißer Hintergrund).
+- 2026-06: **Wahlarzt-Erklärung "So bekommen Sie Geld zurück"** (id=wahlarzt, section-soft grün, 3 Schritt-Karten + "Gut zu wissen"-Note).
+  - Neue Styles: .process-grid/.process-step/.process-number/.process-icon/.refund-note/.section-soft. A11y-Overrides ergänzt.
+  - WICHTIG (gelernt): Scroll-Reveal (.reveal) wird NUR für Elemente im Selektor in script.js setupScrollReveal() beobachtet.
+    Neue reveal-Komponenten MÜSSEN dort zum targets-Selektor hinzugefügt werden, sonst bleiben sie opacity:0 (unsichtbar).
 
 ## Offen / Backlog
 - P0: Eigene Fotos des Users einbinden, sobald hochgeladen (z. B. „Über mich"-Platzhalter `.placeholder-box`).
