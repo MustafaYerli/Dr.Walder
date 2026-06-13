@@ -1,9 +1,6 @@
-// Booking URL
-const BOOKING_URL = 'https://testdrwalder.setmore.com/book?step=time-slot&products=dr-walder-smile&type=service&staff=dr-walder-smile&staffSelected=true';
-
-// Open Booking
+// Open Booking – Terminvereinbarung telefonisch
 function openBooking() {
-    window.open(BOOKING_URL, '_blank');
+    window.location.href = 'tel:012141431';
 }
 
 // Open Google Maps
