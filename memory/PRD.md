@@ -20,6 +20,13 @@ Sprache des Users: DEUTSCH.
 - 2026-06: **Google-Reviews-Badge im Hero** – runder Google-Logo-Kreis + „4,1 ★" + „51 Google Rezensionen"
   (.hero-google-badge, Sternefüllung via CSS-Var --rating: 82%). A11y-Override ergänzt. Statisch/manuell gepflegt.
 - 2026-06: **serve.js auf direkte Auslieferung aus static-website umgestellt** (Sync-Problem behoben).
+- 2026-06: **Unterseite gelenkschmerzen.html** (Leistung „Gelenkschmerzen") – informativ/aufklärend:
+  Sub-Hero mit Breadcrumb, Überblick (prose-grid + Navy aside-card), betroffene Gelenke (4 Karten),
+  Ursachen + Amber-Warnhinweis (.alert-note), Diagnostik (3 process-steps), Behandlungen (6 Karten),
+  FAQ-Accordion, dark CTA-Band, med. Disclaimer. Erste Leistungskarte (index.html) verlinkt darauf (.service-card-link + „Mehr erfahren").
+  Neue Styles: .subpage-hero/.breadcrumb/.prose/.aside-card/.alert-note/.med-disclaimer + A11y-Overrides.
+  ACHTUNG (gelernt): NIE zwei search_replace auf DERSELBEN Datei im selben Parallel-Batch – ein Edit ging
+  durch Race-Condition verloren (CSS-Block fehlte, musste sequenziell nachgetragen werden).
 - 2026-06: **Behandlungsablauf-Section** (id=ablauf, 4 nummerierte Schritt-Karten + CTA, weißer Hintergrund).
 - 2026-06: **Wahlarzt-Erklärung "So bekommen Sie Geld zurück"** (id=wahlarzt, section-soft grün, 3 Schritt-Karten + "Gut zu wissen"-Note).
   - Neue Styles: .process-grid/.process-step/.process-number/.process-icon/.refund-note/.section-soft. A11y-Overrides ergänzt.

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelenkschmerzen – Ursachen, Diagnose & Behandlung in Wien | OA Dr. Ewald Walder</title>
+    <meta name="description" content="Gelenkschmerzen an Knie, Hüfte, Schulter oder Sprunggelenk? OA Dr. Ewald Walder, Facharzt für Orthopädie und Unfallchirurgie in Wien, klärt Ursachen ab und behandelt individuell – als Wahlarzt ohne Überweisung.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Work+Sans:wght@400;500;600;700&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Mobile Sticky Buttons - Only visible on mobile -->
+    <div class="mobile-sticky-footer">
+        <a href="tel:012141431" class="mobile-btn mobile-btn-call" aria-label="Praxis anrufen">
+            <i data-lucide="phone" class="icon" aria-hidden="true"></i>
+            <span>Anrufen</span>
+        </a>
+        <button onclick="openBooking()" class="mobile-btn mobile-btn-booking" aria-label="Online-Termin vereinbaren">
+            <i data-lucide="stethoscope" class="icon" aria-hidden="true"></i>
+            <span>Online-Termin</span>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="navbar">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="header-logo" aria-label="Zur Startseite" data-testid="header-logo-link">
+                    <img src="logo.png" alt="Dr. Ewald Walder - Facharzt für Orthopädie und Unfallchirurgie Wien">
+                </a>
+                <nav class="nav" aria-label="Hauptnavigation">
+                    <a href="index.html#ueber" class="nav-link" data-testid="nav-ueber">Über mich</a>
+                    <a href="index.html#leistungen" class="nav-link" data-testid="nav-leistungen">Leistungen</a>
+                    <a href="index.html#honorare" class="nav-link" data-testid="nav-honorare">Honorare</a>
+                    <a href="index.html#kontakt" class="nav-link" data-testid="nav-kontakt">Kontakt</a>
+                </nav>
+                <div class="header-actions">
+                    <button id="accessibility-toggle" class="btn-accessibility" aria-label="Barrierefreie Seite ein- oder ausschalten" data-testid="accessibility-toggle">
+                        Barrierefreie Seite
+                    </button>
+                    <button onclick="openBooking()" class="btn btn-primary header-cta" aria-label="Online-Termin vereinbaren" data-testid="header-booking-btn">
+                        Termin vereinbaren
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Subpage Hero -->
+    <section class="subpage-hero" id="top" data-testid="subpage-hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Brotkrümelnavigation">
+                <a href="index.html">Startseite</a>
+                <span class="sep" aria-hidden="true">›</span>
+                <a href="index.html#leistungen">Leistungen</a>
+                <span class="sep" aria-hidden="true">›</span>
+                <span class="current">Gelenkschmerzen</span>
+            </nav>
+            <span class="section-eyebrow">Orthopädische Leistung</span>
+            <h1 class="subpage-title"><span class="t-light">Gelenkschmerzen</span> <span class="t-bold">verstehen &amp; gezielt behandeln</span></h1>
+            <p class="subpage-lead">
+                Gelenkschmerzen zählen zu den häufigsten Beschwerden in der Orthopädie. Ob Knie, Hüfte, Schulter oder Sprunggelenk – als Facharzt für Orthopädie und Unfallchirurgie kläre ich gemeinsam mit Ihnen die Ursache ab und entwickle ein individuell passendes, möglichst schonendes Behandlungskonzept.
+            </p>
+            <div class="subpage-hero-actions">
+                <button onclick="openBooking()" class="btn-pill btn-pill-dark" aria-label="Termin vereinbaren" data-testid="subpage-booking-btn">
+                    <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="calendar-check"></i></span>
+                    Termin vereinbaren
+                </button>
+                <a href="index.html#leistungen" class="subpage-back" data-testid="subpage-back-link">
+                    <i data-lucide="arrow-left" aria-hidden="true"></i> Zurück zu den Leistungen
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section">
+        <div class="container">
+            <div class="prose-grid">
+                <div class="prose reveal">
+                    <h3>Was sind Gelenkschmerzen?</h3>
+                    <p>
+                        Als Gelenkschmerzen (medizinisch: Arthralgie) werden Schmerzen bezeichnet, die direkt im Gelenk oder im umliegenden Gewebe – etwa in Bändern, Sehnen, Muskeln oder Schleimbeuteln – entstehen. Sie können ein einzelnes Gelenk betreffen oder mehrere gleichzeitig und reichen von einem leichten Ziehen bei Belastung bis zu starken, bewegungseinschränkenden Beschwerden.
+                    </p>
+                    <p>
+                        Entscheidend für eine erfolgreiche Behandlung ist, die genaue Ursache der Schmerzen zu finden. Denn hinter ähnlichen Symptomen können sehr unterschiedliche Auslöser stecken – von Verschleiß über Entzündungen bis hin zu Verletzungen.
+                    </p>
+
+                    <h3>Akute oder chronische Beschwerden?</h3>
+                    <p>
+                        <strong>Akute Gelenkschmerzen</strong> treten plötzlich auf, etwa nach einer Verletzung, Überlastung oder im Rahmen einer Entzündung. <strong>Chronische Gelenkschmerzen</strong> bestehen über Wochen oder Monate und entwickeln sich häufig schleichend, zum Beispiel bei fortschreitendem Gelenkverschleiß (Arthrose).
+                    </p>
+                    <p>
+                        Gerade chronische Beschwerden sollten nicht „ausgesessen" werden: Je früher die Ursache erkannt wird, desto schonender und wirksamer lässt sich gegensteuern – oft ganz ohne Operation.
+                    </p>
+                </div>
+
+                <aside class="aside-card reveal" data-testid="overview-aside">
+                    <h3>Auf einen Blick</h3>
+                    <div class="aside-item"><i data-lucide="stethoscope" aria-hidden="true"></i><span>Facharzt für Orthopädie &amp; Unfallchirurgie</span></div>
+                    <div class="aside-item"><i data-lucide="hand-heart" aria-hidden="true"></i><span>Konservative, individuell abgestimmte Therapie</span></div>
+                    <div class="aside-item"><i data-lucide="badge-check" aria-hidden="true"></i><span>Wahlarzt – keine Überweisung notwendig</span></div>
+                    <div class="aside-item"><i data-lucide="clock" aria-hidden="true"></i><span>Termine ohne lange Wartezeiten</span></div>
+                    <div class="aside-item"><i data-lucide="map-pin" aria-hidden="true"></i><span>Praterstraße 66/1/69b, 1020 Wien</span></div>
+                    <button onclick="openBooking()" class="btn-pill btn-pill-primary" aria-label="Termin vereinbaren" data-testid="aside-booking-btn">
+                        <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="calendar-check"></i></span>
+                        Termin vereinbaren
+                    </button>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affected joints -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Betroffene Gelenke</span>
+                <h2 class="section-title-center"><span class="t-light">Häufig betroffene</span> <span class="t-bold">Gelenke</span></h2>
+                <p class="section-description">Schmerzen können in nahezu jedem Gelenk auftreten – am häufigsten betroffen sind diese Bereiche.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card info-card reveal">
+                    <div class="service-header"><div class="service-icon" aria-hidden="true"><i data-lucide="activity"></i></div></div>
+                    <h3 class="service-title">Knie</h3>
+                    <p class="service-description">Schmerzen bei Belastung, Treppensteigen oder in der Hocke – z. B. bei Arthrose, Meniskus- oder Bandverletzungen.</p>
+                </div>
+                <div class="service-card info-card reveal">
+                    <div class="service-header"><div class="service-icon" aria-hidden="true"><i data-lucide="person-standing"></i></div></div>
+                    <h3 class="service-title">Hüfte</h3>
+                    <p class="service-description">Leisten- oder Hüftschmerzen beim Gehen und Sitzen, häufig durch Verschleiß (Coxarthrose) oder Fehlbelastung.</p>
+                </div>
+                <div class="service-card info-card reveal">
+                    <div class="service-header"><div class="service-icon" aria-hidden="true"><i data-lucide="move"></i></div></div>
+                    <h3 class="service-title">Schulter</h3>
+                    <p class="service-description">Eingeschränkte Beweglichkeit und Schmerzen beim Heben des Arms – etwa bei Engpasssyndrom oder Sehnenproblemen.</p>
+                </div>
+                <div class="service-card info-card reveal">
+                    <div class="service-header"><div class="service-icon" aria-hidden="true"><i data-lucide="footprints"></i></div></div>
+                    <h3 class="service-title">Sprunggelenk</h3>
+                    <p class="service-description">Schmerzen und Instabilität nach Umknicken, Bänderverletzungen oder bei beginnendem Verschleiß.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Causes & warning -->
+    <section class="section">
+        <div class="container">
+            <div class="prose-grid">
+                <div class="prose reveal">
+                    <h3>Mögliche Ursachen</h3>
+                    <p>Gelenkschmerzen können vielfältige Auslöser haben. Zu den häufigsten zählen:</p>
+                    <ul>
+                        <li><i data-lucide="check-circle" aria-hidden="true"></i> <strong>Arthrose</strong> – altersbedingter oder belastungsbedingter Gelenkverschleiß</li>
+                        <li><i data-lucide="check-circle" aria-hidden="true"></i> <strong>Entzündungen</strong> – z. B. aktivierte Arthrose, Schleimbeutel- oder Sehnenentzündungen</li>
+                        <li><i data-lucide="check-circle" aria-hidden="true"></i> <strong>Sportverletzungen</strong> – Bänder-, Meniskus- oder Sehnenschäden</li>
+                        <li><i data-lucide="check-circle" aria-hidden="true"></i> <strong>Überlastung &amp; Fehlbelastung</strong> – durch Beruf, Sport oder Fehlstellungen</li>
+                        <li><i data-lucide="check-circle" aria-hidden="true"></i> <strong>Unfälle &amp; Verletzungen</strong> – Prellungen, Verstauchungen oder Brüche</li>
+                        <li><i data-lucide="check-circle" aria-hidden="true"></i> <strong>Fehlstellungen</strong> – z. B. X-/O-Beine, die Gelenke ungleich belasten</li>
+                    </ul>
+                    <p>Welche Ursache in Ihrem Fall vorliegt, lässt sich erst nach einer gründlichen Untersuchung sicher beurteilen.</p>
+
+                    <div class="alert-note" data-testid="warning-note">
+                        <span class="alert-note-icon" aria-hidden="true"><i data-lucide="alert-triangle"></i></span>
+                        <div>
+                            <h3>Wann Sie ärztlichen Rat einholen sollten</h3>
+                            <p>Bitte vereinbaren Sie zeitnah einen Termin, wenn einer oder mehrere der folgenden Punkte zutreffen:</p>
+                            <ul>
+                                <li>Starke oder anhaltende Schmerzen über mehrere Tage</li>
+                                <li>Deutliche Schwellung, Rötung oder Überwärmung des Gelenks</li>
+                                <li>Spürbare Bewegungseinschränkung oder Instabilität</li>
+                                <li>Schmerzen in Ruhe oder nachts</li>
+                                <li>Beschwerden nach einem Sturz oder Unfall</li>
+                                <li>Gelenkschmerzen begleitet von Fieber</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="aside-card reveal">
+                    <h3>Schmerzen abklären lassen</h3>
+                    <div class="aside-item"><i data-lucide="search" aria-hidden="true"></i><span>Gründliche Ursachenabklärung statt Symptombehandlung</span></div>
+                    <div class="aside-item"><i data-lucide="message-circle" aria-hidden="true"></i><span>Ausführliches Gespräch ohne Zeitdruck</span></div>
+                    <div class="aside-item"><i data-lucide="shield-check" aria-hidden="true"></i><span>Möglichst schonende, konservative Behandlung</span></div>
+                    <button onclick="openBooking()" class="btn-pill btn-pill-primary" aria-label="Termin vereinbaren">
+                        <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="calendar-check"></i></span>
+                        Termin vereinbaren
+                    </button>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diagnostics -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Diagnostik</span>
+                <h2 class="section-title-center"><span class="t-light">So finden wir</span> <span class="t-bold">die Ursache</span></h2>
+                <p class="section-description">Eine sorgfältige Diagnose ist die Grundlage jeder erfolgreichen Behandlung.</p>
+            </div>
+            <div class="process-grid cols-3">
+                <div class="process-step reveal">
+                    <span class="process-number" aria-hidden="true">1</span>
+                    <div class="process-icon" aria-hidden="true"><i data-lucide="clipboard-list"></i></div>
+                    <h3 class="process-title">Anamnese</h3>
+                    <p class="process-text">Im Gespräch erfasse ich Ihre Beschwerden, deren Verlauf sowie Vorerkrankungen und Belastungen im Alltag.</p>
+                </div>
+                <div class="process-step reveal">
+                    <span class="process-number" aria-hidden="true">2</span>
+                    <div class="process-icon" aria-hidden="true"><i data-lucide="stethoscope"></i></div>
+                    <h3 class="process-title">Klinische Untersuchung</h3>
+                    <p class="process-text">Beweglichkeit, Stabilität und Druckpunkte des Gelenks werden gezielt getestet, um die Schmerzquelle einzugrenzen.</p>
+                </div>
+                <div class="process-step reveal">
+                    <span class="process-number" aria-hidden="true">3</span>
+                    <div class="process-icon" aria-hidden="true"><i data-lucide="scan-line"></i></div>
+                    <h3 class="process-title">Bildgebende Diagnostik</h3>
+                    <p class="process-text">Bei Bedarf ergänzen bildgebende Verfahren wie Röntgen, Ultraschall oder eine MRT-Empfehlung die Diagnose.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment options -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Behandlung</span>
+                <h2 class="section-title-center"><span class="t-light">Individuelle</span> <span class="t-bold">Behandlungsmöglichkeiten</span></h2>
+                <p class="section-description">Mein Ziel ist eine möglichst schonende, konservative Therapie – abgestimmt auf Ursache, Beschwerden und Lebensumstände.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card info-card reveal">
+                    <div class="service-header"><div class="service-icon" aria-hidden="true"><i data-lucide="pill"></i></div></div>
+                    <h3 class="service-title">Medikamentöse Therapie</h3>
+                    <p class="service-description">Gezielter Einsatz schmerz- und entzündungshemmender Medikamente zur Linderung akuter Beschwerden.</p>
+                </div>
+                <div class="service-card info-card reveal">
+                    <div class="service-header"><div class="service-icon" aria-hidden="true"><i data-lucide="syringe"></i></div></div>
+                    <h3 class="service-title">Infiltrationen</h3>
+                    <p class="service-description">Punktgenaue Injektionen, um Entzündungen und Schmerzen direkt am Gelenk zu behandeln.</p>
+                </div>
+                <div class="service-card info-card reveal">
+                    <div class="service-header"><div class="service-icon" aria-hidden="true"><i data-lucide="waves"></i></div></div>
+                    <h3 class="service-title">Physikalische Therapie</h3>
+                    <p class="service-description">Empfehlung und Begleitung physikalischer Maßnahmen zur Schmerzlinderung und Funktionsverbesserung.</p>
+                </div>
+                <div class="service-card info-card reveal">
+                    <div class="service-header"><div class="service-icon" aria-hidden="true"><i data-lucide="dumbbell"></i></div></div>
+                    <h3 class="service-title">Bewegungs- &amp; Trainingstherapie</h3>
+                    <p class="service-description">Gezielte Übungen zur Stärkung, Stabilisierung und Entlastung des betroffenen Gelenks.</p>
+                </div>
+                <div class="service-card info-card reveal">
+                    <div class="service-header"><div class="service-icon" aria-hidden="true"><i data-lucide="zap"></i></div></div>
+                    <h3 class="service-title">Stoßwellentherapie</h3>
+                    <p class="service-description">Moderne Behandlungsoption bei bestimmten chronischen Sehnen- und Gelenkbeschwerden.</p>
+                </div>
+                <div class="service-card info-card reveal">
+                    <div class="service-header"><div class="service-icon" aria-hidden="true"><i data-lucide="clipboard-plus"></i></div></div>
+                    <h3 class="service-title">Begleitung bei OP-Indikation</h3>
+                    <p class="service-description">Ist ein Eingriff sinnvoll, berate ich Sie umfassend und begleite Vor- und Nachbehandlung.</p>
+                </div>
+            </div>
+            <p class="med-disclaimer" data-testid="med-disclaimer">
+                Hinweis: Dieser Text dient ausschließlich der allgemeinen Information und ersetzt keine persönliche ärztliche Beratung, Diagnose oder Behandlung. Welche Maßnahmen in Ihrem individuellen Fall sinnvoll sind, klären wir gemeinsam in der Ordination.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-gray">
+        <div class="container-narrow">
+            <div class="section-header">
+                <span class="section-eyebrow">FAQ</span>
+                <h2 class="section-title-center"><span class="t-light">Fragen zu</span> <span class="t-bold">Gelenkschmerzen</span></h2>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(0)" aria-expanded="false" aria-controls="content-0">
+                        <span>Ab wann sollte ich mit Gelenkschmerzen zum Arzt?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-0" aria-hidden="true"></i>
+                    </button>
+                    <div class="accordion-content" id="content-0">
+                        <p>Spätestens wenn Schmerzen länger als einige Tage anhalten, immer wiederkehren oder mit Schwellung, Rötung, Bewegungseinschränkung bzw. nächtlichen Schmerzen einhergehen, ist eine ärztliche Abklärung sinnvoll. Nach einem Unfall oder bei begleitendem Fieber sollten Sie zeitnah einen Termin vereinbaren.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(1)" aria-expanded="false" aria-controls="content-1">
+                        <span>Muss bei Gelenkschmerzen immer operiert werden?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-1" aria-hidden="true"></i>
+                    </button>
+                    <div class="accordion-content" id="content-1">
+                        <p>Nein. In den meisten Fällen lassen sich Gelenkschmerzen konservativ – also ohne Operation – gut behandeln. Eine Operation wird erst in Betracht gezogen, wenn konservative Maßnahmen nicht ausreichen. Mein Ziel ist stets die möglichst schonende Behandlung.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(2)" aria-expanded="false" aria-controls="content-2">
+                        <span>Welche Untersuchungen erwarten mich beim Termin?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-2" aria-hidden="true"></i>
+                    </button>
+                    <div class="accordion-content" id="content-2">
+                        <p>Zunächst führen wir ein ausführliches Gespräch (Anamnese) und eine klinische Untersuchung des betroffenen Gelenks durch. Bei Bedarf werden bildgebende Verfahren wie Röntgen oder Ultraschall ergänzt bzw. eine MRT empfohlen, um die Ursache genau zu bestimmen.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(3)" aria-expanded="false" aria-controls="content-3">
+                        <span>Brauche ich eine Überweisung?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-3" aria-hidden="true"></i>
+                    </button>
+                    <div class="accordion-content" id="content-3">
+                        <p>Nein. Als Wahlarzt benötigen Sie keine Überweisung. Sie können direkt online oder telefonisch unter 01 214 14 31 einen Termin vereinbaren. Die Verrechnung erfolgt nach der Honorarordnung, die Rückerstattung läuft automatisch über Ihre Krankenkasse.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 2.5rem;">
+                <span class="section-eyebrow eyebrow-light">Termin</span>
+                <h2 class="section-title-center white"><span class="t-light">Schmerzen abklären –</span> <span class="t-bold">jetzt Termin vereinbaren</span></h2>
+                <p class="section-description" style="color: rgba(255,255,255,0.85);">Lassen Sie Ihre Gelenkbeschwerden professionell abklären und profitieren Sie von einer individuellen, schonenden Behandlung.</p>
+            </div>
+            <div style="text-align: center;">
+                <button onclick="openBooking()" class="btn-pill btn-pill-primary" aria-label="Termin vereinbaren" data-testid="cta-booking-btn">
+                    <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="calendar-check"></i></span>
+                    Jetzt Termin vereinbaren
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-cta">
+                <div class="footer-cta-text">
+                    <span class="section-eyebrow eyebrow-light">Jetzt Termin sichern</span>
+                    <h2 class="footer-cta-title"><span class="t-light">Wir sind</span> <span class="t-bold">für Sie da</span></h2>
+                </div>
+                <div class="footer-cta-actions">
+                    <button onclick="openBooking()" class="btn-pill btn-pill-primary" aria-label="Termin vereinbaren" data-testid="footer-booking-btn">
+                        <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="calendar-check"></i></span>
+                        Termin vereinbaren
+                    </button>
+                    <a href="tel:012141431" class="footer-phone-cta" aria-label="Telefonnummer 01 214 14 31 anrufen" data-testid="footer-phone">
+                        <i data-lucide="phone" class="icon-sm" aria-hidden="true"></i> 01 / 214 14 31
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2 class="footer-title">OA Dr. Ewald Walder</h2>
+                    <p class="footer-text">Facharzt für Orthopädie und Unfallchirurgie · Wahlarzt in Wien.</p>
+                    <p class="footer-text">Individuelle Betreuung, moderne Methoden und Behandlung ohne Zeitdruck.</p>
+                </div>
+                <div>
+                    <h3 class="footer-subtitle">Schnellzugriff</h3>
+                    <div class="footer-links">
+                        <a href="index.html#ueber" class="footer-link">Über mich</a>
+                        <a href="index.html#leistungen" class="footer-link">Leistungen</a>
+                        <a href="index.html#honorare" class="footer-link">Honorare</a>
+                        <a href="index.html#kontakt" class="footer-link">Kontakt</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer-subtitle">Kontakt</h3>
+                    <div class="footer-contact">
+                        <p class="footer-contact-item"><i data-lucide="map-pin" aria-hidden="true"></i> Praterstraße 66/1/69b, 1020 Wien</p>
+                        <a href="tel:012141431" class="footer-contact-item footer-link" aria-label="Telefonnummer 01 214 14 31 anrufen"><i data-lucide="phone" aria-hidden="true"></i> 01 / 214 14 31</a>
+                        <p class="footer-contact-item"><i data-lucide="clock" aria-hidden="true"></i> Mo &amp; Do 09–16, Mi 14–18 Uhr</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer-subtitle">Rechtliches</h3>
+                    <div class="footer-links">
+                        <a href="index.html#impressum" class="footer-link">Impressum</a>
+                        <a href="index.html#datenschutz" class="footer-link">Datenschutz</a>
+                        <a href="index.html#genderhinweis" class="footer-link">Genderhinweis</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© <span id="year"></span> OA Dr. Ewald Walder. Alle Rechte vorbehalten.</p>
+                <a href="#top" class="footer-top-link" aria-label="Nach oben scrollen">Nach oben <i data-lucide="arrow-up" class="icon-sm" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
