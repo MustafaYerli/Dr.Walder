@@ -979,11 +979,22 @@ body.accessibility-mode .btn-accessibility {
    ============================================ */
 .subpage-hero {
     position: relative;
-    background: linear-gradient(135deg, #1d3311 0%, var(--color-primary) 150%);
+    background-color: #1d3311;
+    background-image: url('gelenkschmerzen-hero.jpg');
+    background-size: cover;
+    background-position: center right;
     color: #fff;
     padding: calc(var(--header-h) + var(--space-16)) 0 var(--space-20);
     overflow: hidden;
 }
+.subpage-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, rgba(20, 36, 12, 0.97) 0%, rgba(29, 51, 17, 0.93) 42%, rgba(40, 70, 22, 0.72) 72%, rgba(128, 204, 40, 0.42) 100%);
+    z-index: 0;
+}
+.subpage-hero .container { position: relative; z-index: 1; }
 .breadcrumb {
     display: flex;
     flex-wrap: wrap;
@@ -1000,6 +1011,7 @@ body.accessibility-mode .btn-accessibility {
 .subpage-hero .section-eyebrow::before { background: #fff; }
 .subpage-title {
     font-family: 'Outfit', sans-serif;
+    color: #fff;
     font-size: var(--text-5xl);
     font-weight: 700;
     line-height: 1.08;
@@ -1574,9 +1586,11 @@ body.accessibility-mode .refund-note strong { color: #000000 !important; }
 /* Service detail subpage a11y */
 body.accessibility-mode .subpage-hero {
     background: #ffffff !important;
+    background-image: none !important;
     color: #000000 !important;
     padding-top: calc(var(--header-h) + 4rem) !important;
 }
+body.accessibility-mode .subpage-hero::before { display: none !important; }
 body.accessibility-mode .subpage-title,
 body.accessibility-mode .subpage-lead,
 body.accessibility-mode .breadcrumb,

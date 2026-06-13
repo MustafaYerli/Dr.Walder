@@ -25,6 +25,10 @@ Sprache des Users: DEUTSCH.
   Ursachen + Amber-Warnhinweis (.alert-note), Diagnostik (3 process-steps), Behandlungen (6 Karten),
   FAQ-Accordion, dark CTA-Band, med. Disclaimer. Erste Leistungskarte (index.html) verlinkt darauf (.service-card-link + „Mehr erfahren").
   Neue Styles: .subpage-hero/.breadcrumb/.prose/.aside-card/.alert-note/.med-disclaimer + A11y-Overrides.
+- 2026-06: **Hero-Bild für gelenkschmerzen.html** (`gelenkschmerzen-hero.jpg`, Unsplash – Physiotherapeut/Knie-Untersuchung)
+  als Hintergrund mit grünem Verlauf (.subpage-hero::before) + container z-index; .subpage-title color:#fff (globale h1-Farbe überschrieb sonst). A11y: background-image none + ::before display:none.
+  ACHTUNG (gelernt): NIE zwei search_replace auf DERSELBEN Datei im selben Parallel-Batch – ein Edit ging
+  durch Race-Condition verloren (CSS-Block fehlte, musste sequenziell nachgetragen werden).
   ACHTUNG (gelernt): NIE zwei search_replace auf DERSELBEN Datei im selben Parallel-Batch – ein Edit ging
   durch Race-Condition verloren (CSS-Block fehlte, musste sequenziell nachgetragen werden).
 - 2026-06: **Behandlungsablauf-Section** (id=ablauf, 4 nummerierte Schritt-Karten + CTA, weißer Hintergrund).
