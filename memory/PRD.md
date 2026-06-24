@@ -51,6 +51,13 @@ Sprache des Users: DEUTSCH.
   - **Unterseite gelenkschmerzen.html + gelenkschmerzen-hero.jpg GELÖSCHT** (Link aus Leistungen entfernt).
 
 ## Offen / Backlog
+- 2026-06: **Alle 5 Leistungs-Unterseiten erstellt** im einheitlichen Stil (subpage-hero + breadcrumb, prose-grid + aside-card,
+  process-grid, services-grid/Vorteile, alert-note, FAQ-Accordion, section-dark CTA, med-disclaimer):
+  `schmerztherapie.html`, `infusionstherapie.html`, `stosswelle.html`, `stammzelle.html`, `postoperativ.html`.
+  Eigene Stock-Hero-Bilder pro Seite (`*-hero.jpg`, Unsplash). `.subpage-hero` background-image jetzt generisch (inline pro Seite).
+  Alle 5 Leistungskarten (index.html) verlinken mit „Mehr erfahren" (service-link-* data-testids).
+  Neue CSS: .aside-phone + .aside-card p. Verifiziert via testing_agent (iteration_2.json, 100% pass).
+- 2026-06: **A11y-Fix:** toggleAccordion() (script.js) synchronisiert jetzt aria-expanded auf .accordion-trigger (Screenreader).
 - 2026-06: **Hero-Verlauf** früher ausgeblendet (transparent ab ~72% statt 100%) – rechte Bildseite klarer.
 - 2026-06: **Trust-Leiste (benefits-grid)** auf großen Screens (≥1101px) auf 780px verbreitert; mobil unverändert.
 - 2026-06: **Über-mich-Section auf Foto-Hintergrund umgebaut** (`ueber-bg.jpg`, eigenes Foto Dr. Walder):

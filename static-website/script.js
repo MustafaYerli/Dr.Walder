@@ -12,10 +12,12 @@ function openMaps() {
 function toggleAccordion(index) {
     const content = document.getElementById(`content-${index}`);
     const icon = document.getElementById(`icon-${index}`);
-    
+    const triggers = document.querySelectorAll('.accordion-trigger');
+
     if (content.classList.contains('open')) {
         content.classList.remove('open');
         icon.classList.remove('rotated');
+        if (triggers[index]) triggers[index].setAttribute('aria-expanded', 'false');
     } else {
         // Close all other accordions
         document.querySelectorAll('.accordion-content').forEach(item => {
@@ -24,10 +26,12 @@ function toggleAccordion(index) {
         document.querySelectorAll('.accordion-icon').forEach(item => {
             item.classList.remove('rotated');
         });
-        
+        triggers.forEach(t => t.setAttribute('aria-expanded', 'false'));
+
         // Open clicked accordion
         content.classList.add('open');
         icon.classList.add('rotated');
+        if (triggers[index]) triggers[index].setAttribute('aria-expanded', 'true');
     }
 }
 
