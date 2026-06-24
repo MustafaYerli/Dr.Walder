@@ -854,6 +854,8 @@ body.accessibility-mode .btn-accessibility {
 .about-section {
     position: relative;
     background-image: url('ueber-bg.png');
+    background-image: -webkit-image-set(url('ueber-bg.webp') type('image/webp'), url('ueber-bg.png') type('image/png'));
+    background-image: image-set(url('ueber-bg.webp') type('image/webp'), url('ueber-bg.png') type('image/png'));
     background-size: cover;
     background-position: center 42%;
     background-repeat: no-repeat;
