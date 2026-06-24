@@ -804,6 +804,47 @@ body.accessibility-mode .btn-accessibility {
 .refund-note p { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.65; }
 .refund-note strong { color: var(--color-secondary); }
 
+/* Hospitals (Spitäler) */
+.hospital-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+}
+@media (max-width: 980px) { .hospital-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .hospital-grid { grid-template-columns: 1fr; } }
+.hospital-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-4);
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8) var(--space-6);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.hospital-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--color-primary); }
+.hospital-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary-soft);
+    color: var(--color-primary-hover);
+    border-radius: var(--radius-full);
+}
+.hospital-icon svg { width: 28px; height: 28px; }
+.hospital-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--color-secondary);
+    line-height: 1.3;
+}
+
 /* About premium */
 .about-image-wrapper { position: relative; }
 .about-image-wrapper::before {
@@ -1395,6 +1436,7 @@ body.accessibility-mode .card {
 
 body.accessibility-mode .service-card,
 body.accessibility-mode .contact-card,
+body.accessibility-mode .hospital-card,
 body.accessibility-mode .accordion-item {
     padding: 1.8rem !important;
 }
