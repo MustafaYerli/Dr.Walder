@@ -359,9 +359,9 @@ body.accessibility-mode .btn-accessibility {
     background: linear-gradient(
         105deg,
         rgba(33, 56, 22, 0.94) 0%,
-        rgba(107, 179, 32, 0.90) 34%,
-        rgba(128, 204, 40, 0.46) 64%,
-        rgba(128, 204, 40, 0.04) 100%
+        rgba(107, 179, 32, 0.82) 26%,
+        rgba(128, 204, 40, 0.28) 50%,
+        rgba(128, 204, 40, 0.0) 72%
     );
     z-index: 1;
 }
