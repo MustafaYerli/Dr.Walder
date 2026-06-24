@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schmerztherapie in Wien | OA Dr. Ewald Walder – Orthopäde</title>
+    <meta name="description" content="Schmerztherapie bei OA Dr. Ewald Walder, Facharzt für Orthopädie und Unfallchirurgie in Wien. Gezielte Behandlung akuter und chronischer Schmerzen – individuell, ohne Zeitdruck.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Work+Sans:wght@400;500;600;700&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Mobile Sticky Buttons -->
+    <div class="mobile-sticky-footer">
+        <a href="tel:012141431" class="mobile-btn mobile-btn-call" aria-label="Praxis anrufen">
+            <i data-lucide="phone" class="icon" aria-hidden="true"></i>
+            <span>Anrufen</span>
+        </a>
+        <button onclick="openBooking()" class="mobile-btn mobile-btn-booking" aria-label="Termin telefonisch vereinbaren">
+            <i data-lucide="stethoscope" class="icon" aria-hidden="true"></i>
+            <span>Termin</span>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="navbar">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html#top" class="header-logo" aria-label="Zur Startseite" data-testid="header-logo-link">
+                    <img src="logo.png" alt="Dr. Ewald Walder - Facharzt für Orthopädie und Unfallchirurgie Wien">
+                </a>
+                <nav class="nav" aria-label="Hauptnavigation">
+                    <a href="index.html#ueber" class="nav-link" data-testid="nav-ueber">Über mich</a>
+                    <a href="index.html#leistungen" class="nav-link" data-testid="nav-leistungen">Leistungen</a>
+                    <a href="index.html#honorare" class="nav-link" data-testid="nav-honorare">Honorare</a>
+                    <a href="index.html#kontakt" class="nav-link" data-testid="nav-kontakt">Kontakt</a>
+                </nav>
+                <div class="header-actions">
+                    <button id="accessibility-toggle" class="btn-accessibility" aria-label="Barrierefreie Seite ein- oder ausschalten" data-testid="accessibility-toggle">
+                        Barrierefreie Seite
+                    </button>
+                    <button onclick="openBooking()" class="btn btn-primary header-cta" aria-label="Termin telefonisch vereinbaren" data-testid="header-booking-btn">
+                        Termin vereinbaren
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Subpage Hero -->
+    <section class="subpage-hero" id="top" style="background-image: url('schmerztherapie-hero.jpg');" data-testid="subpage-hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Brotkrümelnavigation">
+                <a href="index.html#top">Startseite</a>
+                <span class="sep" aria-hidden="true">/</span>
+                <a href="index.html#leistungen">Leistungen</a>
+                <span class="sep" aria-hidden="true">/</span>
+                <span class="current">Schmerztherapie</span>
+            </nav>
+            <span class="section-eyebrow">Leistung</span>
+            <h1 class="subpage-title">Schmerztherapie in Wien</h1>
+            <p class="subpage-lead">
+                Schmerzen schränken Lebensqualität, Beweglichkeit und Schlaf ein. Als Facharzt für Orthopädie und Unfallchirurgie behandle ich akute und chronische Schmerzen am Bewegungsapparat gezielt – nach einer gründlichen Diagnostik und individuell auf Sie abgestimmt.
+            </p>
+            <div class="subpage-hero-actions">
+                <button onclick="openBooking()" class="btn-pill btn-pill-dark" aria-label="Termin telefonisch vereinbaren" data-testid="hero-booking-btn">
+                    <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="phone"></i></span>
+                    Termin vereinbaren
+                </button>
+                <a href="index.html#leistungen" class="subpage-back" data-testid="back-to-services">
+                    <i data-lucide="arrow-left" aria-hidden="true"></i> Alle Leistungen
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section">
+        <div class="container">
+            <div class="prose-grid">
+                <div class="prose reveal">
+                    <h3>Was versteht man unter Schmerztherapie?</h3>
+                    <p>
+                        Die orthopädische Schmerztherapie umfasst alle Maßnahmen, die darauf abzielen, Schmerzen am Bewegungsapparat zu lindern, ihre Ursache zu behandeln und die Beweglichkeit wiederherzustellen. Im Mittelpunkt steht nicht nur die kurzfristige Linderung, sondern eine nachhaltige Lösung – damit Schmerzen nicht chronisch werden.
+                    </p>
+                    <p>
+                        Vor jeder Behandlung steht eine genaue Diagnostik: Erst wenn die Ursache der Beschwerden klar ist, lässt sich gezielt und wirksam therapieren. Dafür nehme ich mir bewusst Zeit und bespreche mit Ihnen einen verständlichen, auf Sie zugeschnittenen Behandlungsplan.
+                    </p>
+                    <h3>Bei welchen Beschwerden ist sie sinnvoll?</h3>
+                    <ul>
+                        <li><i data-lucide="check-circle" aria-hidden="true"></i> Akute Schmerzen nach Verletzungen oder Überlastung</li>
+                        <li><i data-lucide="check-circle" aria-hidden="true"></i> Chronische Rücken-, Nacken- und Gelenkschmerzen</li>
+                        <li><i data-lucide="check-circle" aria-hidden="true"></i> Arthrose- und Verschleißschmerzen</li>
+                        <li><i data-lucide="check-circle" aria-hidden="true"></i> Sehnen- und Muskelbeschwerden</li>
+                        <li><i data-lucide="check-circle" aria-hidden="true"></i> Schmerzen nach Operationen</li>
+                    </ul>
+                </div>
+                <aside class="aside-card reveal" aria-label="Termin vereinbaren">
+                    <h3>Termin vereinbaren</h3>
+                    <p>Sie leiden unter Schmerzen? Vereinbaren Sie telefonisch einen Termin – wir besprechen Ihre Beschwerden in Ruhe und finden gemeinsam die passende Therapie.</p>
+                    <a href="tel:012141431" class="aside-phone" aria-label="Telefonnummer 01 214 14 31 anrufen">
+                        <i data-lucide="phone" aria-hidden="true"></i> 01 / 214 14 31
+                    </a>
+                    <button onclick="openBooking()" class="btn-pill btn-pill-primary" aria-label="Termin telefonisch vereinbaren" data-testid="aside-booking-btn">
+                        <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="calendar-check"></i></span>
+                        Jetzt anrufen
+                    </button>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Ablauf</span>
+                <h2 class="section-title-center"><span class="t-light">So läuft die</span> <span class="t-bold">Schmerztherapie ab</span></h2>
+                <p class="section-description">Von der genauen Diagnose bis zur individuellen Therapie – transparent und nachvollziehbar.</p>
+            </div>
+            <div class="process-grid cols-3">
+                <div class="process-step reveal">
+                    <span class="process-number" aria-hidden="true">1</span>
+                    <div class="process-icon" aria-hidden="true"><i data-lucide="messages-square"></i></div>
+                    <h3 class="process-title">Anamnese &amp; Diagnostik</h3>
+                    <p class="process-text">Ausführliches Gespräch, klinische Untersuchung und bei Bedarf bildgebende Diagnostik, um die Ursache der Schmerzen zu finden.</p>
+                </div>
+                <div class="process-step reveal">
+                    <span class="process-number" aria-hidden="true">2</span>
+                    <div class="process-icon" aria-hidden="true"><i data-lucide="clipboard-check"></i></div>
+                    <h3 class="process-title">Individueller Therapieplan</h3>
+                    <p class="process-text">Auf Ihre Diagnose abgestimmte Behandlung – konservativ, medikamentös oder mit ergänzenden Verfahren wie Infusionen oder Stoßwelle.</p>
+                </div>
+                <div class="process-step reveal">
+                    <span class="process-number" aria-hidden="true">3</span>
+                    <div class="process-icon" aria-hidden="true"><i data-lucide="trending-up"></i></div>
+                    <h3 class="process-title">Kontrolle &amp; Begleitung</h3>
+                    <p class="process-text">Wir kontrollieren den Therapieerfolg und passen die Behandlung bei Bedarf an – bis Sie wieder beschwerdefrei und beweglich sind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methods -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Methoden</span>
+                <h2 class="section-title-center"><span class="t-light">Mögliche</span> <span class="t-bold">Behandlungsbausteine</span></h2>
+                <p class="section-description">Je nach Ursache kombiniere ich verschiedene Verfahren zu einem individuellen Konzept.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon" aria-hidden="true"><i data-lucide="pill"></i></div>
+                    </div>
+                    <h3 class="service-title">Medikamentöse Therapie</h3>
+                    <p class="service-description">Gezielter, verantwortungsvoller Einsatz schmerzlindernder und entzündungshemmender Medikamente.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon" aria-hidden="true"><i data-lucide="syringe"></i></div>
+                    </div>
+                    <h3 class="service-title">Infiltrationen</h3>
+                    <p class="service-description">Punktgenaue Injektionen zur lokalen Schmerzlinderung direkt am betroffenen Bereich.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon" aria-hidden="true"><i data-lucide="droplets"></i></div>
+                    </div>
+                    <h3 class="service-title">Infusionstherapie</h3>
+                    <p class="service-description">Aufbauende Infusionen zur Unterstützung der Schmerzlinderung und Regeneration.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon" aria-hidden="true"><i data-lucide="waves"></i></div>
+                    </div>
+                    <h3 class="service-title">Stoßwellentherapie</h3>
+                    <p class="service-description">Moderne Stoßwelle bei Sehnen-, Muskel- und chronischen Schmerzzuständen.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon" aria-hidden="true"><i data-lucide="dna"></i></div>
+                    </div>
+                    <h3 class="service-title">Regenerative Verfahren</h3>
+                    <p class="service-description">ACP-/Eigenbluttherapie zur natürlichen Unterstützung der Heilungsprozesse.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon" aria-hidden="true"><i data-lucide="activity"></i></div>
+                    </div>
+                    <h3 class="service-title">Bewegungsempfehlung</h3>
+                    <p class="service-description">Individuelle Empfehlungen zu Bewegung und Entlastung als Teil eines nachhaltigen Konzepts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alert / when to see a doctor -->
+    <section class="section section-gray">
+        <div class="container-narrow">
+            <div class="alert-note reveal">
+                <span class="alert-note-icon" aria-hidden="true"><i data-lucide="alert-triangle"></i></span>
+                <div>
+                    <h3>Wann Sie nicht zu lange warten sollten</h3>
+                    <p>Bei folgenden Anzeichen sollten Schmerzen ärztlich abgeklärt werden:</p>
+                    <ul>
+                        <li>Schmerzen, die länger als wenige Tage anhalten oder zunehmen</li>
+                        <li>Taubheitsgefühle, Kribbeln oder Kraftverlust</li>
+                        <li>Schmerzen nach einem Sturz oder Unfall</li>
+                        <li>Nächtliche Schmerzen oder Schmerzen in Ruhe</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container-narrow">
+            <div class="section-header">
+                <span class="section-eyebrow">FAQ</span>
+                <h2 class="section-title-center"><span class="t-light">Häufige</span> <span class="t-bold">Fragen zur Schmerztherapie</span></h2>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(0)" aria-expanded="false" aria-controls="content-0">
+                        <span>Brauche ich eine Überweisung?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-0" aria-hidden="true"></i>
+                    </button>
+                    <div class="accordion-content" id="content-0">
+                        <p>Nein. Für einen Termin bei OA Dr. Ewald Walder ist keine Überweisung erforderlich. Sie können direkt telefonisch einen Termin zur Abklärung Ihrer Schmerzen vereinbaren.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(1)" aria-expanded="false" aria-controls="content-1">
+                        <span>Wie schnell wirkt die Schmerztherapie?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-1" aria-hidden="true"></i>
+                    </button>
+                    <div class="accordion-content" id="content-1">
+                        <p>Das hängt von Ursache und Schweregrad ab. Akute Beschwerden bessern sich oft rasch, chronische Schmerzen benötigen meist mehrere Schritte. Im Erstgespräch erhalten Sie eine realistische Einschätzung.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(2)" aria-expanded="false" aria-controls="content-2">
+                        <span>Werden die Kosten rückerstattet?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-2" aria-hidden="true"></i>
+                    </button>
+                    <div class="accordion-content" id="content-2">
+                        <p>Als Wahlarzt erfolgt die Verrechnung nach der Honorarordnung. Die Abrechnung wird automatisch über Ihre Krankenkasse eingereicht – Sie erhalten in der Regel rund 70–80 % des Kassentarifs zurück.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(3)" aria-expanded="false" aria-controls="content-3">
+                        <span>Ist die Behandlung schmerzhaft?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-3" aria-hidden="true"></i>
+                    </button>
+                    <div class="accordion-content" id="content-3">
+                        <p>Die meisten Verfahren sind gut verträglich. Bei Injektionen oder Stoßwelle kann es zu einem kurzen, leichten Unbehagen kommen. Ich erkläre Ihnen jeden Schritt vorab.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="section section-dark">
+        <div class="container-narrow">
+            <div class="appointment-header">
+                <span class="section-eyebrow eyebrow-light">Terminbuchung</span>
+                <h2 class="section-title-center white"><span class="t-light">Schmerzfrei</span> <span class="t-bold">durchstarten</span></h2>
+                <p class="appointment-subtitle">Vereinbaren Sie Ihren Termin ganz einfach telefonisch.</p>
+            </div>
+            <div class="card">
+                <div class="appointment-content">
+                    <i data-lucide="phone-call" class="appointment-icon" aria-hidden="true"></i>
+                    <h3 class="appointment-title">Telefonische Terminvereinbarung</h3>
+                    <p class="appointment-description">Rufen Sie uns an – wir finden gemeinsam einen passenden Termin für Sie.</p>
+                    <button onclick="openBooking()" class="btn-pill btn-pill-dark" aria-label="Termin telefonisch vereinbaren" data-testid="cta-booking-btn">
+                        <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="phone"></i></span>
+                        Jetzt anrufen &amp; Termin vereinbaren
+                    </button>
+                    <div class="appointment-divider">
+                        <p class="appointment-or">Sie erreichen uns telefonisch unter:</p>
+                        <a href="tel:012141431" class="appointment-phone" aria-label="Telefonnummer 01 214 14 31 anrufen">
+                            <i data-lucide="phone" class="icon-sm" aria-hidden="true"></i>
+                            01 / 214 14 31
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="med-disclaimer">
+                Hinweis: Die Inhalte dieser Seite dienen der allgemeinen Information und ersetzen keine persönliche ärztliche Beratung, Diagnose oder Behandlung. Die geeignete Therapie wird individuell nach einer Untersuchung festgelegt.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-cta">
+                <div class="footer-cta-text">
+                    <span class="section-eyebrow eyebrow-light">Jetzt Termin sichern</span>
+                    <h2 class="footer-cta-title"><span class="t-light">Wir sind</span> <span class="t-bold">für Sie da</span></h2>
+                </div>
+                <div class="footer-cta-actions">
+                    <button onclick="openBooking()" class="btn-pill btn-pill-primary" aria-label="Termin vereinbaren" data-testid="footer-booking-btn">
+                        <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="calendar-check"></i></span>
+                        Termin vereinbaren
+                    </button>
+                    <a href="tel:012141431" class="footer-phone-cta" aria-label="Telefonnummer 01 214 14 31 anrufen" data-testid="footer-phone">
+                        <i data-lucide="phone" class="icon-sm" aria-hidden="true"></i> 01 / 214 14 31
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2 class="footer-title">OA Dr. Ewald Walder</h2>
+                    <p class="footer-text">Facharzt für Orthopädie und Unfallchirurgie · Wahlarzt in Wien.</p>
+                    <p class="footer-text">Individuelle Betreuung, moderne Methoden und Behandlung ohne Zeitdruck.</p>
+                </div>
+                <div>
+                    <h3 class="footer-subtitle">Schnellzugriff</h3>
+                    <div class="footer-links">
+                        <a href="index.html#ueber" class="footer-link">Über mich</a>
+                        <a href="index.html#leistungen" class="footer-link">Leistungen</a>
+                        <a href="index.html#honorare" class="footer-link">Honorare</a>
+                        <a href="index.html#kontakt" class="footer-link">Kontakt</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer-subtitle">Kontakt</h3>
+                    <div class="footer-contact">
+                        <p class="footer-contact-item"><i data-lucide="map-pin" aria-hidden="true"></i> Praterstraße 66/1/69b, 1020 Wien</p>
+                        <a href="tel:012141431" class="footer-contact-item footer-link" aria-label="Telefonnummer 01 214 14 31 anrufen"><i data-lucide="phone" aria-hidden="true"></i> 01 / 214 14 31</a>
+                        <p class="footer-contact-item"><i data-lucide="clock" aria-hidden="true"></i> Mo &amp; Do 09–16, Mi 14–18 Uhr</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer-subtitle">Rechtliches</h3>
+                    <div class="footer-links">
+                        <a href="index.html#impressum" class="footer-link">Impressum</a>
+                        <a href="index.html#datenschutz" class="footer-link">Datenschutz</a>
+                        <a href="index.html#genderhinweis" class="footer-link">Genderhinweis</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© <span id="year"></span> OA Dr. Ewald Walder. Alle Rechte vorbehalten.</p>
+                <a href="#top" class="footer-top-link" aria-label="Nach oben scrollen">Nach oben <i data-lucide="arrow-up" class="icon-sm" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

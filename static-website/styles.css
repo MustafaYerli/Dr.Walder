@@ -1068,7 +1068,6 @@ body.accessibility-mode .about-section .about-content { max-width: 100% !importa
 .subpage-hero {
     position: relative;
     background-color: #1d3311;
-    background-image: url('gelenkschmerzen-hero.jpg');
     background-size: cover;
     background-position: center right;
     color: #fff;
@@ -1157,6 +1156,10 @@ body.accessibility-mode .about-section .about-content { max-width: 100% !importa
 .aside-item { display: flex; gap: var(--space-3); align-items: flex-start; margin-bottom: var(--space-4); font-size: var(--text-sm); color: rgba(255, 255, 255, 0.9); line-height: 1.5; }
 .aside-item svg { width: 20px; height: 20px; color: var(--color-primary); flex-shrink: 0; margin-top: 1px; }
 .aside-card .btn-pill { margin-top: var(--space-4); width: 100%; justify-content: center; }
+.aside-card p { color: rgba(255, 255, 255, 0.9); font-size: var(--text-sm); line-height: 1.6; margin-bottom: var(--space-5); }
+.aside-phone { display: inline-flex; align-items: center; gap: var(--space-2); color: #fff; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: var(--text-xl); text-decoration: none; transition: color 0.2s ease; }
+.aside-phone:hover { color: var(--color-primary); }
+.aside-phone svg { width: 22px; height: 22px; color: var(--color-primary); }
 
 /* Alert / warning note */
 .alert-note {
