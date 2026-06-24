@@ -51,6 +51,12 @@ Sprache des Users: DEUTSCH.
   - **Unterseite gelenkschmerzen.html + gelenkschmerzen-hero.jpg GELÖSCHT** (Link aus Leistungen entfernt).
 
 ## Offen / Backlog
+- 2026-06: **Hero-Verlauf** früher ausgeblendet (transparent ab ~72% statt 100%) – rechte Bildseite klarer.
+- 2026-06: **Trust-Leiste (benefits-grid)** auf großen Screens (≥1101px) auf 780px verbreitert; mobil unverändert.
+- 2026-06: **Über-mich-Section auf Foto-Hintergrund umgebaut** (`ueber-bg.jpg`, eigenes Foto Dr. Walder):
+  Person in linker Hälfte (background-size:130% auto, position:100% 36%), Text rechts auf freier Fläche
+  (.about-section::before Verlauf transparent→#f7f9fb ab ~52%; .about-content max-width:44% margin-left:auto).
+  Alte about-image-wrapper/Badge entfernt. Mobile: cover + top + heller 180deg-Overlay. A11y: Bild aus, Overlay aus.
 - P0: Eigene Fotos des Users einbinden, sobald hochgeladen (z. B. „Über mich"-Platzhalter `.placeholder-box`).
 - P2: Vollständige „Das sagen Patienten"-Section (User wollte zunächst nur Hero-Badge; ggf. später erweitern,
   ggf. mit Featurable-Widget für automatische Google-Reviews).
