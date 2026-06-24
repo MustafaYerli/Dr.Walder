@@ -1246,6 +1246,14 @@ body.accessibility-mode .about-section .about-content { max-width: 100% !importa
    APPOINTMENT BANNER
    ============================================ */
 .section.section-dark { background: var(--color-primary); }
+#termin.section-dark {
+    background-image:
+        linear-gradient(rgba(128, 204, 40, 0.72), rgba(110, 178, 33, 0.78)),
+        image-set(url('termin-bg.webp') type('image/webp'), url('termin-bg.jpg') type('image/jpeg'));
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
 .appointment-header { margin-bottom: var(--space-12); text-align: center; }
 .appointment-subtitle { font-size: var(--text-xl); color: rgba(255, 255, 255, 0.92); margin-bottom: var(--space-8); }
 .appointment-content { display: flex; flex-direction: column; align-items: center; gap: var(--space-6); }
@@ -1711,7 +1719,9 @@ body.accessibility-mode .alert-note h3,
 body.accessibility-mode .alert-note p,
 body.accessibility-mode .alert-note li { color: #000000 !important; }
 
-body.accessibility-mode .section-dark {
+body.accessibility-mode .section-dark,
+body.accessibility-mode #termin.section-dark {
+    background-image: none !important;
     background: #000000 !important;
     color: #ffffff !important;
 }
