@@ -1,0 +1,52 @@
+{
+  "summary": "Frontend-only verification of 5 newly added service subpages (Schmerztherapie, Infusionstherapie, Stosswelle, Stammzelle, Postoperativ) for OA Dr. Ewald Walder static site at http://localhost:3000. All subpages, hero images, navigation, accordions, accessibility toggle, and homepage service-card links pass. No console errors, no network failures (>=400). One minor a11y note on accordion trigger aria-expanded.",
+  "backend_issues": { "critical": [], "minor": [] },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [],
+    "a11y_minor": [
+      {
+        "component": "FAQ Accordion (all 5 subpages)",
+        "issue": "toggleAccordion(index) in script.js only toggles the '.open' class on .accordion-content and '.rotated' on .accordion-icon. It does NOT update aria-expanded on the .accordion-trigger button (hardcoded aria-expanded=\"false\" in HTML stays 'false' forever). Visual behavior is correct, but screen readers will not announce expanded/collapsed state.",
+        "selector": ".accordion-trigger",
+        "priority": "LOW",
+        "suggested_fix": "In toggleAccordion(index), also do: document.querySelectorAll('.accordion-trigger').forEach(t => t.setAttribute('aria-expanded','false')); then on the opened one: document.querySelectorAll('.accordion-trigger')[index].setAttribute('aria-expanded','true');"
+      }
+    ]
+  },
+  "verifications": [
+    "All 5 subpages return HTTP 200: schmerztherapie.html, infusionstherapie.html, stosswelle.html, stammzelle.html, postoperativ.html.",
+    "All 5 hero images return HTTP 200: schmerztherapie-hero.jpg, infusionstherapie-hero.jpg, stosswelle-hero.jpg, stammzelle-hero.jpg, postoperativ-hero.jpg.",
+    "Homepage #leistungen has 5 anchor cards with correct hrefs and data-testids: service-link-schmerztherapie -> schmerztherapie.html, service-link-infusionstherapie -> infusionstherapie.html, service-link-stosswelle -> stosswelle.html, service-link-stammzelle -> stammzelle.html, service-link-postoperativ -> postoperativ.html.",
+    "Click on [data-testid='service-link-stosswelle'] navigates to /stosswelle.html (verified live).",
+    "On each subpage [data-testid='subpage-hero'] is visible with inline background-image set to the correct hero JPG (e.g., schmerztherapie-hero.jpg).",
+    "Breadcrumb on each subpage contains 'Startseite / Leistungen / <Current>' with correct current title (Schmerztherapie, Infusionstherapie, Stoßwelle, Stammzelle (ACP) Therapie, Post Operative Behandlung).",
+    "H1 present on each subpage (e.g., 'Schmerztherapie in Wien', 'Infusionstherapie in Wien', 'Post-Operative Behandlung in Wien' etc.).",
+    "[data-testid='hero-booking-btn'] visible with text 'Termin vereinbaren'. Uses onclick='openBooking()' (tel:012141431) per spec — not invoked in headless browser.",
+    "[data-testid='back-to-services'] href = 'index.html#leistungen' on all 5 subpages. Clicking it returns to homepage Leistungen anchor.",
+    "[data-testid='header-logo-link'] href = 'index.html#top' on all 5 subpages. Clicking returns to homepage.",
+    "FAQ accordion verified on all 5 subpages: clicking .accordion-trigger toggles .open class on the corresponding .accordion-content (one open/close cycle: before=closed, after-click=open, after-second-click=closed).",
+    "[data-testid='accessibility-toggle'] verified on all 5 subpages: clicking adds 'accessibility-mode' to body.className and computed background-image on .subpage-hero becomes 'none' (hero bg removed, page stays readable).",
+    "Section structure on each subpage: 1x .section-dark CTA band, 1x .aside-card 'Termin vereinbaren' card, footer present.",
+    "Lucide icons render correctly on every subpage (31-34 SVGs each).",
+    "Zero console errors and zero network responses >= 400 across all 5 subpages during full interaction flow."
+  ],
+  "test_report_links": [],
+  "action_items": [
+    "(Optional, LOW priority) Update toggleAccordion() in /app/static-website/script.js to also sync aria-expanded on the .accordion-trigger buttons for screen-reader correctness — visual behavior is already correct."
+  ],
+  "critical_code_review_comments": [
+    "toggleAccordion does not update aria-expanded on the trigger button — the attribute is statically set to 'false' in HTML and never changes, which is misleading for assistive tech. Visual behavior is fine.",
+    "Hero images are served as full-resolution JPGs without responsive sizes/AVIF/WebP variants — same perf observation as iteration_1 for ueber-bg.png; not blocking but worth a follow-up.",
+    "5 subpages duplicate a substantial amount of header/footer/CTA/aside/footer markup. If the site grows, consider a tiny templating/build step (e.g., 11ty/handlebars/include) to DRY this up; for now, acceptable for a static site."
+  ],
+  "updated_files": [],
+  "success_rate": { "backend": "n/a (frontend-only request)", "frontend": "100% (all functional checks pass; 1 minor a11y note)" },
+  "test_credentials": "n/a - public static site",
+  "seed_data_creation": "none",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "5 service subpages live and verified at http://localhost:3000/{schmerztherapie|infusionstherapie|stosswelle|stammzelle|postoperativ}.html. All cross-page links (service-link-*, back-to-services, header-logo-link) confirmed. Accordion toggles via the '.open' class — do NOT assert via aria-expanded (currently not synced; minor a11y issue logged). Booking buttons trigger tel:012141431 — do not expect HTTP nav on click.",
+  "rca of the issue": "n/a — no blocking bugs found. The only minor finding (accordion aria-expanded not synced) is an a11y oversight in script.js#toggleAccordion: it manipulates classList on content/icon but never calls setAttribute('aria-expanded', ...) on the trigger button."
+}

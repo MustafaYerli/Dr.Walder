@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post-Operative Behandlung &amp; Nachsorge in Wien | OA Dr. Ewald Walder</title>
+    <meta name="description" content="Professionelle postoperative Behandlung und Nachsorge bei OA Dr. Ewald Walder, Facharzt für Orthopädie in Wien. Wundkontrolle, Verlaufskontrolle und Reha-Begleitung.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Work+Sans:wght@400;500;600;700&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="mobile-sticky-footer">
+        <a href="tel:012141431" class="mobile-btn mobile-btn-call" aria-label="Praxis anrufen">
+            <i data-lucide="phone" class="icon" aria-hidden="true"></i>
+            <span>Anrufen</span>
+        </a>
+        <button onclick="openBooking()" class="mobile-btn mobile-btn-booking" aria-label="Termin telefonisch vereinbaren">
+            <i data-lucide="stethoscope" class="icon" aria-hidden="true"></i>
+            <span>Termin</span>
+        </button>
+    </div>
+
+    <header class="header" id="navbar">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html#top" class="header-logo" aria-label="Zur Startseite" data-testid="header-logo-link">
+                    <img src="logo.png" alt="Dr. Ewald Walder - Facharzt für Orthopädie und Unfallchirurgie Wien">
+                </a>
+                <nav class="nav" aria-label="Hauptnavigation">
+                    <a href="index.html#ueber" class="nav-link" data-testid="nav-ueber">Über mich</a>
+                    <a href="index.html#leistungen" class="nav-link" data-testid="nav-leistungen">Leistungen</a>
+                    <a href="index.html#honorare" class="nav-link" data-testid="nav-honorare">Honorare</a>
+                    <a href="index.html#kontakt" class="nav-link" data-testid="nav-kontakt">Kontakt</a>
+                </nav>
+                <div class="header-actions">
+                    <button id="accessibility-toggle" class="btn-accessibility" aria-label="Barrierefreie Seite ein- oder ausschalten" data-testid="accessibility-toggle">
+                        Barrierefreie Seite
+                    </button>
+                    <button onclick="openBooking()" class="btn btn-primary header-cta" aria-label="Termin telefonisch vereinbaren" data-testid="header-booking-btn">
+                        Termin vereinbaren
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="subpage-hero" id="top" style="background-image: url('postoperativ-hero.jpg');" data-testid="subpage-hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Brotkrümelnavigation">
+                <a href="index.html#top">Startseite</a>
+                <span class="sep" aria-hidden="true">/</span>
+                <a href="index.html#leistungen">Leistungen</a>
+                <span class="sep" aria-hidden="true">/</span>
+                <span class="current">Post Operative Behandlung</span>
+            </nav>
+            <span class="section-eyebrow">Leistung</span>
+            <h1 class="subpage-title">Post-Operative Behandlung in Wien</h1>
+            <p class="subpage-lead">
+                Nach einer Operation entscheidet die richtige Nachsorge maßgeblich über den Heilungserfolg. Ich begleite Sie professionell durch die postoperative Phase – von der Wundkontrolle über die Verlaufskontrolle bis zur Planung Ihrer Rehabilitation, damit Sie sicher und beschwerdefrei in Ihren Alltag zurückkehren.
+            </p>
+            <div class="subpage-hero-actions">
+                <button onclick="openBooking()" class="btn-pill btn-pill-dark" aria-label="Termin telefonisch vereinbaren" data-testid="hero-booking-btn">
+                    <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="phone"></i></span>
+                    Termin vereinbaren
+                </button>
+                <a href="index.html#leistungen" class="subpage-back" data-testid="back-to-services">
+                    <i data-lucide="arrow-left" aria-hidden="true"></i> Alle Leistungen
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="prose-grid">
+                <div class="prose reveal">
+                    <h3>Warum ist die Nachsorge so wichtig?</h3>
+                    <p>
+                        Eine sorgfältige postoperative Betreuung beugt Komplikationen vor, fördert eine reibungslose Wundheilung und sorgt dafür, dass die Beweglichkeit Schritt für Schritt wiederhergestellt wird. Als Facharzt für Orthopädie und Unfallchirurgie begleite ich Sie nach Eingriffen kompetent und persönlich.
+                    </p>
+                    <p>
+                        Vor- und Nachbetreuungen können auch im Herz Jesu Krankenhaus in 1030 Wien stattfinden. So sind eine durchgehende Betreuung und kurze Wege gewährleistet.
+                    </p>
+                    <h3>Was die Nachsorge umfasst</h3>
+                    <ul>
+                        <li><i data-lucide="check-circle" aria-hidden="true"></i> Wundkontrolle und Verbandwechsel</li>
+                        <li><i data-lucide="check-circle" aria-hidden="true"></i> Entfernen von Fäden oder Klammern</li>
+                        <li><i data-lucide="check-circle" aria-hidden="true"></i> Verlaufs- und Bewegungskontrolle</li>
+                        <li><i data-lucide="check-circle" aria-hidden="true"></i> Schmerzmanagement nach dem Eingriff</li>
+                        <li><i data-lucide="check-circle" aria-hidden="true"></i> Planung und Begleitung der Rehabilitation</li>
+                    </ul>
+                </div>
+                <aside class="aside-card reveal" aria-label="Termin vereinbaren">
+                    <h3>Termin vereinbaren</h3>
+                    <p>Sie benötigen eine Nachkontrolle oder Begleitung nach einer Operation? Vereinbaren Sie telefonisch einen Termin.</p>
+                    <a href="tel:012141431" class="aside-phone" aria-label="Telefonnummer 01 214 14 31 anrufen">
+                        <i data-lucide="phone" aria-hidden="true"></i> 01 / 214 14 31
+                    </a>
+                    <button onclick="openBooking()" class="btn-pill btn-pill-primary" aria-label="Termin telefonisch vereinbaren" data-testid="aside-booking-btn">
+                        <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="calendar-check"></i></span>
+                        Jetzt anrufen
+                    </button>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Ablauf</span>
+                <h2 class="section-title-center"><span class="t-light">So begleite</span> <span class="t-bold">ich Ihre Genesung</span></h2>
+                <p class="section-description">Strukturiert, persönlich und auf Ihren Heilungsverlauf abgestimmt.</p>
+            </div>
+            <div class="process-grid cols-3">
+                <div class="process-step reveal">
+                    <span class="process-number" aria-hidden="true">1</span>
+                    <div class="process-icon" aria-hidden="true"><i data-lucide="clipboard-check"></i></div>
+                    <h3 class="process-title">Erste Kontrolle</h3>
+                    <p class="process-text">Kontrolle der Wunde und des Heilungsverlaufs sowie Klärung aller offenen Fragen nach dem Eingriff.</p>
+                </div>
+                <div class="process-step reveal">
+                    <span class="process-number" aria-hidden="true">2</span>
+                    <div class="process-icon" aria-hidden="true"><i data-lucide="activity"></i></div>
+                    <h3 class="process-title">Heilung begleiten</h3>
+                    <p class="process-text">Regelmäßige Kontrollen, Schmerzmanagement und Empfehlungen für Belastung und Bewegung.</p>
+                </div>
+                <div class="process-step reveal">
+                    <span class="process-number" aria-hidden="true">3</span>
+                    <div class="process-icon" aria-hidden="true"><i data-lucide="trending-up"></i></div>
+                    <h3 class="process-title">Rückkehr in den Alltag</h3>
+                    <p class="process-text">Planung der Rehabilitation und Begleitung, bis Sie wieder beweglich und belastbar sind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Leistungen</span>
+                <h2 class="section-title-center"><span class="t-light">Ihre Vorteile</span> <span class="t-bold">in der Nachsorge</span></h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header"><div class="service-icon" aria-hidden="true"><i data-lucide="user-check"></i></div></div>
+                    <h3 class="service-title">Persönliche Begleitung</h3>
+                    <p class="service-description">Eine konstante ärztliche Bezugsperson über den gesamten Heilungsverlauf.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-header"><div class="service-icon" aria-hidden="true"><i data-lucide="building-2"></i></div></div>
+                    <h3 class="service-title">Betreuung im Spital möglich</h3>
+                    <p class="service-description">Vor- und Nachbetreuung u. a. im Herz Jesu Krankenhaus in 1030 Wien.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-header"><div class="service-icon" aria-hidden="true"><i data-lucide="shield"></i></div></div>
+                    <h3 class="service-title">Komplikationen vorbeugen</h3>
+                    <p class="service-description">Frühzeitiges Erkennen von Auffälligkeiten durch regelmäßige Kontrollen.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-header"><div class="service-icon" aria-hidden="true"><i data-lucide="clipboard-list"></i></div></div>
+                    <h3 class="service-title">Klare Reha-Planung</h3>
+                    <p class="service-description">Strukturierter Plan für Belastung, Bewegung und Rehabilitation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-gray">
+        <div class="container-narrow">
+            <div class="alert-note reveal">
+                <span class="alert-note-icon" aria-hidden="true"><i data-lucide="alert-triangle"></i></span>
+                <div>
+                    <h3>Wann Sie sich umgehend melden sollten</h3>
+                    <p>Bitte kontaktieren Sie nach einer Operation rasch einen Arzt, wenn folgende Anzeichen auftreten:</p>
+                    <ul>
+                        <li>Zunehmende Rötung, Schwellung oder Wärme im Operationsbereich</li>
+                        <li>Fieber oder allgemeines Krankheitsgefühl</li>
+                        <li>Starke oder zunehmende Schmerzen</li>
+                        <li>Nässende Wunde oder ungewöhnlicher Wundausfluss</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container-narrow">
+            <div class="section-header">
+                <span class="section-eyebrow">FAQ</span>
+                <h2 class="section-title-center"><span class="t-light">Häufige</span> <span class="t-bold">Fragen zur Nachsorge</span></h2>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(0)" aria-expanded="false" aria-controls="content-0">
+                        <span>Kann ich zur Nachsorge kommen, auch wenn woanders operiert wurde?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-0" aria-hidden="true"></i>
+                    </button>
+                    <div class="accordion-content" id="content-0">
+                        <p>Ja. Bringen Sie nach Möglichkeit Ihre OP-Unterlagen und Befunde mit, damit ich Ihren Heilungsverlauf optimal begleiten kann.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(1)" aria-expanded="false" aria-controls="content-1">
+                        <span>Wo finden die Vor- und Nachbetreuungen statt?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-1" aria-hidden="true"></i>
+                    </button>
+                    <div class="accordion-content" id="content-1">
+                        <p>Die Betreuung erfolgt in der Ordination, bei Bedarf können vorbereitende Untersuchungen und Nachkontrollen auch im Herz Jesu Krankenhaus in 1030 Wien stattfinden.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(2)" aria-expanded="false" aria-controls="content-2">
+                        <span>Werden die Kosten rückerstattet?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-2" aria-hidden="true"></i>
+                    </button>
+                    <div class="accordion-content" id="content-2">
+                        <p>Als Wahlarzt erfolgt die Verrechnung nach der Honorarordnung. Die Abrechnung wird automatisch über Ihre Krankenkasse eingereicht – Sie erhalten in der Regel rund 70–80 % des Kassentarifs zurück.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-trigger" onclick="toggleAccordion(3)" aria-expanded="false" aria-controls="content-3">
+                        <span>Wie oft sind Kontrollen nötig?</span>
+                        <i data-lucide="chevron-down" class="accordion-icon" id="icon-3" aria-hidden="true"></i>
+                    </button>
+                    <div class="accordion-content" id="content-3">
+                        <p>Das hängt vom Eingriff und Ihrem Heilungsverlauf ab. Den individuellen Kontrollrhythmus legen wir gemeinsam fest.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark">
+        <div class="container-narrow">
+            <div class="appointment-header">
+                <span class="section-eyebrow eyebrow-light">Terminbuchung</span>
+                <h2 class="section-title-center white"><span class="t-light">Sicher</span> <span class="t-bold">genesen</span></h2>
+                <p class="appointment-subtitle">Vereinbaren Sie Ihren Termin ganz einfach telefonisch.</p>
+            </div>
+            <div class="card">
+                <div class="appointment-content">
+                    <i data-lucide="phone-call" class="appointment-icon" aria-hidden="true"></i>
+                    <h3 class="appointment-title">Telefonische Terminvereinbarung</h3>
+                    <p class="appointment-description">Rufen Sie uns an – wir finden gemeinsam einen passenden Termin für Sie.</p>
+                    <button onclick="openBooking()" class="btn-pill btn-pill-dark" aria-label="Termin telefonisch vereinbaren" data-testid="cta-booking-btn">
+                        <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="phone"></i></span>
+                        Jetzt anrufen &amp; Termin vereinbaren
+                    </button>
+                    <div class="appointment-divider">
+                        <p class="appointment-or">Sie erreichen uns telefonisch unter:</p>
+                        <a href="tel:012141431" class="appointment-phone" aria-label="Telefonnummer 01 214 14 31 anrufen">
+                            <i data-lucide="phone" class="icon-sm" aria-hidden="true"></i>
+                            01 / 214 14 31
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="med-disclaimer">
+                Hinweis: Die Inhalte dieser Seite dienen der allgemeinen Information und ersetzen keine persönliche ärztliche Beratung, Diagnose oder Behandlung. Die geeignete Therapie wird individuell nach einer Untersuchung festgelegt.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-cta">
+                <div class="footer-cta-text">
+                    <span class="section-eyebrow eyebrow-light">Jetzt Termin sichern</span>
+                    <h2 class="footer-cta-title"><span class="t-light">Wir sind</span> <span class="t-bold">für Sie da</span></h2>
+                </div>
+                <div class="footer-cta-actions">
+                    <button onclick="openBooking()" class="btn-pill btn-pill-primary" aria-label="Termin vereinbaren" data-testid="footer-booking-btn">
+                        <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="calendar-check"></i></span>
+                        Termin vereinbaren
+                    </button>
+                    <a href="tel:012141431" class="footer-phone-cta" aria-label="Telefonnummer 01 214 14 31 anrufen" data-testid="footer-phone">
+                        <i data-lucide="phone" class="icon-sm" aria-hidden="true"></i> 01 / 214 14 31
+                    </a>
+                </div>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2 class="footer-title">OA Dr. Ewald Walder</h2>
+                    <p class="footer-text">Facharzt für Orthopädie und Unfallchirurgie · Wahlarzt in Wien.</p>
+                    <p class="footer-text">Individuelle Betreuung, moderne Methoden und Behandlung ohne Zeitdruck.</p>
+                </div>
+                <div>
+                    <h3 class="footer-subtitle">Schnellzugriff</h3>
+                    <div class="footer-links">
+                        <a href="index.html#ueber" class="footer-link">Über mich</a>
+                        <a href="index.html#leistungen" class="footer-link">Leistungen</a>
+                        <a href="index.html#honorare" class="footer-link">Honorare</a>
+                        <a href="index.html#kontakt" class="footer-link">Kontakt</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer-subtitle">Kontakt</h3>
+                    <div class="footer-contact">
+                        <p class="footer-contact-item"><i data-lucide="map-pin" aria-hidden="true"></i> Praterstraße 66/1/69b, 1020 Wien</p>
+                        <a href="tel:012141431" class="footer-contact-item footer-link" aria-label="Telefonnummer 01 214 14 31 anrufen"><i data-lucide="phone" aria-hidden="true"></i> 01 / 214 14 31</a>
+                        <p class="footer-contact-item"><i data-lucide="clock" aria-hidden="true"></i> Mo &amp; Do 09–16, Mi 14–18 Uhr</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer-subtitle">Rechtliches</h3>
+                    <div class="footer-links">
+                        <a href="index.html#impressum" class="footer-link">Impressum</a>
+                        <a href="index.html#datenschutz" class="footer-link">Datenschutz</a>
+                        <a href="index.html#genderhinweis" class="footer-link">Genderhinweis</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© <span id="year"></span> OA Dr. Ewald Walder. Alle Rechte vorbehalten.</p>
+                <a href="#top" class="footer-top-link" aria-label="Nach oben scrollen">Nach oben <i data-lucide="arrow-up" class="icon-sm" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
