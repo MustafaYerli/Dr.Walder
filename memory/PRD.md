@@ -57,6 +57,9 @@ Sprache des Users: DEUTSCH.
   Person in linker Hälfte (background-size:130% auto, position:100% 36%), Text rechts auf freier Fläche
   (.about-section::before Verlauf transparent→#f7f9fb ab ~52%; .about-content max-width:44% margin-left:auto).
   Alte about-image-wrapper/Badge entfernt. Mobile: cover + top + heller 180deg-Overlay. A11y: Bild aus, Overlay aus.
+- 2026-06: **Über-mich-Bild gegen HQ-Version getauscht** (`ueber-bg.png`, 3840×2160, ~3.5 MB). Erstes WhatsApp-Bild
+  war nur 1280×853 → pixelig beim Hochskalieren. Jetzt background-size:cover (kein Upscaling), position:center 42%.
+  Verifiziert via testing_agent (iteration_1.json, 100% pass). Offen (optional, P2): WebP/AVIF-Variante für LCP/Mobile.
 - P0: Eigene Fotos des Users einbinden, sobald hochgeladen (z. B. „Über mich"-Platzhalter `.placeholder-box`).
 - P2: Vollständige „Das sagen Patienten"-Section (User wollte zunächst nur Hero-Badge; ggf. später erweitern,
   ggf. mit Featurable-Widget für automatische Google-Reviews).
