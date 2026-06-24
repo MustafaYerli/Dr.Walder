@@ -853,9 +853,9 @@ body.accessibility-mode .btn-accessibility {
 /* About with full-bleed background photo (person left, text right) */
 .about-section {
     position: relative;
-    background-image: url('ueber-bg.jpg');
-    background-size: 130% auto;
-    background-position: 100% 36%;
+    background-image: url('ueber-bg.png');
+    background-size: cover;
+    background-position: center 42%;
     background-repeat: no-repeat;
     overflow: hidden;
 }
@@ -877,7 +877,7 @@ body.accessibility-mode .btn-accessibility {
     margin-left: auto;
 }
 @media (max-width: 980px) {
-    .about-section { background-size: cover; background-position: 28% top; }
+    .about-section { background-size: cover; background-position: 26% 22%; }
     .about-section::before {
         background: linear-gradient(180deg,
             rgba(247, 249, 251, 0.55) 0%,
