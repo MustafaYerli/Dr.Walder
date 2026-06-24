@@ -458,6 +458,11 @@ body.accessibility-mode .btn-accessibility {
 .benefit-title { font-size: var(--text-base); font-weight: 700; color: #fff; line-height: 1.2; }
 .benefit-description { font-size: var(--text-xs); color: rgba(255, 255, 255, 0.85); }
 
+/* Widen the trust bar to the right on large screens (mobile stays stacked) */
+@media (min-width: 1101px) {
+    .benefits-grid { width: 780px; }
+}
+
 .hero-cta {
     display: flex;
     flex-direction: column;
