@@ -40,6 +40,16 @@ Sprache des Users: DEUTSCH.
   - WICHTIG (gelernt): Scroll-Reveal (.reveal) wird NUR für Elemente im Selektor in script.js setupScrollReveal() beobachtet.
     Neue reveal-Komponenten MÜSSEN dort zum targets-Selektor hinzugefügt werden, sonst bleiben sie opacity:0 (unsichtbar).
 
+- 2026-06: **Inhalts-Update (Schritt für Schritt):**
+  - Alle „Wartezeit"-Texte entfernt (Vorteilsleiste „Kurze Wartezeiten" → „Persönliche Betreuung";
+    Behandlungsablauf-Beschreibung & Schritt 1 ohne Wartezeit-Hinweis).
+  - **70–80% Rückerstattung** konkret eingebaut (Honorare-Block „Rückerstattung" + Wahlarzt-Section Schritt 3).
+  - Honorare-Section: Titel „Transparente Honorare" → **„So funktioniert es bei mir"**; Wahlarzt jetzt 1. Punkt
+    (inkl. „nicht an Kassenverträge gebunden"); letzter Punkt „Transparenz" gelöscht (nur 2 Punkte).
+  - **Leistungen komplett ersetzt** (5 neue Karten): Schmerztherapie, Infusionstherapie, Stoßwelle,
+    Stammzelle (ACP) Therapie, Post Operative Behandlung (Icons: activity/droplets/waves/dna/stethoscope).
+  - **Unterseite gelenkschmerzen.html + gelenkschmerzen-hero.jpg GELÖSCHT** (Link aus Leistungen entfernt).
+
 ## Offen / Backlog
 - P0: Eigene Fotos des Users einbinden, sobald hochgeladen (z. B. „Über mich"-Platzhalter `.placeholder-box`).
 - P2: Vollständige „Das sagen Patienten"-Section (User wollte zunächst nur Hero-Badge; ggf. später erweitern,
