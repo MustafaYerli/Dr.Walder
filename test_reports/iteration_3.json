@@ -1,0 +1,35 @@
+{
+  "summary": "Verified bug fix: .alert-note section before FAQ now visible on all 5 service subpages. The fix in /app/static-website/script.js setupScrollReveal() (adding '.alert-note' to the IntersectionObserver targets selector) works correctly. FAQ accordion still functions. Home #termin section renders properly with background image and white card content.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_results": {
+    "alert_note_visibility": {
+      "schmerztherapie.html": "PASS - opacity=0.984, is-visible=true, text='Wann Sie nicht zu lange warten sollten' + 4 bullets visible",
+      "infusionstherapie.html": "PASS - opacity=0.987, is-visible=true, text='Wichtig zu wissen' visible",
+      "stosswelle.html": "PASS - opacity=0.990, is-visible=true, text='Wann die Stoßwelle nicht geeignet ist' visible",
+      "stammzelle.html": "PASS - opacity=0.987, is-visible=true, text='Wichtig zu wissen' visible",
+      "postoperativ.html": "PASS - opacity=0.987, is-visible=true, text='Wann Sie sich umgehend melden sollten' visible"
+    },
+    "faq_accordion": "PASS - 4 triggers found on schmerztherapie.html; clicking first trigger toggles .accordion-content to .open with max-height 500px",
+    "home_termin_section": "PASS - #termin renders with linear-gradient + termin-bg.webp background image; white card with 'Telefonische Terminvereinbarung' content present and readable in screenshot"
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "setupScrollReveal() applies .reveal class via JS and observes via IntersectionObserver - works but fragile: any future structural section added with intended reveal animation must also be added to the targets selector. Consider inverting: query [data-reveal] attribute on elements that opt in, or simply query '.reveal' class already in HTML. Currently the .alert-note has class 'reveal' hardcoded in HTML but JS overwrites/re-adds it; risk of similar bugs if other sections get class='reveal' in HTML but are not in the JS selector list.",
+    "Accessibility-mode toggle correctly bypasses scroll-reveal by adding .is-visible to all .reveal elements - good fallback.",
+    "No data-testid attributes on interactive elements (accordion triggers, accessibility toggle, openBooking buttons). Recommended for future automation."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (static site, backend skipped)", "frontend": "100%"},
+  "test_credentials": "N/A",
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Static site served by /app/frontend/serve.js on port 3000 from /app/static-website/. Backend supervisor service is in BACKOFF state intentionally - ignore. The .alert-note bug fix is in script.js setupScrollReveal() targets selector (line 104). All 5 subpages share same script.js, so fix is universal.",
+  "rca of the issue": "RCA: The .alert-note element had class='reveal' in HTML (opacity:0 via CSS) but was NOT in the IntersectionObserver targets selector in setupScrollReveal(). Therefore no observer was attached and 'is-visible' class was never added, leaving the element permanently at opacity:0 (only the colored background was visible). Fix: added '.alert-note' to the targets querySelectorAll selector. Verified via Playwright on all 5 subpages - element now reaches opacity ~0.98 and is-visible class is applied after scroll into view."
+}

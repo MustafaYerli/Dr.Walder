@@ -101,7 +101,7 @@ function setupScrollReveal() {
     const targets = document.querySelectorAll(
         '.section-header, .service-card, .contact-card, .fee-item, .accordion-item, ' +
         '.about-content, .about-image-wrapper, .advantage-item, .card, .hero-content, ' +
-        '.process-step, .refund-note, .prose, .aside-card, .hospital-card'
+        '.process-step, .refund-note, .prose, .aside-card, .hospital-card, .alert-note'
     );
     targets.forEach(el => el.classList.add('reveal'));
 
