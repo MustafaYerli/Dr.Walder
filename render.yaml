@@ -1,0 +1,39 @@
+services:
+  # Statische Website von OA Dr. Ewald Walder (HTML/CSS/JS)
+  - type: web
+    name: dr-walder-website
+    runtime: static
+    # Keine Build-Schritte nötig – reine statische Dateien
+    buildCommand: "echo 'No build step required - static HTML site'"
+    # Ordner, der veröffentlicht wird (relativ zum Repo-Root)
+    staticPublishPath: ./static-website
+    pullRequestPreviewsEnabled: true
+    # Fallback: nicht vorhandene Pfade auf die Startseite leiten
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    headers:
+      # Lange Cache-Zeiten für statische Assets (Bilder, CSS, JS)
+      - path: /*.jpg
+        name: Cache-Control
+        value: public, max-age=2592000
+      - path: /*.png
+        name: Cache-Control
+        value: public, max-age=2592000
+      - path: /*.webp
+        name: Cache-Control
+        value: public, max-age=2592000
+      - path: /*.css
+        name: Cache-Control
+        value: public, max-age=604800
+      - path: /*.js
+        name: Cache-Control
+        value: public, max-age=604800
+      # Sicherheits-Header
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
