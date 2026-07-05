@@ -3,6 +3,16 @@ function openBooking() {
     window.location.href = 'tel:012141431';
 }
 
+// Scroll to online web calendar in the Termin section
+function goToCalendar() {
+    const target = document.getElementById('online-kalender');
+    if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+        window.location.href = 'index.html#online-kalender';
+    }
+}
+
 // Open Google Maps
 function openMaps() {
     window.open('https://www.google.com/maps/place/Dr.+Ewald+Walder/@48.2165356,16.3885665,133m/data=!3m2!1e3!5s0x476d0707c7bd5639:0x79bcd3b5ec264be8!4m14!1m7!3m6!1s0x476d0708ebb66ed9:0xc4426b51090e64!2sPraterstra%C3%9Fe+66%2F1+69b,+1020+Wien!3b1!8m2!3d48.2165919!4d16.3886769!3m5!1s0x476d0708ebbbd9bb:0xb4fae242d3d12915!8m2!3d48.2165919!4d16.3886769!16s%2Fg%2F1v2gck40?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D', '_blank');
@@ -142,5 +152,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const accessibilityButton = document.getElementById('accessibility-toggle');
     if (accessibilityButton) {
         accessibilityButton.addEventListener('click', toggleAccessibilityMode);
+    }
+
+    // If arriving via #online-kalender (e.g. from a subpage), scroll to the calendar
+    if (window.location.hash === '#online-kalender') {
+        setTimeout(goToCalendar, 300);
     }
 });

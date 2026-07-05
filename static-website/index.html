@@ -36,7 +36,7 @@
             <i data-lucide="phone" class="icon" aria-hidden="true"></i>
             <span>Anrufen</span>
         </a>
-        <button onclick="openBooking()" class="mobile-btn mobile-btn-booking" aria-label="Termin telefonisch vereinbaren">
+        <button onclick="goToCalendar()" class="mobile-btn mobile-btn-booking" aria-label="Online-Termin vereinbaren">
             <i data-lucide="stethoscope" class="icon" aria-hidden="true"></i>
             <span>Termin</span>
         </button>
@@ -59,7 +59,7 @@
                     <button id="accessibility-toggle" class="btn-accessibility" aria-label="Barrierefreie Seite ein- oder ausschalten" data-testid="accessibility-toggle">
                         Barrierefreie Seite
                     </button>
-                    <button onclick="openBooking()" class="btn btn-primary header-cta" aria-label="Termin telefonisch vereinbaren" data-testid="header-booking-btn">
+                    <button onclick="goToCalendar()" class="btn btn-primary header-cta" aria-label="Online-Termin vereinbaren" data-testid="header-booking-btn">
                         Termin vereinbaren
                     </button>
                 </div>
@@ -82,7 +82,7 @@
                 </p>
 
                 <div class="hero-cta">
-                    <button onclick="openBooking()" class="btn-pill btn-pill-dark" aria-label="Termin telefonisch vereinbaren" data-testid="hero-booking-btn">
+                    <button onclick="goToCalendar()" class="btn-pill btn-pill-dark" aria-label="Online-Termin vereinbaren" data-testid="hero-booking-btn">
                         <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="stethoscope"></i></span>
                         Termin vereinbaren
                     </button>
@@ -208,7 +208,7 @@
                     <li><i data-lucide="check-circle" aria-hidden="true"></i> Mitaufbau der Orthopädie am Krankenhaus Herz Jesu</li>
                     <li><i data-lucide="check-circle" aria-hidden="true"></i> Genaue Diagnostik mit Vor- und Nachuntersuchung</li>
                 </ul>
-                <button onclick="openBooking()" class="btn-pill btn-pill-primary about-cta" aria-label="Termin vereinbaren" data-testid="about-booking-btn">
+                <button onclick="goToCalendar()" class="btn-pill btn-pill-primary about-cta" aria-label="Online-Termin vereinbaren" data-testid="about-booking-btn">
                     <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="calendar-check"></i></span>
                     Termin vereinbaren
                 </button>
@@ -355,7 +355,7 @@
                 </div>
             </div>
             <div class="process-cta">
-                <button onclick="openBooking()" class="btn-pill btn-pill-primary" aria-label="Termin vereinbaren" data-testid="process-booking-btn">
+                <button onclick="goToCalendar()" class="btn-pill btn-pill-primary" aria-label="Online-Termin vereinbaren" data-testid="process-booking-btn">
                     <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="calendar-check"></i></span>
                     Jetzt Termin vereinbaren
                 </button>
@@ -440,7 +440,7 @@
                 </p>
             </div>
 
-            <div class="card appointment-calendar-card">
+            <div class="card appointment-calendar-card" id="online-kalender">
                 <div class="appointment-content">
                     <i data-lucide="calendar-check" class="appointment-icon" aria-hidden="true"></i>
                     <h3 class="appointment-title">
@@ -685,7 +685,7 @@
                     <h2 class="footer-cta-title"><span class="t-light">Wir sind</span> <span class="t-bold">für Sie da</span></h2>
                 </div>
                 <div class="footer-cta-actions">
-                    <button onclick="openBooking()" class="btn-pill btn-pill-primary" aria-label="Termin vereinbaren" data-testid="footer-booking-btn">
+                    <button onclick="goToCalendar()" class="btn-pill btn-pill-primary" aria-label="Online-Termin vereinbaren" data-testid="footer-booking-btn">
                         <span class="btn-pill-icon" aria-hidden="true"><i data-lucide="calendar-check"></i></span>
                         Termin vereinbaren
                     </button>
