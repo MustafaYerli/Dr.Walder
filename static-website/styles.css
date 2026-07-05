@@ -1199,6 +1199,44 @@ body.accessibility-mode .about-section .about-content { max-width: 100% !importa
 .subpage-back:hover { opacity: 1; text-decoration: underline; }
 .subpage-back svg { width: 1.1rem; height: 1.1rem; }
 
+/* ============================================
+   LEGAL PAGES (Impressum / Datenschutz)
+   ============================================ */
+.legal-hero {
+    position: relative;
+    background-color: #1d3311;
+    background: linear-gradient(100deg, #14240c 0%, #1d3311 45%, #284616 78%, #3a6220 100%);
+    color: #fff;
+    padding: calc(var(--header-h) + var(--space-16)) 0 var(--space-16);
+    overflow: hidden;
+}
+.legal-hero .section-eyebrow { color: #fff; }
+.legal-hero .section-eyebrow::before { background: #fff; }
+.legal-title {
+    font-family: 'Outfit', sans-serif;
+    color: #fff;
+    font-size: var(--text-5xl);
+    font-weight: 700;
+    line-height: 1.08;
+    margin: var(--space-2) 0 var(--space-4);
+}
+.legal-lead {
+    font-size: var(--text-lg);
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    max-width: 46rem;
+}
+.legal-prose h3 { margin-top: var(--space-10); }
+.legal-prose h3:first-child { margin-top: 0; }
+.legal-prose a { color: var(--color-primary); text-decoration: underline; }
+.legal-prose .subpage-back {
+    color: var(--color-secondary);
+    opacity: 1;
+    margin-top: var(--space-12);
+}
+.legal-prose .subpage-back:hover { color: var(--color-primary); }
+
+
 /* Prose layout */
 .prose-grid { display: grid; gap: var(--space-12); align-items: start; }
 @media (min-width: 900px) { .prose-grid { grid-template-columns: 1.6fr 1fr; } }
