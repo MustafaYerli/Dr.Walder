@@ -246,8 +246,26 @@
             <div class="appointment-header">
                 <span class="section-eyebrow eyebrow-light">Terminbuchung</span>
                 <h2 class="section-title-center white"><span class="t-light">Sicher</span> <span class="t-bold">genesen</span></h2>
-                <p class="appointment-subtitle">Vereinbaren Sie Ihren Termin ganz einfach telefonisch.</p>
+                <p class="appointment-subtitle">Vereinbaren Sie Ihren Termin ganz einfach online oder telefonisch.</p>
             </div>
+            <div class="card appointment-calendar-card" id="online-kalender">
+                <div class="appointment-content">
+                    <i data-lucide="calendar-check" class="appointment-icon" aria-hidden="true"></i>
+                    <h3 class="appointment-title">
+                        Online-Terminreservierung
+                    </h3>
+                    <p class="appointment-description">
+                        Wählen Sie direkt einen freien Termin in unserem Online-Kalender.
+                    </p>
+                    <div class="calendar-embed">
+                        <iframe name="aceto-terminreservierung" title="Online-Terminreservierung"
+                            src="https://aceto365.com/ACETOwebkalender/auswahl.xhtml?seriennummer=1411395005"
+                            style="width:100%; border:0;" frameborder="0"
+                            onload="if(window.iFrameResize){iFrameResize({heightCalculationMethod: 'taggedElement'}, this);}"></iframe>
+                    </div>
+                </div>
+            </div>
+
             <div class="card">
                 <div class="appointment-content">
                     <i data-lucide="phone-call" class="appointment-icon" aria-hidden="true"></i>
@@ -356,6 +374,10 @@
                             <p class="contact-text" style="line-height: 1.6;">
                                 Für die Anreise mit dem Auto stehen zahlreiche Parkplätze entlang der Praterstraße sowie APCOA-Tiefgaragen in der Praterstraße 62 und Afrikanergasse 3 zur Verfügung.
                             </p>
+                            <div class="parking-note" data-testid="parking-note">
+                                <i data-lucide="circle-parking" aria-hidden="true"></i>
+                                <p><strong>1 Std. kostenloses Parken</strong> in der APCOA Tiefgarage (Praterstraße 62) für alle Patienten.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="map-wrapper">
@@ -427,6 +449,7 @@
         </div>
     </footer>
 
+    <script src="https://aceto365.com/ACETOwebkalender/javax.faces.resource/iframeResizer.min.js.xhtml?ln=js"></script>
     <script src="script.js"></script>
     <script>
         lucide.createIcons();
