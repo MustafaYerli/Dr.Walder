@@ -1030,6 +1030,27 @@ body.accessibility-mode .about-section .about-content { max-width: 100% !importa
 .about-points li i { width: 1.3rem; height: 1.3rem; color: var(--color-primary); flex-shrink: 0; }
 
 .about-cta { align-self: flex-start; }
+.about-mobile-image { display: none; }
+@media (max-width: 980px) {
+    .about-mobile-image {
+        display: block;
+        width: 100%;
+        margin-bottom: var(--space-8);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+    }
+    .about-mobile-image img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        object-position: center 30%;
+        display: block;
+    }
+    /* Background image no longer needed on mobile – shown as inline image instead */
+    .about-section { background-image: none; }
+    .about-section::before { display: none; }
+}
 
 /* Primary pill */
 .btn-pill-primary { background: var(--color-primary); color: #fff; }

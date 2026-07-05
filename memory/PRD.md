@@ -67,7 +67,21 @@ Sprache des Users: DEUTSCH.
 - 2026-06: **Über-mich-Bild gegen HQ-Version getauscht** (`ueber-bg.png`, 3840×2160, ~3.5 MB). Erstes WhatsApp-Bild
   war nur 1280×853 → pixelig beim Hochskalieren. Jetzt background-size:cover (kein Upscaling), position:center 42%.
   Verifiziert via testing_agent (iteration_1.json, 100% pass). Offen (optional, P2): WebP/AVIF-Variante für LCP/Mobile.
+- 2026-07: **ACETO Online-Webkalender** im Termin-Bereich eingebettet (iframe + iframeResizer-Skript im head,
+  `#online-kalender`-Karte oberhalb der Telefon-Karte). Untertitel „online oder telefonisch". CSS .calendar-embed.
+- 2026-07: **Termin-Buttons → Online-Kalender.** Neue `goToCalendar()` (script.js) scrollt smooth zu `#online-kalender`
+  (auf Unterseiten Navigation zu `index.html#online-kalender` + Auto-Scroll via Hash). Alle „Termin vereinbaren"-Buttons
+  (Header/Hero/Über-mich/Ablauf/Footer/mobil) nutzen goToCalendar; „Jetzt anrufen"-Button behält `openBooking()` (tel:).
+- 2026-07: **impressum.html + datenschutz.html erstellt** (rechtskonform AT: § 5 ECG/§ 25 MedienG bzw. DSGVO/DSG).
+  Daten: Ordination Dr. Walder, Praterstraße 66/69b Stiege 1 5.Stock 1020 Wien, office@ordination-walder.at,
+  Tel 01/214 14 31, Facharzt f. Orthopädie u. Orthopäd. Chirurgie/Unfallchirurgie, Freiberufler, Ärztekammer Wien,
+  ÄrzteG 1998, USt-befreit §6/1/19 UStG. Datenschutz deckt ACETO-Webkalender (einziger Drittdienst) + Google-Maps-Link ab.
+  Neue Styles: .legal-hero/.legal-title/.legal-lead/.legal-prose. Footer-Links (alle 7 Seiten) auf impressum.html/datenschutz.html.
+- 2026-07: **Über-mich Mobile-Bild** (`.about-mobile-image` picture, webp+png) über dem Titel eingeblendet
+  (nur ≤980px), da das Desktop-Hintergrundbild auf Mobile nicht sichtbar war. Desktop unverändert.
 - P0: Eigene Fotos des Users einbinden, sobald hochgeladen (z. B. „Über mich"-Platzhalter `.placeholder-box`).
+- P1: Leistungs-Unterseiten mit praxisspezifischen Details füllen (Geräte, Sitzungen, Preise).
+- P2: WhatsApp-Kontakt-Icon neben Telefonnummer. Footer-Link „Genderhinweis" (index.html) zeigt noch auf leeren Anker.
 - P2: Vollständige „Das sagen Patienten"-Section (User wollte zunächst nur Hero-Badge; ggf. später erweitern,
   ggf. mit Featurable-Widget für automatische Google-Reviews).
 - P1: Barrierefreier Modus Feinschliff ("reden wir später").
