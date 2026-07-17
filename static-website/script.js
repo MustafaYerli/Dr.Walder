@@ -138,10 +138,54 @@ function setupScrollReveal() {
     if (hero) requestAnimationFrame(() => hero.classList.add('is-visible'));
 }
 
+// Vacation / closed popup — shown only between 27.07.2026 and 09.08.2026 (inclusive)
+function setupVacationPopup() {
+    const now = new Date();
+    const start = new Date(2026, 6, 27, 0, 0, 0);   // 27.07.2026 00:00
+    const end = new Date(2026, 7, 9, 23, 59, 59);    // 09.08.2026 23:59
+    if (now < start || now > end) return;
+    if (sessionStorage.getItem('urlaubPopupClosed') === 'true') return;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'vacation-overlay';
+    overlay.setAttribute('data-testid', 'vacation-popup');
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-labelledby', 'vacation-title');
+    overlay.innerHTML = `
+        <div class="vacation-card">
+            <button type="button" class="vacation-close" data-testid="vacation-popup-close" aria-label="Schließen">
+                <i data-lucide="x" aria-hidden="true"></i>
+            </button>
+            <div class="vacation-icon"><i data-lucide="palmtree" aria-hidden="true"></i></div>
+            <h2 id="vacation-title" class="vacation-title">Liebe Patient:innen!</h2>
+            <p class="vacation-text">Wir sind von <strong>27.07. &ndash; 9.08.</strong> auf Urlaub und daher geschlossen!</p>
+            <p class="vacation-text">Danke für Ihr Verständnis!</p>
+            <p class="vacation-sign">Ordination Dr. Ewald Walder</p>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+
+    const close = () => {
+        overlay.classList.remove('is-open');
+        sessionStorage.setItem('urlaubPopupClosed', 'true');
+        setTimeout(() => overlay.remove(), 300);
+    };
+    overlay.querySelector('.vacation-close').addEventListener('click', close);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+    document.addEventListener('keydown', function esc(e) {
+        if (e.key === 'Escape') { close(); document.removeEventListener('keydown', esc); }
+    });
+
+    requestAnimationFrame(() => overlay.classList.add('is-open'));
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+}
+
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
     setCurrentYear();
     setupScrollReveal();
+    setupVacationPopup();
     
     // Re-initialize Lucide icons after DOM is ready
     if (typeof lucide !== 'undefined') {
