@@ -86,3 +86,8 @@ Sprache des Users: DEUTSCH.
   ggf. mit Featurable-Widget für automatische Google-Reviews).
 - P1: Barrierefreier Modus Feinschliff ("reden wir später").
 - Hinweis: `/app/frontend/public/` wird nicht mehr ausgeliefert (kann perspektivisch gelöscht werden).
+
+## Update — 22.06.2026
+- Urlaubs-Popup (script.js + styles.css): erscheint automatisch nur 27.07.–09.08.2026, Text "Wir sind auf Urlaub...", global auf allen 9 Seiten, mobil & desktop, schließbar (X/ESC/Overlay), Session-persistent. Barrierefrei-Modus respektiert.
+- "Über mich" Mobil-Bild (ueber-mobile.webp) neu in 1500x1294 aus 4K-Quelle erzeugt (Schärfe-Fix). Verifiziert durch testing_agent (iteration_4.json, Frontend 100%).
+- "Über mich" Desktop-Hintergrund (ueber-bg.webp/png) durch neues HD-Bild 2000x1125 ersetzt; weißer CSS-Verlauf (.about-section::before) über Text rechts vorhanden.
