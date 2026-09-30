@@ -1,3 +1,4 @@
+/* global lucide */
 // Booking URL
 const BOOKING_URL = 'https://testdrwalder.setmore.com/book?step=time-slot&products=dr-walder-smile&type=service&staff=dr-walder-smile&staffSelected=true';
 
